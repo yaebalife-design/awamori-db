@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://awamori-db.example/sitemap.xml
+Sitemap: https://awamori-db.com/sitemap.xml
