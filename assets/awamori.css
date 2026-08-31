@@ -1,0 +1,497 @@
+@charset "UTF-8";
+/* ===========================================================================
+   泡盛DB デザインシステム
+   Gin-DB（黒×金）とは別の識別子を持たせる。
+   コンセプト：「時間の層」— このDBの背骨は古酒年数。
+     藍（琉球藍）を地の色に、泡盛の琥珀色をアクセントに。
+     年数・度数といった数値は常に等幅で、層のように積み上がって見えるようにする。
+   =========================================================================== */
+
+:root{
+  /* 地 */
+  --paper:#f6f3ea;        /* 生成り */
+  --white:#fff;
+  --card:#fffdf8;
+
+  /* 藍 */
+  --indigo:#1e3f63;
+  --indigo-deep:#132a44;
+  --indigo-soft:#eaeff5;
+
+  /* 琥珀（泡盛の色） */
+  --amber:#b0742a;
+  --amber-deep:#8a5a1d;
+  --amber-soft:#f6ecdc;
+
+  /* 文字 */
+  --ink:#1c1b19;
+  --ink-2:#4a463f;
+  --muted:#7a746b;
+  --muted-2:#9b958b;
+
+  /* 線 */
+  --line:#e2dccf;
+  --line-strong:#cdc4b1;
+
+  /* 状態 */
+  --ok:#2f6b46;          /* 全量古酒 */
+  --warn:#a4552f;        /* 全量古酒でない */
+  --unknown:#9b958b;     /* 未確認 */
+
+  --serif:"Noto Serif JP",serif;
+  --sans:"Noto Sans JP","Inter",system-ui,sans-serif;
+  --mono:"Inter",ui-monospace,SFMono-Regular,Menlo,monospace;
+
+  --radius:10px;
+  --shadow:0 1px 2px rgba(28,27,25,.05),0 8px 24px -12px rgba(28,27,25,.18);
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--sans);font-size:15px;line-height:1.9;
+  font-feature-settings:"palt";
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;height:auto;}
+a{color:var(--indigo);}
+
+.wrap{width:min(1080px,calc(100% - 40px));margin-inline:auto;}
+.wrap--narrow{width:min(760px,calc(100% - 40px));margin-inline:auto;}
+
+/* --- ヘッダー ------------------------------------------------------------ */
+.hd{
+  position:sticky;top:0;z-index:50;
+  background:var(--indigo-deep);color:#eef2f7;
+  border-bottom:2px solid var(--amber);
+}
+.hd__in{display:flex;align-items:center;gap:20px;padding:11px 0;}
+.hd__logo{display:flex;align-items:baseline;gap:9px;text-decoration:none;color:inherit;flex:0 0 auto;}
+.hd__logo b{font-family:var(--serif);font-weight:700;font-size:19px;letter-spacing:.04em;}
+.hd__logo span{font-size:10.5px;color:#a9bdd3;letter-spacing:.06em;}
+.hd__nav{display:flex;gap:2px;margin-left:auto;flex-wrap:wrap;}
+.hd__nav a{
+  color:#d5e0ec;text-decoration:none;font-size:13px;font-weight:500;
+  padding:6px 11px;border-radius:6px;white-space:nowrap;
+}
+.hd__nav a:hover{background:rgba(255,255,255,.11);color:#fff;}
+.hd__nav a[aria-current]{background:var(--amber);color:#fff;}
+.hd__burger{display:none;margin-left:auto;background:none;border:1px solid rgba(255,255,255,.3);
+  color:#eef2f7;border-radius:6px;padding:6px 9px;cursor:pointer;}
+@media(max-width:860px){
+  .hd__burger{display:block;}
+  .hd__nav{display:none;width:100%;order:3;padding-bottom:8px;}
+  .hd__nav.is-open{display:flex;flex-direction:column;}
+  .hd__in{flex-wrap:wrap;}
+}
+
+/* --- パンくず ------------------------------------------------------------ */
+.crumb{font-size:12px;color:var(--muted);padding:14px 0 0;}
+.crumb ol{list-style:none;display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;}
+.crumb li+li::before{content:"／";margin-right:6px;color:var(--muted-2);}
+.crumb a{color:var(--muted);text-decoration:none;}
+.crumb a:hover{color:var(--indigo);text-decoration:underline;}
+
+/* --- 見出し -------------------------------------------------------------- */
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.45;margin:0;}
+.h-page{font-size:clamp(25px,4.2vw,34px);margin:14px 0 12px;letter-spacing:.01em;}
+.h-sec{
+  font-size:20px;margin:0 0 16px;padding-left:13px;
+  border-left:4px solid var(--amber);
+}
+.h-sub{font-size:16px;margin:26px 0 10px;color:var(--indigo);}
+.lede{font-size:16px;line-height:2.05;color:var(--ink-2);margin:0 0 20px;}
+
+/* --- ヒーロー ------------------------------------------------------------ */
+.hero{
+  background:linear-gradient(170deg,var(--indigo-deep) 0%,var(--indigo) 62%,#2b5478 100%);
+  color:#f2f6fa;padding:52px 0 46px;position:relative;overflow:hidden;
+}
+.hero::after{
+  /* 古酒の「層」を背景に薄く重ねる */
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:repeating-linear-gradient(180deg,rgba(255,255,255,.05) 0 1px,transparent 1px 34px);
+}
+.hero__kicker{font-size:11px;letter-spacing:.22em;color:#d8a969;font-weight:700;margin:0 0 12px;}
+.hero h1{font-size:clamp(27px,5vw,42px);line-height:1.38;margin:0 0 16px;}
+.hero p{font-size:15px;line-height:2.05;color:#dbe4ee;max-width:46em;margin:0;}
+.hero__stats{display:flex;flex-wrap:wrap;gap:26px;margin-top:26px;}
+.hero__stat b{display:block;font-family:var(--mono);font-size:29px;font-weight:700;color:#fff;line-height:1.1;}
+.hero__stat span{font-size:11.5px;color:#b6c6d8;letter-spacing:.04em;}
+
+/* --- カード / パネル ------------------------------------------------------ */
+main{padding-bottom:64px;}
+.panel{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px 22px;margin:22px 0;
+}
+.panel--note{border-left:4px solid var(--amber);}
+.panel--quiet{background:var(--indigo-soft);border-color:#d3dde8;}
+.panel h3{font-size:15px;margin:0 0 8px;}
+.panel p{margin:0 0 10px;font-size:14px;}
+.panel p:last-child{margin-bottom:0;}
+
+/* --- 入口タイル ---------------------------------------------------------- */
+.tiles{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));margin:20px 0 8px;}
+.tile{
+  display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px;text-decoration:none;color:var(--ink);transition:.15s;position:relative;overflow:hidden;
+}
+.tile::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--amber);
+  transform:scaleY(0);transform-origin:top;transition:transform .18s;}
+.tile:hover{border-color:var(--line-strong);box-shadow:var(--shadow);transform:translateY(-1px);}
+.tile:hover::before{transform:scaleY(1);}
+.tile b{display:block;font-family:var(--serif);font-size:17px;margin-bottom:5px;}
+.tile span{display:block;font-size:12.5px;color:var(--muted);line-height:1.85;}
+.tile em{display:block;font-style:normal;font-family:var(--mono);font-size:12px;color:var(--amber-deep);
+  font-weight:700;margin-top:8px;}
+
+/* --- チップ（絞り込み・ジャンプ） ----------------------------------------- */
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 20px;}
+.chip{
+  display:inline-flex;align-items:center;gap:6px;padding:6px 12px;
+  border:1px solid var(--line-strong);border-radius:999px;background:var(--white);
+  font-size:12.5px;font-weight:600;color:var(--ink);text-decoration:none;cursor:pointer;
+  font-family:var(--sans);transition:.13s;
+}
+.chip:hover{border-color:var(--amber);color:var(--amber-deep);}
+.chip small{font-family:var(--mono);font-weight:400;color:var(--muted-2);font-size:11px;}
+.chip[aria-pressed="true"]{background:var(--indigo);border-color:var(--indigo);color:#fff;}
+.chip[aria-pressed="true"] small{color:#b9cadb;}
+
+/* --- 表 ------------------------------------------------------------------ */
+/* 横スクロールできることを示す影。JSなしで、端まで送ると自動で消える。
+   スマホでは表がほぼ必ず画面幅を超えるので、これが無いと「見切れている」としか見えない。
+   local の2層が中身と一緒に動き、scroll の2層が影として残る仕組み。 */
+.tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;
+  border:1px solid var(--line);border-radius:var(--radius);
+  background:
+    linear-gradient(to right,#fffdf8 30%,rgba(255,253,248,0)) left center/34px 100% no-repeat local,
+    linear-gradient(to left,#fffdf8 30%,rgba(255,253,248,0)) right center/34px 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%,rgba(28,27,25,.22),rgba(28,27,25,0)) left center/20px 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%,rgba(28,27,25,.22),rgba(28,27,25,0)) right center/20px 100% no-repeat scroll,
+    var(--card);}
+
+table.db{width:100%;border-collapse:collapse;font-size:13.5px;min-width:640px;}
+table.db th,table.db td{padding:11px 13px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line);}
+table.db thead th{
+  background:var(--indigo-soft);color:var(--indigo-deep);font-size:12px;font-weight:700;
+  white-space:nowrap;position:sticky;top:0;z-index:2;letter-spacing:.02em;
+}
+table.db tbody tr:last-child td{border-bottom:none;}
+table.db tbody tr:hover{background:var(--amber-soft);}
+table.db td.n{font-family:var(--mono);text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums;}
+table.db td.name{min-width:180px;}
+table.db td.name b{font-weight:700;}
+table.db a{color:var(--indigo);text-decoration:none;font-weight:600;}
+table.db a:hover{text-decoration:underline;}
+/* 列を詰めた版。760px幅（wrap--narrow）に7列は入りきらず横に見切れていたので、
+   購入導線を銘柄ページへ出し、数値列は colgroup で固定幅にして詰めている。 */
+/* table-layout:fixed にしないと colgroup の幅が「目安」扱いになり、
+   余った幅が数値列にも配られて 度数と容量のあいだが間延びする。 */
+table.db.db--tight{min-width:600px;font-size:13px;table-layout:fixed;}
+table.db.db--tight th,table.db.db--tight td{padding:9px 10px;}
+table.db td.w{white-space:nowrap;}      /* 「一般酒」が1文字ずつ縦に折れるのを防ぐ */
+/* 🔴 容量のように値が複数入る数値セルは折り返せるようにする。
+   nowrap のままだと「360ml / 600ml / 1,800ml」が列幅を超えて隣の価格欄に重なる。
+   数字そのものは分割されないよう、区切りのスラッシュのところで折る。 */
+table.db td.n--multi{white-space:normal;word-break:normal;overflow-wrap:break-word;}
+
+/* スマホ：表は必ず画面幅を超えるので、1列目（銘柄・酒造所）を貼り付けて
+   「どの行を見ているか」を見失わないようにする。これが無いと横に送った瞬間に迷子になる。
+   ⚠️ この指定は table.db.db--tight より**後ろ**に置くこと。
+      同じ詳細度なので、前に置くと min-width が上書きされない。 */
+@media(max-width:760px){
+  table.db.db--tight{min-width:700px;}
+  table.db td.name,table.db th:first-child{position:sticky;left:0;
+    box-shadow:1px 0 0 var(--line);}
+  table.db td.name{background:var(--card);z-index:1;}
+  table.db th:first-child{background:var(--indigo-soft);z-index:3;}
+}
+.sub{display:block;font-size:11px;color:var(--muted-2);line-height:1.7;margin-top:3px;}
+.sub a{font-weight:600;}
+.na{color:var(--muted-2);}
+
+/* 出典の原文引用（銘柄ページ）。要約せず原文を出すのがこのサイトの根拠になる */
+.quote{margin:0 0 14px;padding:14px 16px;background:var(--card);
+  border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:var(--radius);}
+.quote p{margin:0;font-size:13.5px;line-height:1.95;color:var(--ink-2);}
+.quote cite{display:block;font-style:normal;margin-top:9px;font-size:12px;color:var(--muted);}
+
+/* 縦書きの年数レール（古酒ページ） */
+.yrail{display:flex;align-items:center;gap:12px;margin:38px 0 14px;}
+.yrail b{font-family:var(--mono);font-size:30px;font-weight:700;color:var(--indigo);line-height:1;}
+.yrail b i{font-style:normal;font-size:14px;color:var(--muted);margin-left:2px;}
+.yrail hr{flex:1;border:none;border-top:1px solid var(--line-strong);margin:0;}
+.yrail span{font-family:var(--mono);font-size:12px;color:var(--muted);}
+
+/* --- 古酒バッジ（本サイトの signature） ----------------------------------- */
+.kv{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:700;
+  padding:3px 8px;border-radius:5px;white-space:nowrap;line-height:1.5;}
+.kv--full{background:#e7f1ea;color:var(--ok);border:1px solid #bcd8c6;}
+.kv--part{background:#f8ebe4;color:var(--warn);border:1px solid #e3c3b3;}
+.kv--none{background:#f0eee9;color:var(--unknown);border:1px solid var(--line);}
+.kv__bar{display:inline-block;width:26px;height:5px;border-radius:3px;background:#ddd6c8;
+  position:relative;overflow:hidden;}
+.kv__bar i{position:absolute;left:0;top:0;bottom:0;background:currentColor;border-radius:3px;}
+
+/* --- 出典バッジ ---------------------------------------------------------- */
+.src{display:inline-block;font-size:10px;font-weight:700;line-height:1.5;padding:2px 6px;
+  border:1px solid;border-radius:4px;vertical-align:1px;margin-left:5px;white-space:nowrap;}
+.src--official{color:var(--indigo);border-color:#b7c8d9;background:var(--indigo-soft);}
+.src--union{color:var(--amber-deep);border-color:#e0c9a4;background:var(--amber-soft);}
+.src--weak{color:var(--muted);border-color:var(--line-strong);background:#f2efe8;}
+
+/* --- データ充足度メーター（他サイトが持っていない透明性の可視化） ---------- */
+.cov{display:grid;grid-template-columns:auto 1fr auto;gap:9px 12px;align-items:center;
+  font-size:12.5px;margin:4px 0;}
+.cov__label{color:var(--muted);white-space:nowrap;}
+.cov__bar{height:7px;background:#e8e2d5;border-radius:4px;overflow:hidden;}
+.cov__bar i{display:block;height:100%;background:var(--indigo);border-radius:4px;}
+.cov__bar i.low{background:var(--amber);}
+.cov__val{font-family:var(--mono);font-size:12px;color:var(--ink-2);white-space:nowrap;}
+
+/* --- 定義リスト（蔵の基本情報） ------------------------------------------ */
+.facts{display:grid;grid-template-columns:auto 1fr;gap:0;border:1px solid var(--line);
+  border-radius:var(--radius);overflow:hidden;background:var(--card);}
+.facts dt{padding:11px 15px;background:var(--indigo-soft);color:var(--indigo-deep);
+  font-size:12.5px;font-weight:700;border-bottom:1px solid var(--line);white-space:nowrap;}
+.facts dd{padding:11px 15px;margin:0;font-size:13.5px;border-bottom:1px solid var(--line);
+  border-left:1px solid var(--line);line-height:1.85;}
+.facts dt:last-of-type,.facts dd:last-of-type{border-bottom:none;}
+@media(max-width:560px){
+  .facts{grid-template-columns:1fr;}
+  .facts dd{border-left:none;}
+  .facts dt{border-bottom:none;}
+}
+
+/* --- 購入導線 ------------------------------------------------------------ */
+.buy{margin:26px 0;padding:19px 21px;background:var(--amber-soft);
+  border:1px solid #e6d4b6;border-radius:var(--radius);scroll-margin-top:74px;}
+.buy h3{font-size:15px;margin:0 0 5px;}
+.buy p{font-size:12.5px;color:var(--ink-2);margin:0 0 13px;}
+.btns{display:flex;flex-wrap:wrap;gap:9px;}
+.btn{
+  display:inline-flex;align-items:center;gap:7px;padding:11px 19px;border-radius:7px;
+  font-size:13.5px;font-weight:700;text-decoration:none;color:#fff;transition:.13s;
+}
+.btn:hover{filter:brightness(1.07);transform:translateY(-1px);}
+.btn--rakuten{background:#bf0000;}
+.btn--amazon{background:#ff9900;color:#111;}
+/* 🔴 moshimo_link.py が出すクラス名は .btn ではなく .affiliate-btn / .affiliate-link。
+   ここが無いと購入ボタンが素のテキストリンクとして描画される（2026-08-31 に発覚）。
+   外部ブランドカラーはこの購入ボタンにだけ使う。UIの地には被せない（社長の指摘）。 */
+.affiliate-btn{
+  display:inline-flex;align-items:center;gap:7px;padding:11px 19px;border-radius:7px;
+  font-size:13.5px;font-weight:700;text-decoration:none;color:#fff;transition:.13s;
+}
+.affiliate-btn:hover{filter:brightness(1.07);transform:translateY(-1px);}
+.affiliate-btn--rakuten{background:#bf0000;}
+.affiliate-btn--amazon{background:#ff9900;color:#111;}
+.affiliate-link{color:var(--indigo);font-weight:600;text-decoration:none;white-space:nowrap;}
+.affiliate-link:hover{text-decoration:underline;}
+.lnk{font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap;}
+.lnk--rakuten{color:#bf0000;}
+.lnk--amazon{color:#b06800;}
+.pr{font-size:11px;color:var(--muted);margin:9px 0 0;}
+
+/* --- 記事本文 ------------------------------------------------------------ */
+.doc{font-size:15.5px;line-height:2.15;}
+.doc p{margin:0 0 18px;}
+.doc h3{font-size:17px;margin:32px 0 12px;color:var(--indigo);}
+.doc ul,.doc ol{margin:0 0 18px;padding-left:1.4em;}
+.doc li{margin-bottom:7px;}
+.doc blockquote{
+  margin:20px 0 6px;padding:16px 20px;background:var(--indigo-soft);
+  border-left:4px solid var(--indigo);border-radius:0 var(--radius) var(--radius) 0;
+  font-size:14.5px;line-height:2;color:var(--indigo-deep);
+}
+.doc blockquote+p{font-size:11.5px;color:var(--muted);margin:-2px 0 20px;}
+.doc table.db{font-size:13px;}
+.doc .tblwrap{margin:0 0 20px;}
+.doc strong{font-weight:700;}
+
+/* 🔴 記事HTML（guide_articles_*.py）は Gin-DB から持ち込んだクラス名を使っており、
+   泡盛DBのCSSに定義が無かった。そのため読みもの5本ぶんの
+   表11個が枠なしの素のtable、注意ボックス26個がただの段落として描画されていた
+   （2026-08-31 に発覚）。記事側のHTMLは触らず、ここで泡盛DBのデザインに寄せる。
+   --sub-2 も記事HTMLが参照している未定義の変数（--muted-2 と同じ色を当てる）。 */
+:root{--sub-2:#9b958b;}
+
+.doc .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 20px;
+  border:1px solid var(--line);border-radius:var(--radius);background:var(--card);}
+.doc table.spec-table{width:100%;border-collapse:collapse;font-size:13px;min-width:520px;}
+.doc table.spec-table th,.doc table.spec-table td{padding:10px 13px;text-align:left;
+  vertical-align:top;border-bottom:1px solid var(--line);line-height:1.85;}
+.doc table.spec-table th{background:var(--indigo-soft);color:var(--indigo-deep);
+  font-size:12px;font-weight:700;white-space:nowrap;}
+.doc table.spec-table tr:last-child td{border-bottom:none;}
+.doc table.spec-table td.num{font-family:var(--mono);text-align:right;white-space:nowrap;
+  font-variant-numeric:tabular-nums;}
+
+.doc .note-box{margin:0 0 20px;padding:15px 17px;background:var(--card);
+  border:1px solid var(--line);border-left:3px solid var(--indigo);border-radius:var(--radius);}
+.doc .note-box p{margin:0 0 9px;font-size:13.5px;line-height:1.95;}
+.doc .note-box ul,.doc .note-box ol{margin:0 0 9px;font-size:13.5px;}
+.doc .note-box>:last-child{margin-bottom:0;}
+.doc .note-box--warn{border-left-color:var(--amber);background:var(--amber-soft);}
+
+/* --- フッター ------------------------------------------------------------ */
+.ft{background:var(--indigo-deep);color:#c3d1e0;padding:44px 0 30px;margin-top:56px;font-size:13px;}
+.ft__grid{display:grid;gap:30px;grid-template-columns:1.5fr 1fr 1fr;}
+@media(max-width:720px){.ft__grid{grid-template-columns:1fr;}}
+.ft b{font-family:var(--serif);color:#fff;font-size:17px;display:block;margin-bottom:9px;}
+.ft p{margin:0;font-size:12px;line-height:1.95;color:#a8bacd;}
+.ft h4{font-size:12px;color:#fff;margin:0 0 9px;letter-spacing:.05em;font-family:var(--sans);font-weight:700;}
+.ft a{display:block;color:#c3d1e0;text-decoration:none;font-size:12.5px;padding:3px 0;}
+.ft a:hover{color:#fff;text-decoration:underline;}
+.ft__note{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);
+  font-size:11.5px;line-height:1.95;color:#93a7bc;}
+.ft__copy{margin-top:14px;font-size:11px;color:#7c92a9;}
+
+/* --- 20歳未満確認 -------------------------------------------------------- */
+.gate{position:fixed;inset:0;z-index:200;background:rgba(19,42,68,.97);color:#fff;
+  display:flex;align-items:center;justify-content:center;padding:24px;}
+.gate__box{max-width:420px;text-align:center;}
+.gate h2{font-size:21px;margin:0 0 14px;color:#fff;}
+.gate p{font-size:13.5px;line-height:1.95;color:#c9d7e5;margin:0 0 22px;}
+.gate__btns{display:flex;gap:11px;justify-content:center;}
+.gate button{padding:11px 26px;border-radius:7px;border:1px solid rgba(255,255,255,.35);
+  background:transparent;color:#fff;font-size:14px;font-weight:700;cursor:pointer;font-family:var(--sans);}
+.gate button.yes{background:var(--amber);border-color:var(--amber);}
+
+@media print{.hd,.ft,.buy,.gate{display:none;}}
+
+/* ===========================================================================
+   画像ヒーロー・データビジュアル（2026-08-31 追加）
+   画像はすべてVertex AIで生成したイメージ。実在の酒造所の建物は描いていない。
+   =========================================================================== */
+
+/* --- 画像つきヒーロー ----------------------------------------------------- */
+.phero{position:relative;min-height:clamp(300px,46vw,470px);display:flex;align-items:flex-end;
+  overflow:hidden;background:var(--indigo-deep);}
+.phero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  filter:saturate(.9) brightness(.72);}
+.phero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(19,42,68,.30) 0%,rgba(19,42,68,.55) 45%,rgba(19,42,68,.92) 100%);}
+.phero__body{position:relative;z-index:2;padding:46px 0 34px;color:#fff;width:100%;}
+.phero__kicker{font-size:11px;letter-spacing:.22em;color:#e0b579;font-weight:700;margin:0 0 10px;}
+.phero h1{font-size:clamp(27px,5vw,44px);line-height:1.34;margin:0 0 14px;
+  text-shadow:0 2px 24px rgba(0,0,0,.4);}
+.phero p{font-size:15px;line-height:2.05;color:#e2e9f1;max-width:46em;margin:0;
+  text-shadow:0 1px 12px rgba(0,0,0,.45);}
+.phero__credit{position:absolute;right:12px;bottom:8px;z-index:3;font-size:10px;
+  color:rgba(255,255,255,.62);letter-spacing:.04em;}
+.phero__stats{display:flex;flex-wrap:wrap;gap:24px;margin-top:22px;}
+.phero__stats b{display:block;font-family:var(--mono);font-size:28px;font-weight:700;color:#fff;line-height:1.1;}
+.phero__stats span{font-size:11px;color:#c2d2e2;letter-spacing:.04em;}
+
+/* 小さい画像バナー（蔵ページなど） */
+.banner{position:relative;height:190px;overflow:hidden;background:var(--indigo-deep);}
+.banner img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) brightness(.66);}
+.banner::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(19,42,68,.25),rgba(19,42,68,.9));}
+.banner__body{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:0 0 20px;color:#fff;}
+.banner__body .hero__kicker{margin-bottom:6px;}
+.banner__body h1{font-size:clamp(23px,4vw,34px);margin:0 0 4px;text-shadow:0 2px 20px rgba(0,0,0,.45);}
+.banner__body p{font-size:12.5px;color:#cfdae7;margin:0;}
+.banner__credit{position:absolute;right:12px;bottom:6px;z-index:3;font-size:10px;color:rgba(255,255,255,.6);}
+
+/* --- 島の帯（諸島の並びを模式的に示す） ---------------------------------- */
+/* 🔴 スマホでは帯が画面幅に収まらず、6島のうち3島しか見えていなかった。
+   横スクロールはできていたが、それが分からないので「切れている」ようにしか見えない。
+   表と同じスクロール影を出して、送れることを示す。 */
+.arch{border-radius:var(--radius);padding:26px 22px 18px;margin:26px 0;
+  overflow-x:auto;
+  background:
+    linear-gradient(to right,#132a44 30%,rgba(19,42,68,0)) left center/34px 100% no-repeat local,
+    linear-gradient(to left,#132a44 30%,rgba(19,42,68,0)) right center/34px 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%,rgba(0,0,0,.45),rgba(0,0,0,0)) left center/15px 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%,rgba(0,0,0,.45),rgba(0,0,0,0)) right center/15px 100% no-repeat scroll,
+    var(--indigo-deep);}
+.arch__note{color:#93a7bc;font-size:11.5px;margin:14px 0 0;line-height:1.8;}
+/* 帯は最低660px。それより狭い画面でだけスクロールの案内を出す */
+.arch__scroll{display:none;color:#e0b579;font-size:11.5px;margin:0 0 10px;font-weight:600;}
+@media(max-width:760px){.arch__scroll{display:block;position:sticky;left:0;}}
+.arch svg{display:block;min-width:660px;width:100%;height:auto;}
+.arch a text{fill:#dbe6f1;font-size:11px;font-family:var(--sans);}
+.arch a:hover circle{stroke:#e0b579;stroke-width:2.5;}
+.arch a:hover text{fill:#fff;}
+.arch .arch__n{fill:#fff;font-family:var(--mono);font-weight:700;font-size:13px;}
+
+/* --- 古酒のタイムライン --------------------------------------------------- */
+.tl{position:relative;margin:30px 0 10px;padding-left:78px;}
+.tl::before{content:"";position:absolute;left:52px;top:6px;bottom:6px;width:2px;
+  background:linear-gradient(180deg,var(--amber-soft),var(--amber) 30%,var(--indigo));}
+.tl__node{position:relative;margin-bottom:34px;}
+.tl__year{position:absolute;left:-78px;top:-4px;width:60px;text-align:right;
+  font-family:var(--mono);font-weight:700;font-size:22px;color:var(--indigo);line-height:1.2;}
+.tl__year i{display:block;font-style:normal;font-size:10.5px;color:var(--muted);font-weight:400;}
+.tl__node::before{content:"";position:absolute;left:-28px;top:6px;width:11px;height:11px;
+  border-radius:50%;background:var(--amber);border:2.5px solid var(--paper);
+  box-shadow:0 0 0 1px var(--amber);}
+.tl__head{display:flex;align-items:baseline;gap:10px;margin-bottom:9px;flex-wrap:wrap;}
+.tl__head b{font-family:var(--serif);font-size:16px;}
+.tl__head span{font-size:12px;color:var(--muted);font-family:var(--mono);}
+@media(max-width:600px){
+  .tl{padding-left:56px;}
+  .tl::before{left:34px;}
+  .tl__year{left:-56px;width:44px;font-size:18px;}
+  .tl__node::before{left:-27px;}
+}
+
+/* --- 度数のスケール（定規） ---------------------------------------------- */
+/* 両端に padding を入れないと、left:0% / left:100% の目盛りが
+   transform:translateX(-50%) のぶん（バー幅の半分＝13px）はみ出す。 */
+.scale{margin:26px 0 34px;padding:0 14px;}
+.scale__track{position:relative;height:56px;border-bottom:2px solid var(--line-strong);margin-bottom:4px;}
+.scale__tick{position:absolute;bottom:0;transform:translateX(-50%);text-align:center;}
+.scale__bar{width:26px;background:var(--indigo);border-radius:3px 3px 0 0;display:block;margin:0 auto;
+  transition:.15s;}
+.scale__tick:hover .scale__bar{background:var(--amber);}
+.scale__tick.is-hana .scale__bar{background:var(--amber-deep);}
+.scale__lbl{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11px;
+  color:var(--muted);}
+.scale__marks{position:relative;height:34px;}
+.scale__mark{position:absolute;transform:translateX(-50%);text-align:center;font-family:var(--mono);
+  font-size:11px;color:var(--indigo);text-decoration:none;font-weight:700;white-space:nowrap;}
+.scale__mark small{display:block;font-weight:400;color:var(--muted-2);font-size:10px;}
+.scale__mark:hover{color:var(--amber-deep);}
+
+/* --- 数字の帯（トップ） --------------------------------------------------- */
+.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:1px;
+  background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin:26px 0;}
+.figs div{background:var(--card);padding:18px 16px;}
+.figs b{display:block;font-family:var(--mono);font-size:26px;font-weight:700;color:var(--indigo);line-height:1.15;}
+.figs span{display:block;font-size:11.5px;color:var(--muted);margin-top:4px;line-height:1.7;}
+
+/* --- 画像つき地域カード --------------------------------------------------- */
+.rcards{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));margin:20px 0;}
+.rcard{position:relative;display:block;height:150px;border-radius:var(--radius);overflow:hidden;
+  text-decoration:none;color:#fff;background:var(--indigo-deep);}
+.rcard img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) brightness(.66);transition:.3s;}
+.rcard:hover img{transform:scale(1.05);filter:saturate(1) brightness(.72);}
+.rcard::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(19,42,68,.1),rgba(19,42,68,.85));}
+.rcard__body{position:absolute;left:16px;right:16px;bottom:13px;z-index:2;}
+.rcard__body b{font-family:var(--serif);font-size:17px;display:block;text-shadow:0 1px 12px rgba(0,0,0,.5);}
+.rcard__body span{font-size:11.5px;color:#cddaea;font-family:var(--mono);}
+
+/* --- 画像つき入口タイル（トップ） ---------------------------------------- */
+.itile{display:block;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;text-decoration:none;color:var(--ink);transition:.16s;}
+.itile:hover{border-color:var(--line-strong);box-shadow:var(--shadow);transform:translateY(-2px);}
+/* 🔴 __img / __body は <span> なので display:block を必ず指定する。
+   指定を落とすと inline のままになり、height:118px が効かず画像がカード全体を占め、
+   タイトルと説明文が overflow:hidden で切り落とされて「画像だけのタイル」になる。 */
+.itile__img{display:block;position:relative;height:118px;overflow:hidden;background:var(--indigo-deep);}
+.itile__img img{width:100%;height:100%;object-fit:cover;filter:saturate(.85) brightness(.78);transition:.3s;}
+.itile:hover .itile__img img{transform:scale(1.06);filter:saturate(1) brightness(.86);}
+.itile__img::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(19,42,68,.05),rgba(19,42,68,.55));}
+.itile__n{position:absolute;right:11px;bottom:8px;z-index:2;font-family:var(--mono);font-weight:700;
+  font-size:12px;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.6);}
+.itile__body{display:block;padding:15px 17px 17px;}
+.itile__body b{display:block;font-family:var(--serif);font-size:16.5px;margin-bottom:5px;}
+.itile__body span{display:block;font-size:12.5px;color:var(--muted);line-height:1.85;}

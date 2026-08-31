@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://awamori-db.example/sitemap.xml

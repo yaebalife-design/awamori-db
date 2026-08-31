@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>泡盛のカロリーと糖質｜度数から計算した早見表｜泡盛DB</title>
+<meta name="description" content="泡盛の糖質は0g（日本食品標準成分表）。カロリーはすべてアルコール由来で、度数だけで決まります。厚生労働省の式と文部科学省の換算係数で計算した度数別の早見表を載せています。">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/awamori.css?v=20260831g">
+<link rel="canonical" href="https://awamori-db.example/calorie.html">
+<meta property="og:site_name" content="泡盛DB">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://awamori-db.example/calorie.html">
+<meta property="og:title" content="泡盛のカロリーと糖質｜度数から計算した早見表｜泡盛DB">
+<meta property="og:description" content="泡盛の糖質は0g（日本食品標準成分表）。カロリーはすべてアルコール由来で、度数だけで決まります。厚生労働省の式と文部科学省の換算係数で計算した度数別の早見表を載せています。">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:image" content="https://awamori-db.example/assets/img/abv.webp">
+<meta name="twitter:card" content="summary_large_image">
+<script src="assets/awamori.js" defer></script>
+
+<script type="application/ld+json">{"@context": "https://schema.org/", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "トップ", "item": "https://awamori-db.example/index.html"}, {"@type": "ListItem", "position": 2, "name": "カロリーと糖質"}]}</script>
+</head>
+<body>
+<header class="hd">
+  <div class="wrap hd__in">
+    <a class="hd__logo" href="index.html"><b>泡盛DB</b><span>琉球泡盛データベース</span></a>
+    <button class="hd__burger" type="button" aria-expanded="false" aria-label="メニュー">☰</button>
+    <nav class="hd__nav">
+      <a href="find.html">絞り込んで探す</a>
+      <a href="koshu.html">古酒</a>
+      <a href="abv/index.html">度数</a>
+      <a href="hanazake.html">花酒</a>
+      <a href="tour.html">蔵見学</a>
+      <a href="distillery/index.html">酒造所</a>
+      <a href="guide/index.html">読みもの</a>
+    </nav>
+  </div>
+</header>
+<div class="phero">
+  <img class="phero__img" src="assets/img/abv.webp" alt="度数の違う泡盛を並べたイメージ" fetchpriority="high" width="1600" height="678">
+  <div class="phero__body"><div class="wrap">
+    <p class="phero__kicker">カロリーと糖質</p>
+    <h1>泡盛のカロリーは、度数だけで決まる</h1>
+    <p>泡盛（45度以下の単式蒸留焼酎）は<strong>糖質を含まない</strong>（日本食品標準成分表の「単式蒸留しょうちゅう」は炭水化物0g）。たんぱく質も脂質も0なので、<strong>カロリーはすべてアルコール由来</strong>になる。つまり銘柄が違っても、<strong>度数が同じならカロリーも同じ</strong>だ。</p>
+    <div class="phero__stats"><div><b>0g</b><span>糖質（100gあたり）</span></div><div><b>7</b><span>アルコール1gのkcal</span></div><div><b>617</b><span>度数を確認できた銘柄</span></div></div>
+  </div></div>
+  <span class="phero__credit">画像はイメージ</span>
+</div>
+<nav class="crumb wrap" aria-label="パンくず"><ol><li><a href="index.html">トップ</a></li><li>カロリーと糖質</li></ol></nav>
+<main class="wrap">
+<p class="lede">
+  「泡盛は太る／太らない」という話ではなく、<strong>公表されている数値から計算するとどうなるか</strong>だけを載せる。
+  使った式と定数、その出典はページの最後に原文つきで置いた。
+</p>
+
+<div class="panel panel--note">
+  <h3>先に結論</h3>
+  <p><strong>糖質は0g。</strong>文部科学省の日本食品標準成分表（八訂・増補2023年）で、泡盛が当たる
+  <strong>16015「単式蒸留しょうちゅう」</strong>は可食部100gあたり
+  <strong>炭水化物 0g</strong>、たんぱく質0g、脂質0g、アルコール20.5g、
+  エネルギー144kcal と記載されている。</p>
+  <p><strong>カロリーはすべてアルコール由来。</strong>
+  アルコール20.5g × 換算係数7kcal/g ＝
+  143.5kcal で、
+  成分表のエネルギー144kcalとほぼ一致する。
+  <strong>アルコールの量だけでエネルギーの説明がついてしまう</strong>ということだ。</p>
+  <p>だから<strong>銘柄別のカロリー表には意味がない。</strong>同じ30度なら、どの酒造所のどの銘柄でも
+  100mlあたり168kcalになる。このページが度数別の表を主役にしているのはそのためだ。
+  <span class="sub">確認日 2026年8月31日</span></p>
+</div>
+
+<section style="margin:38px 0;">
+<h2 class="h-sec">計算のしかた</h2>
+<p style="font-size:14px;line-height:2;">
+  ① 純アルコール量(g) ＝ <b>量(ml) × 度数 ÷ 100 × 0.8</b>（厚生労働省の式。0.8はアルコールの比重）<br>
+  ② エネルギー(kcal) ＝ <b>純アルコール量(g) × 7</b>（文部科学省のエネルギー換算係数）<br>
+  → まとめると <b>100mlあたりのkcal ＝ 度数 × 5.6</b>
+</p>
+<p style="font-size:12.5px;color:var(--muted);line-height:1.9;">
+  ⚠️ よく使われる「アルコール1gは7.1kcal」は古い係数で、
+  日本食品標準成分表2020年版（八訂）の換算係数は<strong>7kcal/g</strong>。ここでは成分表の値を使っている。<br>
+  ⚠️ 成分表の値は可食部<strong>100g</strong>あたり、この表は<strong>100ml</strong>あたり。単位が違う。<br>
+  ⚠️ 水やお湯、炭酸水で割ってもアルコールの量は変わらないので、この数値も変わらない。
+  ジュースなどで割った場合は、割り材のぶんが加わる。
+</p>
+</section>
+
+<section style="margin:38px 0;">
+<h2 class="h-sec">度数別の早見表</h2>
+<p style="font-size:12.5px;color:var(--muted);margin:-6px 0 12px;line-height:1.9;">
+  掲載している泡盛のうち、公式サイト（一部は沖縄県酒造組合）で度数を確認できた
+  <strong>617銘柄</strong>に出てくる度数を並べた。
+  いちばん右は、その度数で<strong>純アルコール40g</strong>に達する量。
+</p>
+<p style="font-size:12px;color:var(--muted);margin:-6px 0 12px;line-height:1.9;">
+  🔴 <strong>45度を超えるものは糖質0gの根拠が別になる。</strong>
+  酒税法第3条第10号の「単式蒸留焼酎」は<strong>45度以下</strong>と決まっているので、
+  花酒（60度）や高濃度の原酒は品目が「原料用アルコール」になり、成分表の
+  「単式蒸留しょうちゅう」には当たらない。エネルギーは蒸留酒として同じ式で計算できるが、
+  糖質はこのサイトでは「—」と表示して、0gとは書いていない。
+</p>
+<div class="tblwrap"><table class="db db--tight">
+  <colgroup><col style="width:66px"><col style="width:96px"><col style="width:76px">
+    <col style="width:92px"><col style="width:104px"><col style="width:116px">
+    <col style="width:118px"><col style="width:84px"></colgroup>
+  <thead><tr><th style="text-align:right;">度数</th>
+    <th style="text-align:right;">純アルコール<br>100mlあたり</th><th style="text-align:right;">100ml</th><th style="text-align:right;">1合 180ml</th><th style="text-align:right;">四合瓶 720ml</th><th style="text-align:right;">一升瓶 1,800ml</th>
+    <th style="text-align:right;">純アルコール<br>40gになる量</th>
+    <th style="text-align:right;">銘柄数</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="n"><b>10度</b></td>
+      <td class="n">8.0g</td>
+<td class="n">56</td><td class="n">101</td><td class="n">403</td><td class="n">1,008</td>
+      <td class="n">500ml</td>
+      <td class="n">6</td>
+    </tr>
+    <tr>
+      <td class="n"><b>11度</b></td>
+      <td class="n">8.8g</td>
+<td class="n">62</td><td class="n">111</td><td class="n">444</td><td class="n">1,109</td>
+      <td class="n">455ml</td>
+      <td class="n">2</td>
+    </tr>
+    <tr>
+      <td class="n"><b>12度</b></td>
+      <td class="n">9.6g</td>
+<td class="n">67</td><td class="n">121</td><td class="n">484</td><td class="n">1,210</td>
+      <td class="n">417ml</td>
+      <td class="n">5</td>
+    </tr>
+    <tr>
+      <td class="n"><b>14度</b></td>
+      <td class="n">11.2g</td>
+<td class="n">78</td><td class="n">141</td><td class="n">564</td><td class="n">1,411</td>
+      <td class="n">357ml</td>
+      <td class="n">1</td>
+    </tr>
+    <tr>
+      <td class="n"><b>15度</b></td>
+      <td class="n">12.0g</td>
+<td class="n">84</td><td class="n">151</td><td class="n">605</td><td class="n">1,512</td>
+      <td class="n">333ml</td>
+      <td class="n">4</td>
+    </tr>
+    <tr>
+      <td class="n"><b>20度</b></td>
+      <td class="n">16.0g</td>
+<td class="n">112</td><td class="n">202</td><td class="n">806</td><td class="n">2,016</td>
+      <td class="n">250ml</td>
+      <td class="n">14</td>
+    </tr>
+    <tr>
+      <td class="n"><b>25度</b></td>
+      <td class="n">20.0g</td>
+<td class="n">140</td><td class="n">252</td><td class="n">1,008</td><td class="n">2,520</td>
+      <td class="n">200ml</td>
+      <td class="n">90</td>
+    </tr>
+    <tr>
+      <td class="n"><b>27度</b></td>
+      <td class="n">21.6g</td>
+<td class="n">151</td><td class="n">272</td><td class="n">1,089</td><td class="n">2,722</td>
+      <td class="n">185ml</td>
+      <td class="n">2</td>
+    </tr>
+    <tr>
+      <td class="n"><b>29度</b></td>
+      <td class="n">23.2g</td>
+<td class="n">162</td><td class="n">292</td><td class="n">1,169</td><td class="n">2,923</td>
+      <td class="n">172ml</td>
+      <td class="n">2</td>
+    </tr>
+    <tr>
+      <td class="n"><b>30度</b></td>
+      <td class="n">24.0g</td>
+<td class="n">168</td><td class="n">302</td><td class="n">1,210</td><td class="n">3,024</td>
+      <td class="n">167ml</td>
+      <td class="n">181</td>
+    </tr>
+    <tr>
+      <td class="n"><b>34度</b></td>
+      <td class="n">27.2g</td>
+<td class="n">190</td><td class="n">343</td><td class="n">1,371</td><td class="n">3,427</td>
+      <td class="n">147ml</td>
+      <td class="n">2</td>
+    </tr>
+    <tr>
+      <td class="n"><b>35度</b></td>
+      <td class="n">28.0g</td>
+<td class="n">196</td><td class="n">353</td><td class="n">1,411</td><td class="n">3,528</td>
+      <td class="n">143ml</td>
+      <td class="n">46</td>
+    </tr>
+    <tr>
+      <td class="n"><b>36度</b></td>
+      <td class="n">28.8g</td>
+<td class="n">202</td><td class="n">363</td><td class="n">1,452</td><td class="n">3,629</td>
+      <td class="n">139ml</td>
+      <td class="n">2</td>
+    </tr>
+    <tr>
+      <td class="n"><b>38度</b></td>
+      <td class="n">30.4g</td>
+<td class="n">213</td><td class="n">383</td><td class="n">1,532</td><td class="n">3,830</td>
+      <td class="n">132ml</td>
+      <td class="n">1</td>
+    </tr>
+    <tr>
+      <td class="n"><b>39度</b></td>
+      <td class="n">31.2g</td>
+<td class="n">218</td><td class="n">393</td><td class="n">1,572</td><td class="n">3,931</td>
+      <td class="n">128ml</td>
+      <td class="n">4</td>
+    </tr>
+    <tr>
+      <td class="n"><b>40度</b></td>
+      <td class="n">32.0g</td>
+<td class="n">224</td><td class="n">403</td><td class="n">1,613</td><td class="n">4,032</td>
+      <td class="n">125ml</td>
+      <td class="n">58</td>
+    </tr>
+    <tr>
+      <td class="n"><b>41度</b></td>
+      <td class="n">32.8g</td>
+<td class="n">230</td><td class="n">413</td><td class="n">1,653</td><td class="n">4,133</td>
+      <td class="n">122ml</td>
+      <td class="n">7</td>
+    </tr>
+    <tr>
+      <td class="n"><b>42度</b></td>
+      <td class="n">33.6g</td>
+<td class="n">235</td><td class="n">423</td><td class="n">1,693</td><td class="n">4,234</td>
+      <td class="n">119ml</td>
+      <td class="n">15</td>
+    </tr>
+    <tr>
+      <td class="n"><b>43度</b></td>
+      <td class="n">34.4g</td>
+<td class="n">241</td><td class="n">433</td><td class="n">1,734</td><td class="n">4,334</td>
+      <td class="n">116ml</td>
+      <td class="n">160</td>
+    </tr>
+    <tr>
+      <td class="n"><b>44度</b></td>
+      <td class="n">35.2g</td>
+<td class="n">246</td><td class="n">444</td><td class="n">1,774</td><td class="n">4,435</td>
+      <td class="n">114ml</td>
+      <td class="n">45</td>
+    </tr>
+    <tr>
+      <td class="n"><b>45度</b></td>
+      <td class="n">36.0g</td>
+<td class="n">252</td><td class="n">454</td><td class="n">1,814</td><td class="n">4,536</td>
+      <td class="n">111ml</td>
+      <td class="n">1</td>
+    </tr>
+    <tr>
+      <td class="n"><b>46度</b></td>
+      <td class="n">36.8g</td>
+<td class="n">258</td><td class="n">464</td><td class="n">1,855</td><td class="n">4,637</td>
+      <td class="n">109ml</td>
+      <td class="n">1</td>
+    </tr>
+    <tr>
+      <td class="n"><b>47度</b></td>
+      <td class="n">37.6g</td>
+<td class="n">263</td><td class="n">474</td><td class="n">1,895</td><td class="n">4,738</td>
+      <td class="n">106ml</td>
+      <td class="n">2</td>
+    </tr>
+    <tr>
+      <td class="n"><b>50度</b></td>
+      <td class="n">40.0g</td>
+<td class="n">280</td><td class="n">504</td><td class="n">2,016</td><td class="n">5,040</td>
+      <td class="n">100ml</td>
+      <td class="n">2</td>
+    </tr>
+    <tr>
+      <td class="n"><b>51度</b></td>
+      <td class="n">40.8g</td>
+<td class="n">286</td><td class="n">514</td><td class="n">2,056</td><td class="n">5,141</td>
+      <td class="n">98ml</td>
+      <td class="n">1</td>
+    </tr>
+    <tr>
+      <td class="n"><b>52度</b></td>
+      <td class="n">41.6g</td>
+<td class="n">291</td><td class="n">524</td><td class="n">2,097</td><td class="n">5,242</td>
+      <td class="n">96ml</td>
+      <td class="n">1</td>
+    </tr>
+    <tr>
+      <td class="n"><b>53度</b></td>
+      <td class="n">42.4g</td>
+<td class="n">297</td><td class="n">534</td><td class="n">2,137</td><td class="n">5,342</td>
+      <td class="n">94ml</td>
+      <td class="n">1</td>
+    </tr>
+    <tr>
+      <td class="n"><b>59度</b></td>
+      <td class="n">47.2g</td>
+<td class="n">330</td><td class="n">595</td><td class="n">2,379</td><td class="n">5,947</td>
+      <td class="n">85ml</td>
+      <td class="n">1</td>
+    </tr>
+    <tr>
+      <td class="n"><b>60度</b></td>
+      <td class="n">48.0g</td>
+<td class="n">336</td><td class="n">605</td><td class="n">2,419</td><td class="n">6,048</td>
+      <td class="n">83ml</td>
+      <td class="n">13</td>
+    </tr>
+    <tr>
+      <td class="n"><b>80度</b></td>
+      <td class="n">64.0g</td>
+<td class="n">448</td><td class="n">806</td><td class="n">3,226</td><td class="n">8,064</td>
+      <td class="n">62ml</td>
+      <td class="n">1</td>
+    </tr>
+  </tbody>
+</table></div>
+<p style="font-size:12px;color:var(--muted);margin-top:10px;">
+  公式に度数の記載がない銘柄が36件ある。推測で埋めずに、この表からは外している。
+</p>
+</section>
+
+<div class="panel">
+  <h3>純アルコール40g・20gという目安について</h3>
+  <p>厚生労働省 e-ヘルスネットは、健康日本21（第二次）における
+  「生活習慣病のリスクを高める量」を
+  <strong>「一日当たりの純アルコール摂取量が男性40ｇ以上、女性20ｇ以上の者」</strong>
+  と定義している（原文のまま）。上の表のいちばん右の列は、これを泡盛の量に置き換えたものだ。
+  たとえば43度なら約116mlで40gに達する。</p>
+  <p><strong>20歳未満の方の飲酒は法律で禁止されている。</strong>
+  妊娠中・授乳期の飲酒は控え、飲酒運転は絶対にしないこと。
+  体質や体調による差が大きいので、ここに書いたのはあくまで公表された数値の計算であり、
+  健康上の助言ではない。</p>
+</div>
+
+<section style="margin:38px 0;">
+<h2 class="h-sec">酒造所ごとの代表銘柄で見る</h2>
+<p style="font-size:12.5px;color:var(--muted);margin:-6px 0 12px;line-height:1.9;">
+  各酒造所の代表銘柄を、公式で確認できた度数で計算した。
+  銘柄名から、その銘柄のページ（容量ごとのカロリーつき）へ移動できる。
+</p>
+<div class="tblwrap"><table class="db db--tight">
+  <colgroup><col><col style="width:150px"><col style="width:64px">
+    <col style="width:118px"><col style="width:118px"><col style="width:74px"></colgroup>
+  <thead><tr><th>代表銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th>
+    <th style="text-align:right;">100mlあたり<br>kcal</th>
+    <th style="text-align:right;">100mlあたり<br>純アルコール</th>
+    <th style="text-align:right;">糖質</th></tr></thead>
+  <tbody>
+    <tr>
+      <td class="name"><a href="brand/nakijin-c823305b.html">美しき古里</a></td>
+      <td><a href="distillery/nakijin.html">今帰仁酒造</a>
+        <span class="sub">本島北部</span></td>
+      <td class="n">20度</td>
+      <td class="n">112</td>
+      <td class="n">16.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/iheya-09a62ea5.html">照島</a></td>
+      <td><a href="distillery/iheya.html">伊平屋酒造所</a>
+        <span class="sub">本島北部</span></td>
+      <td class="n">30度</td>
+      <td class="n">168</td>
+      <td class="n">24.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/izena-11d6f916.html">常盤</a></td>
+      <td><a href="distillery/izena.html">伊是名酒造所</a>
+        <span class="sub">本島北部</span></td>
+      <td class="n">30度</td>
+      <td class="n">168</td>
+      <td class="n">24.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/tsukayama-ba2cde2b.html">國華</a></td>
+      <td><a href="distillery/tsukayama.html">津嘉山酒造所</a>
+        <span class="sub">本島北部</span></td>
+      <td class="n">30度</td>
+      <td class="n">168</td>
+      <td class="n">24.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/ryusen-23d345fc.html">龍泉3年古酒</a></td>
+      <td><a href="distillery/ryusen.html">龍泉酒造</a>
+        <span class="sub">本島北部</span></td>
+      <td class="n">43度</td>
+      <td class="n">241</td>
+      <td class="n">34.4g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/helios-0284dbc3.html">くら（オーク樽熟成三年古酒）</a></td>
+      <td><a href="distillery/helios.html">ヘリオス酒造</a>
+        <span class="sub">本島北部</span></td>
+      <td class="n">25度</td>
+      <td class="n">140</td>
+      <td class="n">20.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/yanbaru-af76e83e.html">まるた</a></td>
+      <td><a href="distillery/yanbaru.html">やんばる酒造</a>
+        <span class="sub">本島北部</span></td>
+      <td class="n">30度</td>
+      <td class="n">168</td>
+      <td class="n">24.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/sakimoto-ed36a6d5.html">咲元復刻ラベル</a></td>
+      <td><a href="distillery/sakimoto.html">咲元酒造</a>
+        <span class="sub">本島北部</span></td>
+      <td class="n">25度</td>
+      <td class="n">140</td>
+      <td class="n">20.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/onna-b034d6ce.html">萬座</a></td>
+      <td><a href="distillery/onna.html">恩納酒造所</a>
+        <span class="sub">本島北部</span></td>
+      <td class="n">30度</td>
+      <td class="n">168</td>
+      <td class="n">24.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/yamakawa-d534fde2.html">珊瑚礁</a></td>
+      <td><a href="distillery/yamakawa.html">山川酒造</a>
+        <span class="sub">本島北部</span></td>
+      <td class="n">30度</td>
+      <td class="n">168</td>
+      <td class="n">24.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/matsufuji-dac23492.html">松藤 粗濾過</a></td>
+      <td><a href="distillery/matsufuji.html">松藤（崎山酒造廠）</a>
+        <span class="sub">本島北部</span></td>
+      <td class="n">44度</td>
+      <td class="n">246</td>
+      <td class="n">35.2g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/kin-72a4c1d5.html">龍</a></td>
+      <td><a href="distillery/kin.html">金武酒造</a>
+        <span class="sub">本島北部</span></td>
+      <td class="n">30度</td>
+      <td class="n">168</td>
+      <td class="n">24.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/kusunosato-73ebac8a.html">古酒の郷 5年古酒</a></td>
+      <td><a href="distillery/kusunosato.html">琉球泡盛古酒の郷</a>
+        <span class="sub">本島中部</span></td>
+      <td class="n">40度</td>
+      <td class="n">224</td>
+      <td class="n">32.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/kamimura-6a21a0d0.html">暖流SHIP</a></td>
+      <td><a href="distillery/kamimura.html">神村酒造</a>
+        <span class="sub">本島中部</span></td>
+      <td class="n">30度</td>
+      <td class="n">168</td>
+      <td class="n">24.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/chatanchoro-9ffce5a7.html">北谷長老 一般酒</a></td>
+      <td><a href="distillery/chatanchoro.html">北谷長老酒造工場</a>
+        <span class="sub">本島中部</span></td>
+      <td class="n">30度</td>
+      <td class="n">168</td>
+      <td class="n">24.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/shinzato-a57a1611.html">かりゆし（リニューアル）</a></td>
+      <td><a href="distillery/shinzato.html">新里酒造</a>
+        <span class="sub">本島中部</span></td>
+      <td class="n">30度</td>
+      <td class="n">168</td>
+      <td class="n">24.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/higa-528a872d.html">残波ホワイト（ザンシロ）</a></td>
+      <td><a href="distillery/higa.html">比嘉酒造</a>
+        <span class="sub">本島中部</span></td>
+      <td class="n">25度</td>
+      <td class="n">140</td>
+      <td class="n">20.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/kamiya-8006c84e.html">南光</a></td>
+      <td><a href="distillery/kamiya.html">神谷酒造所</a>
+        <span class="sub">那覇・南部</span></td>
+      <td class="n">30度</td>
+      <td class="n">168</td>
+      <td class="n">24.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/uehara-ca66f254.html">琉球泡盛「南都 神泉」</a></td>
+      <td><a href="distillery/uehara.html">上原酒造</a>
+        <span class="sub">那覇・南部</span></td>
+      <td class="n">30度</td>
+      <td class="n">168</td>
+      <td class="n">24.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/masahiro-5523800f.html">まさひろ 仕次酒</a></td>
+      <td><a href="distillery/masahiro.html">まさひろ酒造</a>
+        <span class="sub">那覇・南部</span></td>
+      <td class="n">44度</td>
+      <td class="n">246</td>
+      <td class="n">35.2g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/ishikawa-50f13c59.html">玉友 甕仕込10年古酒</a></td>
+      <td><a href="distillery/ishikawa.html">石川酒造場</a>
+        <span class="sub">那覇・南部</span></td>
+      <td class="n">35度</td>
+      <td class="n">196</td>
+      <td class="n">28.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/chuko-fe42982a.html">忠孝15年古酒</a></td>
+      <td><a href="distillery/chuko.html">忠孝酒造</a>
+        <span class="sub">那覇・南部</span></td>
+      <td class="n">40度</td>
+      <td class="n">224</td>
+      <td class="n">32.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/tsuhako-19a6700f.html">太平</a></td>
+      <td><a href="distillery/tsuhako.html">津波古酒造</a>
+        <span class="sub">那覇・南部</span></td>
+      <td class="n">30度</td>
+      <td class="n">168</td>
+      <td class="n">24.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/kumesen-22f88624.html">久米仙 一升瓶</a></td>
+      <td><a href="distillery/kumesen.html">久米仙酒造</a>
+        <span class="sub">那覇・南部</span></td>
+      <td class="n">43度</td>
+      <td class="n">241</td>
+      <td class="n">34.4g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/miyazato-76da1be8.html">春雨ブルー</a></td>
+      <td><a href="distillery/miyazato.html">宮里酒造所</a>
+        <span class="sub">那覇・南部</span></td>
+      <td class="n">43度</td>
+      <td class="n">241</td>
+      <td class="n">34.4g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/okishukyo-3dec3f5d.html">海乃邦</a></td>
+      <td><a href="distillery/okishukyo.html">沖縄県酒造協同組合</a>
+        <span class="sub">那覇・南部</span></td>
+      <td class="n">43度</td>
+      <td class="n">241</td>
+      <td class="n">34.4g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/zuisen-d873b480.html">瑞泉新酒</a></td>
+      <td><a href="distillery/zuisen.html">瑞泉酒造</a>
+        <span class="sub">那覇・南部</span></td>
+      <td class="n">30度</td>
+      <td class="n">168</td>
+      <td class="n">24.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/mizuho-1a0bbf8d.html">瑞穂 熟成三年古酒</a></td>
+      <td><a href="distillery/mizuho.html">瑞穂酒造</a>
+        <span class="sub">那覇・南部</span></td>
+      <td class="n">43度</td>
+      <td class="n">241</td>
+      <td class="n">34.4g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/shikina-2bce711f.html">時雨</a></td>
+      <td><a href="distillery/shikina.html">識名酒造</a>
+        <span class="sub">那覇・南部</span></td>
+      <td class="n">43度</td>
+      <td class="n">241</td>
+      <td class="n">34.4g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/yoneshima-47395e4a.html">久米島</a></td>
+      <td><a href="distillery/yoneshima.html">米島酒造</a>
+        <span class="sub">久米島</span></td>
+      <td class="n">43度</td>
+      <td class="n">241</td>
+      <td class="n">34.4g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/kumejima-kumesen-48a9b18a.html">久米島の久米仙</a></td>
+      <td><a href="distillery/kumejima-kumesen.html">久米島の久米仙</a>
+        <span class="sub">久米島</span></td>
+      <td class="n">30度</td>
+      <td class="n">168</td>
+      <td class="n">24.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/miyanohana-511e6bbc.html">宮の華</a></td>
+      <td><a href="distillery/miyanohana.html">宮の華</a>
+        <span class="sub">宮古</span></td>
+      <td class="n">30度</td>
+      <td class="n">168</td>
+      <td class="n">24.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/tokuyama-5d3ad777.html">ゆら</a></td>
+      <td><a href="distillery/tokuyama.html">渡久山酒造</a>
+        <span class="sub">宮古</span></td>
+      <td class="n">25度</td>
+      <td class="n">140</td>
+      <td class="n">20.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/taragawa-c8b5d92a.html">多良川</a></td>
+      <td><a href="distillery/taragawa.html">多良川</a>
+        <span class="sub">宮古</span></td>
+      <td class="n">30度</td>
+      <td class="n">168</td>
+      <td class="n">24.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/okinohikari-a07bc329.html">30度沖之光</a></td>
+      <td><a href="distillery/okinohikari.html">沖之光酒造</a>
+        <span class="sub">宮古</span></td>
+      <td class="n">30度</td>
+      <td class="n">168</td>
+      <td class="n">24.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/ikema-1f20dc3d.html">瑞光</a></td>
+      <td><a href="distillery/ikema.html">池間酒造</a>
+        <span class="sub">宮古</span></td>
+      <td class="n">44度</td>
+      <td class="n">246</td>
+      <td class="n">35.2g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/kikunotsuyu-51ff81a6.html">菊之露akari（あかり）</a></td>
+      <td><a href="distillery/kikunotsuyu.html">菊之露酒造</a>
+        <span class="sub">宮古</span></td>
+      <td class="n">25度</td>
+      <td class="n">140</td>
+      <td class="n">20.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/donan-7af16b77.html">どなん30度ブラックボトル</a></td>
+      <td><a href="distillery/donan.html">どなん酒造</a>
+        <span class="sub">八重山</span></td>
+      <td class="n">30度</td>
+      <td class="n">168</td>
+      <td class="n">24.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/sakimoto-yonaguni-6db6ad9b.html">与那国</a></td>
+      <td><a href="distillery/sakimoto-yonaguni.html">崎元酒造所</a>
+        <span class="sub">八重山</span></td>
+      <td class="n">43度</td>
+      <td class="n">241</td>
+      <td class="n">34.4g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/irinamihira-8d2a3449.html">舞富名</a></td>
+      <td><a href="distillery/irinamihira.html">入波平酒造</a>
+        <span class="sub">八重山</span></td>
+      <td class="n">30度</td>
+      <td class="n">168</td>
+      <td class="n">24.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/ikehara-3ff44926.html">白百合</a></td>
+      <td><a href="distillery/ikehara.html">池原酒造</a>
+        <span class="sub">八重山</span></td>
+      <td class="n">30度</td>
+      <td class="n">168</td>
+      <td class="n">24.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/seifuku-1ef0cd96.html">請福 石垣島定番</a></td>
+      <td><a href="distillery/seifuku.html">請福酒造</a>
+        <span class="sub">八重山</span></td>
+      <td class="n">30度</td>
+      <td class="n">168</td>
+      <td class="n">24.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/takamine-0170be77.html">於茂登（おもと）</a></td>
+      <td><a href="distillery/takamine.html">髙嶺酒造所</a>
+        <span class="sub">八重山</span></td>
+      <td class="n">30度</td>
+      <td class="n">168</td>
+      <td class="n">24.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/yaesen-5f3cb33c.html">八重泉</a></td>
+      <td><a href="distillery/yaesen.html">八重泉酒造</a>
+        <span class="sub">八重山</span></td>
+      <td class="n">30度</td>
+      <td class="n">168</td>
+      <td class="n">24.0g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/tamanaha-ae257e1d.html">玉の露 一升瓶</a></td>
+      <td><a href="distillery/tamanaha.html">玉那覇酒造所</a>
+        <span class="sub">八重山</span></td>
+      <td class="n">43度</td>
+      <td class="n">241</td>
+      <td class="n">34.4g</td>
+      <td class="n">0g</td>
+    </tr>
+    <tr>
+      <td class="name"><a href="brand/hateruma-3b425e2c.html">泡波</a></td>
+      <td><a href="distillery/hateruma.html">波照間酒造所</a>
+        <span class="sub">八重山</span></td>
+      <td class="n">30度</td>
+      <td class="n">168</td>
+      <td class="n">24.0g</td>
+      <td class="n">0g</td>
+    </tr>
+  </tbody>
+</table></div><p style="font-size:12.5px;color:var(--muted);margin-top:10px;">仲間酒造 は公式に度数の記載がある銘柄を確認できていないため、この表に載せていません。推測では埋めていません。</p>
+</section>
+
+<section style="margin:38px 0;">
+<h2 class="h-sec">度数から探す</h2>
+<div class="chips">
+  <a class="chip" href="abv/index.html">度数から探す</a>
+  <a class="chip" href="find.html">条件で絞り込む</a>
+  <a class="chip" href="koshu.html">古酒から探す</a>
+  <a class="chip" href="hanazake.html">花酒（60度）</a>
+</div>
+</section>
+
+<section style="margin:38px 0;">
+<h2 class="h-sec">このページで使った数値の出典</h2>
+<p style="font-size:12.5px;color:var(--muted);margin:-6px 0 12px;line-height:1.9;">
+  計算に使った定数はすべて官公庁の一次ソースで確認したものです（2026年8月31日確認）。
+  数値は要約せず、原文を添えています。</p>
+<ul style="font-size:13px;line-height:1.9;padding-left:1.2em;"><li><b>純アルコール量の計算式（比重0.8）</b><br>厚生労働省 e-ヘルスネット「飲酒量の単位」<br><a href="https://kennet.mhlw.go.jp/information/information/alcohol/a-02-001.html" target="_blank" rel="noopener">https://kennet.mhlw.go.jp/information/information/alcohol/a-02-001.html</a><br><span class="sub">原文：酒の量(mL) × 度数または% / 100 × 比重 = 純アルコール量(g)</span></li><li><b>アルコールのエネルギー換算係数 7kcal/g</b><br>文部科学省 食品成分データベース「エネルギー」（日本食品標準成分表2020年版）<br><a href="https://fooddb.mext.go.jp/nutman/nutman_02.html" target="_blank" rel="noopener">https://fooddb.mext.go.jp/nutman/nutman_02.html</a><br><span class="sub">原文：アルコール：29 kJ/g ／ 7 kcal/g</span></li><li><b>泡盛が属する食品の成分値（炭水化物0g）</b><br>文部科学省 食品成分データベース 16015 単式蒸留しょうちゅう（日本食品標準成分表（八訂）増補2023年）<br><a href="https://fooddb.mext.go.jp/details/details.pl?ITEM_NO=16_16015_7" target="_blank" rel="noopener">https://fooddb.mext.go.jp/details/details.pl?ITEM_NO=16_16015_7</a><br><span class="sub">原文：可食部100gあたり エネルギー144kcal／炭水化物0g／アルコール20.5g</span></li><li><b>生活習慣病のリスクを高める飲酒量</b><br>厚生労働省 e-ヘルスネット「健康日本21（第二次）におけるアルコール対策」<br><a href="https://kennet.mhlw.go.jp/information/information/alcohol/a-06-002.html" target="_blank" rel="noopener">https://kennet.mhlw.go.jp/information/information/alcohol/a-06-002.html</a><br><span class="sub">原文：一日当たりの純アルコール摂取量が男性40ｇ以上、女性20ｇ以上の者</span></li></ul>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft__grid">
+      <div>
+        <b>泡盛DB</b>
+        <p>沖縄県酒造組合が公開する47の酒造所（協同組合2つを含む）と、その泡盛を横断して調べられるデータベースです。
+        度数・容量・古酒年数は各酒造所の公式サイトで確認したものだけを掲載し、
+        公式に記載がない項目は「未確認」と表示しています。</p>
+      </div>
+      <div>
+        <h4>探す</h4>
+        <a href="find.html">条件で絞り込む</a>
+        <a href="koshu.html">古酒の年数から</a>
+        <a href="abv/index.html">度数から</a>
+        <a href="hanazake.html">花酒（60度）</a>
+        <a href="tour.html">蔵見学ができる酒造所</a>
+        <a href="calorie.html">カロリーと糖質</a>
+        <a href="furusato.html">ふるさと納税</a>
+      </div>
+      <div>
+        <h4>サイトについて</h4>
+        <a href="distillery/index.html">酒造所一覧</a>
+        <a href="guide/index.html">読みもの</a>
+        <a href="about.html">このサイトについて</a>
+        <a href="disclaimer.html">免責事項</a>
+        <a href="privacy.html">プライバシーポリシー</a>
+      </div>
+    </div>
+    <p class="ft__note">
+      掲載している度数・容量・価格・受賞歴・見学情報は、各酒造所の公式サイト等で確認した時点のものです。
+      法令・規約・返礼品の内容は変わることがあります。最新の情報は各出典でご確認ください。<br>
+      <strong>20歳未満の方の飲酒は法律で禁止されています。</strong>妊娠中や授乳期の飲酒はお控えください。飲酒運転は絶対にやめましょう。
+    </p>
+    <p class="ft__copy">&copy; 泡盛DB</p>
+  </div>
+</footer>
+</body>
+</html>
