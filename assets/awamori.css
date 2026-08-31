@@ -571,3 +571,16 @@ table.db td.n--multi{white-space:normal;word-break:normal;overflow-wrap:break-wo
 .doc section[id]{scroll-margin-top:76px;}
 html{scroll-behavior:smooth;}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}}
+
+/* 計測オプトアウトの状態表示（?ga=off / ?ga=on のときだけ出る） */
+.ga-note{
+  position:fixed;left:50%;bottom:18px;transform:translateX(-50%);
+  z-index:60;max-width:calc(100% - 32px);
+  padding:11px 18px;border-radius:999px;
+  background:var(--indigo-deep);color:#fff;
+  font-size:12.5px;line-height:1.6;font-weight:500;
+  box-shadow:0 4px 20px rgba(19,42,68,.3);
+  opacity:1;transition:opacity .5s ease;
+}
+.ga-note--off{background:var(--amber-deep);}
+.ga-note.is-out{opacity:0;}

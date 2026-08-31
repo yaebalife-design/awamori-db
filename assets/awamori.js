@@ -59,3 +59,25 @@
     });
   });
 })();
+
+/* 計測オプトアウトの状態表示
+   ?ga=off / ?ga=on で来たときだけ、効いたかどうかを画面で知らせる。
+   実際の切り替えは head 内のスクリプトが gtag.js より先に済ませている。
+   ここは「効いたことが社長に見える」ためだけの表示。 */
+(function () {
+  var s = location.search;
+  if (s.indexOf('ga=off') === -1 && s.indexOf('ga=on') === -1) return;
+  var off;
+  try { off = localStorage.getItem('adb_noga') === '1'; } catch (e) { off = null; }
+  var el = document.createElement('div');
+  el.className = 'ga-note' + (off ? ' ga-note--off' : '');
+  el.setAttribute('role', 'status');
+  el.textContent = off === null
+    ? 'このブラウザでは設定を保存できません（プライベートモードの可能性）'
+    : off
+      ? 'このブラウザからのアクセスを計測しません（解除は ?ga=on）'
+      : 'このブラウザの計測を再開しました';
+  document.body.appendChild(el);
+  setTimeout(function () { el.classList.add('is-out'); }, 4200);
+  setTimeout(function () { el.remove(); }, 5000);
+})();
