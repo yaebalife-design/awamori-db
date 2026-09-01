@@ -680,3 +680,10 @@ html{scroll-behavior:smooth;}
   width:6px;height:6px;border-radius:50%;background:var(--amber);
 }
 .keypts__list strong{color:var(--ink);font-weight:700;}
+
+/* 出典として生のURLを見せている箇所がある（読者が自分で検証できるようにするため）。
+   🔴 URLは途中で改行できないので、そのままだとモバイルで画面からはみ出す。
+   実際に calorie.html が 390px 画面で 414px になり横スクロールしていた（2026/09/02）。
+   URLらしいリンクテキストだけ、どこでも折り返してよいことにする。
+   日本語の本文には効かせない（変な位置で折れるため）。 */
+a[href^="http"]{overflow-wrap:anywhere;}
