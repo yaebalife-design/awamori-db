@@ -299,17 +299,30 @@ table.db td.n--multi{white-space:normal;word-break:normal;overflow-wrap:break-wo
 .pr{font-size:11px;color:var(--muted);margin:9px 0 0;}
 
 /* --- 記事本文 ------------------------------------------------------------ */
-.doc{font-size:15.5px;line-height:2.15;}
-.doc p{margin:0 0 18px;}
-.doc h3{font-size:17px;margin:32px 0 12px;color:var(--indigo);}
-.doc ul,.doc ol{margin:0 0 18px;padding-left:1.4em;}
-.doc li{margin-bottom:7px;}
+/* 記事本文。
+   🔴 2026/09/01 社長「記事をもっと読みやすく」。直した点：
+   ・条文の引用が全部「塗りつぶしの箱」で、1記事に26個並ぶと画面が箱だらけになり
+     どこが本文でどこが引用か分からなかった → 塗りをやめ、罫線と字下げで示す
+   ・本文をわずかに大きくし、行間を詰めすぎないようにした
+   ・セクションの間隔をCSS側で持ち、リズムを作れるようにした */
+.doc{font-size:16px;line-height:2.1;}
+.doc p{margin:0 0 20px;}
+.doc h3{font-size:17px;margin:34px 0 12px;color:var(--indigo);}
+.doc ul,.doc ol{margin:0 0 20px;padding-left:1.4em;}
+.doc li{margin-bottom:8px;}
+.doc__sec{margin:46px 0;}
+.doc__sec:first-child{margin-top:32px;}
+
+/* 条文・公式表記の引用。本文より一段引いて見せる（箱で埋めない） */
 .doc blockquote{
-  margin:20px 0 6px;padding:16px 20px;background:var(--indigo-soft);
-  border-left:4px solid var(--indigo);border-radius:0 var(--radius) var(--radius) 0;
-  font-size:14.5px;line-height:2;color:var(--indigo-deep);
+  margin:24px 0 4px;padding:3px 0 3px 22px;
+  background:none;border-left:3px solid var(--amber);border-radius:0;
+  font-size:14.5px;line-height:2.05;color:var(--ink-2);
 }
-.doc blockquote+p{font-size:11.5px;color:var(--muted);margin:-2px 0 20px;}
+.doc blockquote p{margin:0 0 12px;}
+.doc blockquote>:last-child{margin-bottom:0;}
+/* 引用の直後の段落＝出典表記。引用と同じ位置に字下げして対応関係を見せる */
+.doc blockquote+p{font-size:11.5px;color:var(--muted-2);margin:0 0 26px;padding-left:22px;}
 .doc table.db{font-size:13px;}
 .doc .tblwrap{margin:0 0 20px;}
 .doc strong{font-weight:700;}
@@ -586,3 +599,27 @@ html{scroll-behavior:smooth;}
 }
 .ga-note--off{background:var(--amber-deep);}
 .ga-note.is-out{opacity:0;}
+
+/* 記事冒頭の「この記事でわかること」
+   本文が2,300〜4,300字あり条文の引用も多いので、読む前に要点を渡す。
+   目次(.toc)が藍なのに対してこちらは琥珀にして、役割の違いを色で分ける。 */
+.keypts{
+  margin:24px 0 10px;padding:17px 20px 15px;
+  background:var(--amber-soft);
+  border:1px solid var(--line);border-left:3px solid var(--amber);
+  border-radius:8px;
+}
+.keypts__h{
+  margin:0 0 10px;font-family:var(--serif);font-weight:700;font-size:14px;
+  color:var(--amber-deep);
+}
+.keypts__list{list-style:none;margin:0;padding:0;display:grid;gap:9px;}
+.keypts__list li{
+  position:relative;padding-left:20px;
+  font-size:13.5px;line-height:1.95;color:var(--ink-2);
+}
+.keypts__list li::before{
+  content:"";position:absolute;left:4px;top:.72em;
+  width:6px;height:6px;border-radius:50%;background:var(--amber);
+}
+.keypts__list strong{color:var(--ink);font-weight:700;}
