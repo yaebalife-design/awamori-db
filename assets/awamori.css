@@ -305,13 +305,27 @@ table.db td.n--multi{white-space:normal;word-break:normal;overflow-wrap:break-wo
      どこが本文でどこが引用か分からなかった → 塗りをやめ、罫線と字下げで示す
    ・本文をわずかに大きくし、行間を詰めすぎないようにした
    ・セクションの間隔をCSS側で持ち、リズムを作れるようにした */
-.doc{font-size:16px;line-height:2.1;}
-.doc p{margin:0 0 20px;}
-.doc h3{font-size:17px;margin:34px 0 12px;color:var(--indigo);}
-.doc ul,.doc ol{margin:0 0 20px;padding-left:1.4em;}
-.doc li{margin-bottom:8px;}
-.doc__sec{margin:46px 0;}
-.doc__sec:first-child{margin-top:32px;}
+/* 🔴 2026/09/01 社長「記事が見づらい」。実測して原因を特定した：
+     ・1行が48文字あった（日本語は35〜45字が読みやすいとされる）→ 42em で頭打ちに
+     ・段落の下余白20pxが行間33.6pxより**狭かった**。段落の切れ目が行間に埋もれ、
+       文字の壁に見えていた → 行間よりはっきり広く取る
+     ・文字色がほぼ真っ黒で長文だと強すぎた → わずかに和らげる
+   表とスクロール領域は幅を絞らない（データは広いほうが読める）。 */
+.doc{font-size:16px;line-height:2.1;color:#262420;}
+.doc p,.doc ul,.doc ol,.doc blockquote,.doc .note-box{max-width:42em;}
+.doc p{margin:0 0 32px;}
+.doc h3{font-size:17px;margin:40px 0 14px;color:var(--indigo);}
+.doc ul,.doc ol{margin:0 0 32px;padding-left:1.4em;}
+.doc li{margin-bottom:10px;}
+.doc li>p:last-child{margin-bottom:0;}
+.doc__sec{margin:0 0 62px;}
+.doc__sec:first-child{margin-top:34px;}
+/* セクションの通し番号。13項目ある記事で「いま何番を読んでいるか」を示す */
+.doc__num{
+  margin:0 0 6px;font-family:var(--mono);font-size:11.5px;font-weight:700;
+  letter-spacing:.14em;color:var(--amber);
+}
+.doc__sec>.h-sec{margin-bottom:20px;}
 
 /* 条文・公式表記の引用。本文より一段引いて見せる（箱で埋めない） */
 .doc blockquote{
