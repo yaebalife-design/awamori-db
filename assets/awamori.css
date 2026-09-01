@@ -463,6 +463,12 @@ table.db td.n--multi{white-space:normal;word-break:normal;overflow-wrap:break-wo
 /* 🔴 スマホでは帯が画面幅に収まらず、6島のうち3島しか見えていなかった。
    横スクロールはできていたが、それが分からないので「切れている」ようにしか見えない。
    表と同じスクロール影を出して、送れることを示す。 */
+/* 47蔵の分布図。
+   🔴 2026/09/02 社長「ここも質素、裏を海と島の画像でよくない？」
+   紺一色の上に円が並ぶだけだったので、海と島の写真を敷いた。
+   ・写真は scroll 固定。local にすると横スクロールで背景まで流れてしまう
+   ・写真の上に藍の膜を重ねて暗さを揃える。円と文字の可読性を落とさないため
+   ・スクロールの端を示す影（既存）は写真より前面に残す */
 .arch{border-radius:var(--radius);padding:26px 22px 18px;margin:26px 0;
   overflow-x:auto;
   background:
@@ -470,6 +476,11 @@ table.db td.n--multi{white-space:normal;word-break:normal;overflow-wrap:break-wo
     linear-gradient(to left,#132a44 30%,rgba(19,42,68,0)) right center/34px 100% no-repeat local,
     radial-gradient(farthest-side at 0 50%,rgba(0,0,0,.45),rgba(0,0,0,0)) left center/15px 100% no-repeat scroll,
     radial-gradient(farthest-side at 100% 50%,rgba(0,0,0,.45),rgba(0,0,0,0)) right center/15px 100% no-repeat scroll,
+    /* 上は薄く（島と海を見せる）、下は濃く（注記の文字を読ませる） */
+    linear-gradient(rgba(19,42,68,.42) 0%,rgba(19,42,68,.58) 45%,rgba(19,42,68,.88) 100%) center/cover no-repeat scroll,
+    /* url() は awamori.css からの相対。ページの階層に関係なく解決される。
+       HTML側からCSS変数で渡すと assets/assets/... と二重になる（実際にやって失敗した） */
+    url(img/islands.webp) center/cover no-repeat scroll,
     var(--indigo-deep);}
 .arch__note{color:#93a7bc;font-size:11.5px;margin:14px 0 0;line-height:1.8;}
 /* 帯は最低660px。それより狭い画面でだけスクロールの案内を出す */
