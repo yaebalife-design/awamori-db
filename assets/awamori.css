@@ -687,3 +687,15 @@ html{scroll-behavior:smooth;}
    URLらしいリンクテキストだけ、どこでも折り返してよいことにする。
    日本語の本文には効かせない（変な位置で折れるため）。 */
 a[href^="http"]{overflow-wrap:anywhere;}
+
+/* 一覧の表の中のリンクのタップ領域。
+   🔴 モバイルで実測したら、行は115〜216pxもあるのにリンク自体は19pxしかなかった
+      （2026/09/02）。指で押しにくいうえ、隣の行を誤爆しやすい。
+   行はすでに高いので、リンクを inline-block にして上下に余白を入れれば
+   **表を1pxも縦に伸ばさずに**タップ領域だけ広げられる。
+   PCではホバーで判別できるので、狭い画面のときだけ効かせる。 */
+@media(max-width:700px){
+  table.db tbody a{display:inline-block;padding-block:8px;}
+  /* セル内で改行された2つ目以降のリンクが行間を広げすぎないようにする */
+  table.db tbody td .sub a{padding-block:4px;}
+}
