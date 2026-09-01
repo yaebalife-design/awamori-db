@@ -101,7 +101,12 @@ h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.45;margin:0;}
   border-left:4px solid var(--amber);
 }
 .h-sub{font-size:16px;margin:26px 0 10px;color:var(--indigo);}
-.lede{font-size:16px;line-height:2.05;color:var(--ink-2);margin:0 0 20px;}
+/* 🔴 2026/09/01 社長「間が詰まりすぎじゃね」。
+   実測したらパンくずとリードの間隔が **0px** だった（main に上余白が無かった）。
+   本文より一段大きくして、記事の入口だと分かるようにもした。 */
+main{padding-top:30px;}
+main.wrap--narrow{padding-top:26px;}
+.lede{font-size:17px;line-height:2.15;color:var(--ink-2);margin:0 0 32px;max-width:42em;}
 
 /* --- ヒーロー ------------------------------------------------------------ */
 .hero{
