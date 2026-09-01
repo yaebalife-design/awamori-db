@@ -244,6 +244,8 @@ table.db td.n--multi{white-space:normal;word-break:normal;overflow-wrap:break-wo
 .src--weak{color:var(--muted);border-color:var(--line-strong);background:#f2efe8;}
 
 /* --- データ充足度メーター（他サイトが持っていない透明性の可視化） ---------- */
+/* 🔴 全行をまとめて1つのグリッドに載せる。1行ずつ独立させると、ラベルの文字数で
+   バーの土台の幅が変わり、同じ 9/14 でも長さが違って見える（2026/09/01 修正）。 */
 .cov{display:grid;grid-template-columns:auto 1fr auto;gap:9px 12px;align-items:center;
   font-size:12.5px;margin:4px 0;}
 .cov__label{color:var(--muted);white-space:nowrap;}
