@@ -89,7 +89,9 @@ a{color:var(--indigo);}
 .hd__nav a[aria-current]{background:var(--amber);color:#fff;}
 .hd__burger{display:none;margin-left:auto;background:none;border:1px solid rgba(255,255,255,.3);
   color:#eef2f7;border-radius:6px;padding:6px 9px;cursor:pointer;}
-@media(max-width:860px){
+/* ナビが8項目（ふるさと納税を追加・2026/09/02）になり、実測で990px以下では
+   2段に折れる（ロゴ186＋検索170＋ナビ554px＋余白）。折れるくらいならメニューに畳む。 */
+@media(max-width:1000px){
   /* タップ領域はApple/Google推奨の44px前後を確保する（2026/09/02 監査：
      バーガー約31px・ナビ項目約34px・チップ約31pxで軒並み下回っていた） */
   .hd__burger{display:block;padding:13px 16px;font-size:15px;line-height:1;}
