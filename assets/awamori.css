@@ -699,3 +699,140 @@ a[href^="http"]{overflow-wrap:anywhere;}
   /* セル内で改行された2つ目以降のリンクが行間を広げすぎないようにする */
   table.db tbody td .sub a{padding-block:4px;}
 }
+
+/* --- 図解 -----------------------------------------------------------------
+   記事の中で「文章で説明しているが、形にした方が一目で分かる」ところにだけ置く。
+   飾りの図は作らない。数字はすべて data/ の実データから計算していて、
+   check_article_facts.py が本文の数字とのズレを見張っている。
+
+   すべて HTML+CSS で描く（数直線だけ SVG）。理由は3つ:
+     ・画像だと文字が拡大でボケる／検索に引っかからない／読み上げに乗らない
+     ・棒の長さを % で持てるので、データが変わっても崩れない
+     ・SVG の <text> はモバイルで潰れるので、文字はできるだけ HTML 側に置く
+--------------------------------------------------------------------------- */
+.fig{margin:26px 0;border:1px solid var(--line);border-radius:var(--radius);
+  background:var(--card);overflow:hidden;}
+.fig__h{display:flex;align-items:baseline;gap:9px;padding:13px 16px 0;}
+.fig__n{flex:none;font-family:var(--mono);font-size:10px;letter-spacing:.09em;
+  color:#fff;background:var(--indigo);padding:3px 7px;border-radius:3px;}
+.fig__t{font-size:13px;font-weight:700;color:var(--indigo-deep);line-height:1.65;}
+.fig__b{padding:15px 16px 16px;}
+.fig__note{padding:0 16px 14px;font-size:11.5px;color:var(--muted);line-height:1.85;}
+.fig__note b{color:var(--ink-2);}
+/* 🔴 図の中の余白はここで確定させる。
+   記事本文の p には `.doc p` で margin が付いていて、詳細度(0,1,1)が
+   `.band__row`(0,1,0) より高い。個別クラスだけ書いても負けて間延びする
+   （2026/09/02、図が縦に伸びていた原因）。同じ詳細度にして後勝ちで上書きする。 */
+.fig p{margin:0;}
+
+/* 横棒グラフ ---------------------------------------------------------------
+   ラベル・棒・値の3列グリッド。棒の列だけ 1fr にして幅を揃える
+   （揃っていないと「長さが比較できない」ので図の意味が無くなる）。 */
+.gbar{display:grid;grid-template-columns:auto 1fr auto;gap:6px 11px;align-items:center;}
+.gbar__l{font-family:var(--mono);font-size:12px;color:var(--ink-2);white-space:nowrap;
+  text-align:right;}
+.gbar__t{background:#ebe5d8;border-radius:3px;height:14px;}
+.gbar__t i{display:block;height:100%;background:var(--indigo);border-radius:3px;}
+.gbar__v{font-family:var(--mono);font-size:11.5px;color:var(--muted);white-space:nowrap;}
+/* 本文で名指ししている行を目立たせる。強調は琥珀に統一 */
+.gbar__t i.hi{background:var(--amber);}
+.gbar__l.hi{color:var(--amber-deep);font-weight:700;}
+.gbar__v.hi{color:var(--amber-deep);font-weight:700;}
+.gbar__t i.mute{background:var(--muted-2);}
+
+/* 100%を塗り分ける帯 ------------------------------------------------------- */
+.band{display:flex;height:36px;border-radius:5px;overflow:hidden;}
+.band>span{display:flex;align-items:center;justify-content:center;
+  font-size:11.5px;font-weight:700;color:#fff;letter-spacing:.02em;
+  white-space:nowrap;overflow:hidden;}
+.band--sm{height:28px;}
+.fig .band__row{margin:0 0 6px;font-size:12px;color:var(--ink-2);font-weight:700;}
+/* 2ブロック目（現行の帯など）は前の帯から離す */
+.fig .band+.band__row{margin-top:16px;}
+.fig .band+.calc,.fig .band+.legend,.fig .band__leg+.calc{margin-top:11px;}
+/* 帯が細くて中に文字が入らないときの逃げ場。切って読めなくするより外に出す */
+.band__leg{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:8px;
+  font-size:11.5px;color:var(--ink-2);}
+.band__leg span{display:inline-flex;align-items:center;gap:6px;}
+.band__leg i{flex:none;width:11px;height:11px;border-radius:2px;}
+.b-ok{background:var(--ok);}
+.b-warn{background:var(--warn);}
+.b-ink{background:var(--indigo);}
+.b-amber{background:var(--amber);}
+.b-gray{background:var(--unknown);}
+.b-mid{background:var(--indigo-mid);}
+
+/* 47蔵を1マスずつ並べる図 --------------------------------------------------
+   「47のうち13」を文章で読むより、13マス色が違う方が早い。 */
+.waf{display:flex;flex-wrap:wrap;gap:4px;}
+/* 🔴 ここに background を書かないこと。`.waf i`(0,1,1) は色クラス `.b-amber`(0,1,0) より
+   詳細度が高いので、既定色を書くとマスが全部その色で塗りつぶされる
+   （2026/09/02、47マスが全部グレーになっていた原因）。色は必ずクラスで渡す。 */
+.waf i{width:16px;height:16px;border-radius:3px;}
+.legend{display:flex;flex-wrap:wrap;gap:5px 15px;margin-top:12px;
+  font-size:11.5px;color:var(--ink-2);}
+.legend span{display:inline-flex;align-items:center;gap:6px;}
+.legend i{flex:none;width:11px;height:11px;border-radius:2px;}
+
+/* 年表 --------------------------------------------------------------------- */
+.tline{list-style:none;margin:0;padding:0 0 0 20px;border-left:2px solid var(--line-strong);}
+.tline li{position:relative;padding:0 0 14px 4px;}
+.tline li:last-child{padding-bottom:0;}
+.tline li::before{content:"";position:absolute;left:-27px;top:5px;width:11px;height:11px;
+  border-radius:50%;background:var(--paper);border:2px solid var(--line-strong);}
+.tline li.on::before{background:var(--amber);border-color:var(--amber);}
+.tline b{display:block;font-family:var(--mono);font-size:12px;color:var(--indigo-deep);
+  letter-spacing:.02em;}
+.tline span{display:block;font-size:12.5px;color:var(--ink-2);line-height:1.8;margin-top:2px;}
+
+/* 工程の流れ --------------------------------------------------------------- */
+.flow{display:grid;gap:11px;}
+.flow__r{display:grid;grid-template-columns:auto 1fr;gap:11px;align-items:center;}
+.flow__n{font-size:11.5px;font-weight:700;color:var(--indigo-deep);white-space:nowrap;
+  background:var(--indigo-soft);padding:6px 10px;border-radius:5px;text-align:center;}
+.flow__s{display:flex;flex-wrap:wrap;gap:6px;align-items:center;}
+.flow__s em{font-style:normal;font-size:12px;padding:6px 11px;border-radius:5px;
+  background:var(--paper);border:1px solid var(--line);color:var(--ink-2);}
+.flow__s em.key{background:var(--amber-soft);border-color:var(--amber);
+  color:var(--amber-deep);font-weight:700;}
+/* その工程が「無い」ことを示す。打ち消し線＋破線の枠で、
+   有る工程（実線の枠）とひと目で区別できるようにする */
+.flow__s s{text-decoration:line-through;color:var(--muted);font-size:12px;
+  padding:6px 11px;border-radius:5px;border:1px dashed var(--line-strong);}
+
+/* 計算式 ------------------------------------------------------------------- */
+.calc{display:flex;flex-wrap:wrap;align-items:center;gap:7px 9px;
+  font-family:var(--mono);font-size:13px;color:var(--ink);}
+/* 一般形と実例を縦に揃えて対応させる。列数は項数ぶんインラインで指定 */
+.calcs{display:grid;justify-content:start;justify-items:center;}
+.calcs>u,.calcs>s{width:100%;text-align:center;}
+/* 携帯では式が画面幅に収まらない。折り返すと上下の対応が崩れるので、
+   ここだけ横スクロールさせる（ページ全体は横に動かさない）。 */
+.calc-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:3px;}
+.calc u{text-decoration:none;background:var(--indigo-soft);color:var(--indigo-deep);
+  padding:5px 9px;border-radius:4px;font-weight:700;}
+.calc u.out{background:var(--amber-soft);color:var(--amber-deep);}
+.calc s{text-decoration:none;color:var(--muted);font-size:12px;}
+.calc__note{margin:11px 0 0;font-size:11.5px;color:var(--muted);line-height:1.85;}
+
+/* 数直線（度数の境界） ----------------------------------------------------- */
+/* 藍の中間色。数直線で「低い度数→高い度数」を濃淡で示すために足した。
+   🔴 --ok / --warn は古酒バッジ（全量古酒かどうか）の意味を持つ色なので、
+      度数の区分に流用しない。同じ色が2つの意味を持つと読者が誤読する。 */
+:root{--indigo-mid:#6d8fb0;}
+.numline{width:100%;height:auto;display:block;}
+.fig .numline+.gbar{margin-top:16px;}
+.numline text{font-family:var(--sans);fill:var(--ink-2);}
+.numline .nl-t{font-size:9px;fill:var(--muted);}
+.numline .nl-k{font-size:9.5px;font-weight:700;}
+
+@media(max-width:640px){
+  .fig__h{padding:11px 13px 0;}
+  .fig__b{padding:13px 13px 14px;}
+  .fig__note{padding:0 13px 12px;}
+  .gbar{gap:5px 8px;}
+  .gbar__l{font-size:11px;}
+  .gbar__v{font-size:10.5px;}
+  .waf i{width:13px;height:13px;}
+  .flow__r{grid-template-columns:1fr;gap:6px;}
+}
