@@ -99,6 +99,20 @@
     });
   }
 
+  /* --- 銘柄ページの固定CTAバー ------------------------------------------
+     最初の購入ボックス（#buy）が画面の上に流れたら下端にバーを出す。
+     まだ買う気を測っていない冒頭では出さない（うるさいだけ）。 */
+  document.addEventListener("DOMContentLoaded", function () {
+    var bar = document.querySelector(".ctabar");
+    var buyEl = document.getElementById("buy");
+    if (!bar || !buyEl || !("IntersectionObserver" in window)) return;
+    new IntersectionObserver(function (es) {
+      var e = es[0];
+      /* #buy が視界の上に消えたときだけ出す（下にあるうちは出さない） */
+      bar.hidden = !(e.boundingClientRect.bottom < 0 && !e.isIntersecting);
+    }).observe(buyEl);
+  });
+
   /* --- 現在地をナビに反映 ------------------------------------------------ */
   document.addEventListener("DOMContentLoaded", function () {
     var here = location.pathname.replace(/index\.html$/, "").replace(/\/$/, "");

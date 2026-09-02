@@ -887,3 +887,30 @@ a[href^="http"]{overflow-wrap:anywhere;}
 /* koshu.html の年数見出しの横に出す、専用ページへの案内 */
 .tl__more{font-size:12px;color:var(--amber-deep);text-decoration:none;font-weight:700;}
 .tl__more:hover{text-decoration:underline;}
+
+/* ふるさと納税セル：主ポータルをボタンで1つだけ前に出す。
+   同格リンク6本の羅列は「どれを押せばいいか決められない」（2026/09/02 監査） */
+.fbtn{display:inline-block;padding:8px 14px;border-radius:7px;
+  background:var(--indigo);color:#fff !important;text-decoration:none;
+  font-size:12.5px;font-weight:700;}
+.fbtn:hover{background:var(--indigo-deep);}
+.fmore{margin-top:7px;}
+.fmore summary{font-size:11.5px;color:var(--muted);cursor:pointer;}
+.fmore p{margin:6px 0 0;font-size:12px;line-height:2;}
+
+/* 📱 銘柄ページのスマホ固定CTAバー。
+   最初の購入ボックスを通過したあとだけ表示（制御は awamori.js）。
+   スマホでは購入ボックスが1.5〜2画面上に流れてしまうため（2026/09/02 監査）。 */
+.ctabar{display:none;}
+@media(max-width:700px){
+  .ctabar{position:fixed;left:0;right:0;bottom:0;z-index:90;
+    display:flex;align-items:center;gap:8px;
+    background:var(--indigo-deep);padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+    box-shadow:0 -4px 16px rgba(19,42,68,.25);}
+  .ctabar[hidden]{display:none;}
+  .ctabar a{flex:1;text-align:center;background:var(--amber);color:#fff;
+    text-decoration:none;font-size:13.5px;font-weight:700;
+    padding:11px 10px;border-radius:8px;}
+  .ctabar__pr{font-size:9px;color:#8fa5bc;}
+}
+@media print{.ctabar{display:none;}}
