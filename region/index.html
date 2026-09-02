@@ -4,18 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="-5wjhv4IpfEJj_h6v5UEWNO8HnlC5YGOIewMCSUG4YA">
-<title>地域から探す｜泡盛DB</title>
+<title>沖縄の泡盛を地域から探す — 6エリア・47酒造所｜泡盛DB</title>
 <meta name="description" content="沖縄の泡盛47酒造所を6地域から探せます。本島北部・中部・那覇南部・久米島・宮古・八重山。地域ごとに銘柄数・度数の中央値・古酒の割合・公式価格の中央値・創業年の分布まで出しています。">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap">
-<link rel="stylesheet" href="../assets/awamori.css?v=20260902j">
+<link rel="stylesheet" href="../assets/awamori.css?v=20260902m">
 <link rel="canonical" href="https://awamori-db.com/region/">
 <meta property="og:site_name" content="泡盛DB">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://awamori-db.com/region/">
-<meta property="og:title" content="地域から探す｜泡盛DB">
+<meta property="og:title" content="沖縄の泡盛を地域から探す — 6エリア・47酒造所｜泡盛DB">
 <meta property="og:description" content="沖縄の泡盛47酒造所を6地域から探せます。本島北部・中部・那覇南部・久米島・宮古・八重山。地域ごとに銘柄数・度数の中央値・古酒の割合・公式価格の中央値・創業年の分布まで出しています。">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://awamori-db.com/assets/img/islands.webp">
@@ -29,22 +29,25 @@
 <body>
 <header class="hd">
   <div class="wrap hd__in">
-    <a class="hd__logo" href="../index.html"><b>泡盛DB</b><span>琉球泡盛データベース</span></a>
-    <button class="hd__burger" type="button" aria-expanded="false" aria-label="メニュー">☰</button>
+    <a class="hd__logo" href="../"><b>泡盛DB</b><span>琉球泡盛データベース</span></a>
+    <form class="hd__search" action="../find" role="search">
+      <input type="search" name="q" placeholder="銘柄・酒造所名" aria-label="銘柄名・酒造所名で検索">
+    </form>
+    <button class="hd__burger" type="button" aria-expanded="false" aria-label="メニュー">☰ メニュー</button>
     <nav class="hd__nav">
-      <a href="../find.html">絞り込んで探す</a>
-      <a href="../koshu.html">古酒</a>
-      <a href="../abv/index.html">度数</a>
-      <a href="../hanazake.html">花酒</a>
-      <a href="../tour.html">蔵見学</a>
-      <a href="../distillery/index.html">酒造所</a>
-      <a href="../guide/index.html">読みもの</a>
+      <a href="../find">絞り込んで探す</a>
+      <a href="../koshu">古酒</a>
+      <a href="../abv/">度数</a>
+      <a href="../hanazake">花酒</a>
+      <a href="../tour">蔵見学</a>
+      <a href="../distillery/">酒造所</a>
+      <a href="../guide/">読みもの</a>
     </nav>
   </div>
 </header>
-<nav class="crumb wrap" aria-label="パンくず"><ol><li><a href="../index.html">トップ</a></li><li>地域から探す</li></ol></nav>
+<nav class="crumb wrap" aria-label="パンくず"><ol><li><a href="../">トップ</a></li><li>地域から探す</li></ol></nav>
 <main class="wrap">
-<h1 class="h-page">地域から探す</h1>
+<h1 class="h-page">沖縄の泡盛を地域から探す — 6エリア・47酒造所</h1>
 <p class="lede">沖縄県酒造組合のエリア区分に合わせて6つに分けている。
 本島だけでなく、久米島・宮古・八重山の離島にも酒造所がある。
 もっとも西の与那国島と、もっとも北の伊平屋島は、同じ県のなかで大きく離れている。</p>
@@ -54,37 +57,37 @@
     <line x1="36" y1="62" x2="864" y2="62" stroke="#2c4d70" stroke-width="2"/>
     <text x="32" y="24" text-anchor="start" font-size="10.5" fill="#8fa5bc" font-family="sans-serif">西</text>
     <text x="868" y="24" text-anchor="end" font-size="10.5" fill="#8fa5bc" font-family="sans-serif">東</text>
-    <a href="../region/yaeyama.html">
+    <a href="../region/yaeyama">
       <circle cx="62" cy="62" r="28.5" fill="#1e3f63" stroke="#b0742a" stroke-width="1.5"/>
       <text class="arch__n" x="62" y="67" text-anchor="middle">10</text>
       <text x="62" y="108" text-anchor="middle">八重山</text>
       <text x="62" y="123" text-anchor="middle" font-size="9.5" fill="#8fa5bc">日本最西端・最南端</text>
     </a>
-    <a href="../region/miyako.html">
+    <a href="../region/miyako">
       <circle cx="217" cy="62" r="25.0" fill="#1e3f63" stroke="#b0742a" stroke-width="1.5"/>
       <text class="arch__n" x="217" y="67" text-anchor="middle">6</text>
       <text x="217" y="104" text-anchor="middle">宮古</text>
       
     </a>
-    <a href="../region/kume.html">
+    <a href="../region/kume">
       <circle cx="372" cy="62" r="19.9" fill="#1e3f63" stroke="#b0742a" stroke-width="1.5"/>
       <text class="arch__n" x="372" y="67" text-anchor="middle">2</text>
       <text x="372" y="99" text-anchor="middle">久米島</text>
       
     </a>
-    <a href="../region/naha_south.html">
+    <a href="../region/naha_south">
       <circle cx="528" cy="62" r="30.0" fill="#1e3f63" stroke="#b0742a" stroke-width="1.5"/>
       <text class="arch__n" x="528" y="67" text-anchor="middle">12</text>
       <text x="528" y="109" text-anchor="middle">那覇・南部</text>
       <text x="528" y="124" text-anchor="middle" font-size="9.5" fill="#8fa5bc">首里三箇</text>
     </a>
-    <a href="../region/central.html">
+    <a href="../region/central">
       <circle cx="683" cy="62" r="24.0" fill="#1e3f63" stroke="#b0742a" stroke-width="1.5"/>
       <text class="arch__n" x="683" y="67" text-anchor="middle">5</text>
       <text x="683" y="103" text-anchor="middle">本島中部</text>
       
     </a>
-    <a href="../region/north.html">
+    <a href="../region/north">
       <circle cx="838" cy="62" r="30.0" fill="#1e3f63" stroke="#b0742a" stroke-width="1.5"/>
       <text class="arch__n" x="838" y="67" text-anchor="middle">12</text>
       <text x="838" y="109" text-anchor="middle">本島北部</text>
@@ -97,22 +100,22 @@
   </p>
 </div>
 
-<div class="rcards">  <a class="rcard" href="../region/north.html">
+<div class="rcards">  <a class="rcard" href="../region/north">
     <img src="../assets/img/region-north-sm.webp" alt="本島北部のイメージ" loading="lazy" width="720" height="305">
     <span class="rcard__body"><b>本島北部</b><span>12軒</span></span>
-  </a>  <a class="rcard" href="../region/central.html">
+  </a>  <a class="rcard" href="../region/central">
     <img src="../assets/img/region-central-sm.webp" alt="本島中部のイメージ" loading="lazy" width="720" height="305">
     <span class="rcard__body"><b>本島中部</b><span>5軒</span></span>
-  </a>  <a class="rcard" href="../region/naha_south.html">
+  </a>  <a class="rcard" href="../region/naha_south">
     <img src="../assets/img/region-naha_south-sm.webp" alt="那覇・南部のイメージ" loading="lazy" width="720" height="305">
     <span class="rcard__body"><b>那覇・南部</b><span>12軒</span></span>
-  </a>  <a class="rcard" href="../region/kume.html">
+  </a>  <a class="rcard" href="../region/kume">
     <img src="../assets/img/region-kume-sm.webp" alt="久米島のイメージ" loading="lazy" width="720" height="305">
     <span class="rcard__body"><b>久米島</b><span>2軒</span></span>
-  </a>  <a class="rcard" href="../region/miyako.html">
+  </a>  <a class="rcard" href="../region/miyako">
     <img src="../assets/img/region-miyako-sm.webp" alt="宮古のイメージ" loading="lazy" width="720" height="305">
     <span class="rcard__body"><b>宮古</b><span>6軒</span></span>
-  </a>  <a class="rcard" href="../region/yaeyama.html">
+  </a>  <a class="rcard" href="../region/yaeyama">
     <img src="../assets/img/region-yaeyama-sm.webp" alt="八重山のイメージ" loading="lazy" width="720" height="305">
     <span class="rcard__body"><b>八重山</b><span>10軒</span></span>
   </a></div>
@@ -129,22 +132,22 @@
       </div>
       <div>
         <h4>探す</h4>
-        <a href="../find.html">条件で絞り込む</a>
-        <a href="../region/index.html">地域から探す</a>
-        <a href="../koshu.html">古酒の年数から</a>
-        <a href="../abv/index.html">度数から</a>
-        <a href="../hanazake.html">花酒（60度）</a>
-        <a href="../tour.html">蔵見学ができる酒造所</a>
-        <a href="../calorie.html">カロリーと糖質</a>
-        <a href="../furusato.html">ふるさと納税</a>
+        <a href="../find">条件で絞り込む</a>
+        <a href="../region/">地域から探す</a>
+        <a href="../koshu">古酒の年数から</a>
+        <a href="../abv/">度数から</a>
+        <a href="../hanazake">花酒（60度）</a>
+        <a href="../tour">蔵見学ができる酒造所</a>
+        <a href="../calorie">カロリーと糖質</a>
+        <a href="../furusato">ふるさと納税</a>
       </div>
       <div>
         <h4>サイトについて</h4>
-        <a href="../distillery/index.html">酒造所一覧</a>
-        <a href="../guide/index.html">読みもの</a>
-        <a href="../about.html">このサイトについて</a>
-        <a href="../disclaimer.html">免責事項</a>
-        <a href="../privacy.html">プライバシーポリシー</a>
+        <a href="../distillery/">酒造所一覧</a>
+        <a href="../guide/">読みもの</a>
+        <a href="../about">このサイトについて</a>
+        <a href="../disclaimer">免責事項</a>
+        <a href="../privacy">プライバシーポリシー</a>
       </div>
     </div>
     <p class="ft__note">

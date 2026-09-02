@@ -3,13 +3,30 @@
 (function () {
   "use strict";
 
-  /* --- ナビ開閉 --------------------------------------------------------- */
+  /* --- ナビ開閉 ---------------------------------------------------------
+     2026/09/02 監査での指摘に対応:
+       ・開いているのか閉じているのか、ボタンの見た目で分からなかった
+       ・Escape・メニュー外タップで閉じられなかった */
   var burger = document.querySelector(".hd__burger");
   var nav = document.querySelector(".hd__nav");
   if (burger && nav) {
-    burger.addEventListener("click", function () {
-      var open = nav.classList.toggle("is-open");
+    nav.id = nav.id || "site-nav";
+    burger.setAttribute("aria-controls", nav.id);
+    function setNav(open) {
+      nav.classList.toggle("is-open", open);
       burger.setAttribute("aria-expanded", open ? "true" : "false");
+      burger.textContent = open ? "✕ 閉じる" : "☰ メニュー";
+    }
+    setNav(false);
+    burger.addEventListener("click", function () {
+      setNav(!nav.classList.contains("is-open"));
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && nav.classList.contains("is-open")) setNav(false);
+    });
+    document.addEventListener("click", function (e) {
+      if (nav.classList.contains("is-open")
+          && !nav.contains(e.target) && !burger.contains(e.target)) setNav(false);
     });
   }
 
@@ -24,12 +41,21 @@
     return null;
   }
 
+  /* 2026/09/02 監査での指摘に対応:
+       ・「いいえ」誤タップで確認なしに即サイト外へ飛ばされ、戻ってもまたゲート
+         → 同じオーバーレイ内の案内に差し替え、「やり直す」で復帰できるようにした
+       ・「はい」「いいえ」が同格・11px間隔で誤タップしやすかった
+         → 「はい」を主ボタン（琥珀）、「いいえ」を弱いスタイルに（CSS側）
+       ・ダイアログのARIAとフォーカスが無かった */
   if (store("awamori_age_ok") !== "1") {
     var g = document.createElement("div");
     g.className = "gate";
+    g.setAttribute("role", "dialog");
+    g.setAttribute("aria-modal", "true");
+    g.setAttribute("aria-labelledby", "gate-q");
     g.innerHTML =
       '<div class="gate__box">' +
-      '<h2>あなたは20歳以上ですか？</h2>' +
+      '<h2 id="gate-q">あなたは20歳以上ですか？</h2>' +
       '<p>20歳未満の方の飲酒は法律で禁止されています。<br>' +
       'このサイトは酒類（泡盛）の情報を扱っています。</p>' +
       '<div class="gate__btns">' +
@@ -38,12 +64,37 @@
       "</div></div>";
     document.addEventListener("DOMContentLoaded", function () {
       document.body.appendChild(g);
-      g.querySelector(".yes").addEventListener("click", function () {
+      var yes = g.querySelector(".yes");
+      var no = g.querySelector(".no");
+      yes.focus();
+      /* Tabをゲートの中に閉じる（背後のページへ移動させない） */
+      g.addEventListener("keydown", function (e) {
+        if (e.key !== "Tab") return;
+        var f = g.querySelectorAll("button");
+        var first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault(); last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault(); first.focus();
+        }
+      });
+      yes.addEventListener("click", function () {
         store("awamori_age_ok", "1");
         g.remove();
       });
-      g.querySelector(".no").addEventListener("click", function () {
-        location.href = "https://www.google.com/";
+      no.addEventListener("click", function () {
+        var box = g.querySelector(".gate__box");
+        box.innerHTML =
+          '<h2>ご覧いただけません</h2>' +
+          '<p>20歳未満の方はこのサイトをご覧いただけません。</p>' +
+          '<div class="gate__btns">' +
+          '<button type="button" class="back">まちがえた（やり直す）</button>' +
+          "</div>";
+        var back = box.querySelector(".back");
+        back.focus();
+        back.addEventListener("click", function () {
+          location.reload();
+        });
       });
     });
   }

@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap">
-<link rel="stylesheet" href="assets/awamori.css?v=20260902j">
+<link rel="stylesheet" href="assets/awamori.css?v=20260902m">
 <link rel="canonical" href="https://awamori-db.com/">
 <meta property="og:site_name" content="泡盛DB">
 <meta property="og:type" content="website">
@@ -24,21 +24,25 @@
 <script>(function(){try{var s=location.search;if(s.indexOf('ga=off')>-1){localStorage.setItem('adb_noga','1');}if(s.indexOf('ga=on')>-1){localStorage.removeItem('adb_noga');}if(localStorage.getItem('adb_noga')==='1'){window['ga-disable-G-ZYFBNN3H9E']=true;}}catch(e){}})();</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYFBNN3H9E"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZYFBNN3H9E');</script>
-
+<script type="application/ld+json">{"@context": "https://schema.org/", "@type": "WebSite", "name": "泡盛DB", "alternateName": "琉球泡盛データベース", "url": "https://awamori-db.com/", "inLanguage": "ja"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org/", "@type": "Organization", "name": "泡盛DB", "url": "https://awamori-db.com/"}</script>
 </head>
 <body>
 <header class="hd">
   <div class="wrap hd__in">
-    <a class="hd__logo" href="index.html"><b>泡盛DB</b><span>琉球泡盛データベース</span></a>
-    <button class="hd__burger" type="button" aria-expanded="false" aria-label="メニュー">☰</button>
+    <a class="hd__logo" href="./"><b>泡盛DB</b><span>琉球泡盛データベース</span></a>
+    <form class="hd__search" action="find" role="search">
+      <input type="search" name="q" placeholder="銘柄・酒造所名" aria-label="銘柄名・酒造所名で検索">
+    </form>
+    <button class="hd__burger" type="button" aria-expanded="false" aria-label="メニュー">☰ メニュー</button>
     <nav class="hd__nav">
-      <a href="find.html">絞り込んで探す</a>
-      <a href="koshu.html">古酒</a>
-      <a href="abv/index.html">度数</a>
-      <a href="hanazake.html">花酒</a>
-      <a href="tour.html">蔵見学</a>
-      <a href="distillery/index.html">酒造所</a>
-      <a href="guide/index.html">読みもの</a>
+      <a href="find">絞り込んで探す</a>
+      <a href="koshu">古酒</a>
+      <a href="abv/">度数</a>
+      <a href="hanazake">花酒</a>
+      <a href="tour">蔵見学</a>
+      <a href="distillery/">酒造所</a>
+      <a href="guide/">読みもの</a>
     </nav>
   </div>
 </header>
@@ -46,16 +50,16 @@
   <img class="phero__img" src="assets/img/hero.webp" srcset="assets/img/hero-sm.webp 720w, assets/img/hero.webp 1600w" sizes="100vw" alt="泡盛の甕が並ぶ蔵のイメージ" fetchpriority="high" width="1600" height="678">
   <div class="phero__body"><div class="wrap">
     <p class="phero__kicker">RYUKYU AWAMORI DATABASE</p>
-    <h1>その「古酒」は、<br>本当に全量が古酒か。</h1>
-    <p>泡盛の古酒は、2013年の規約改正から<strong>全量が古酒でなければ「古酒」と表示できない</strong>。古酒を60%混ぜただけの商品は、中身に古酒が入っていても古酒とは名乗れない。このデータベースは、公式が公開している<strong>古酒の割合</strong>まで載せている。</p>
-    <div class="phero__stats"><div><b>47</b><span>酒造所</span></div><div><b>636</b><span>銘柄</span></div><div><b>605</b><span>度数を確認</span></div><div><b>253</b><span>古酒</span></div><div><b>14</b><span>花酒（60度）</span></div></div>
+    <h1>琉球泡盛47酒造所・636銘柄の<br>横断データベース</h1>
+    <p><strong>その「古酒」は、本当に全量が古酒か。</strong>泡盛の古酒は、2013年の規約改正から全量が古酒でなければ「古酒」と表示できない。古酒を60%混ぜただけの商品は、中身に古酒が入っていても古酒とは名乗れない。このデータベースは、公式が公開している<strong>古酒の割合</strong>まで載せている。</p>
+    <div class="phero__stats"><div><b>47</b><span>酒造所</span></div><div><b>636</b><span>銘柄</span></div><div><b>605</b><span>度数を確認</span></div><div><b>253</b><span>古酒</span></div><div><b>14</b><span>花酒（60度）</span></div></div><div class="phero__cta"><a class="pbtn pbtn--main" href="find">636銘柄を条件で絞り込む</a><a class="pbtn" href="koshu">古酒を年数から探す</a></div>
   </div></div>
   <span class="phero__credit">画像はイメージ</span>
 </div>
 <main class="wrap">
 <section style="margin:34px 0 26px;">
 <h2 class="h-sec">何から探しますか</h2>
-  <div class="tiles"><a class="itile" href="find.html"><span class="itile__img"><img src="assets/img/hero-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">636銘柄</span></span><span class="itile__body"><b>条件で絞り込む</b><span>度数・古酒の年数・全量古酒かどうか・地域・種別を掛け合わせて探せます。</span></span></a><a class="itile" href="koshu.html"><span class="itile__img"><img src="assets/img/koshu-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">253銘柄</span></span><span class="itile__body"><b>古酒から探す</b><span>3年から50年まで。規約が求める「全量古酒」かどうかを併記しています。</span></span></a><a class="itile" href="abv/index.html"><span class="itile__img"><img src="assets/img/abv-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">605銘柄</span></span><span class="itile__body"><b>度数から探す</b><span>10度から60度まで。30度・43度など度数ごとのページがあります。</span></span></a><a class="itile" href="hanazake.html"><span class="itile__img"><img src="assets/img/hanazake-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">14銘柄</span></span><span class="itile__body"><b>花酒（60度）</b><span>与那国島の3軒だけが造る60度。酒税法上は「原料用アルコール」になります。</span></span></a><a class="itile" href="tour.html"><span class="itile__img"><img src="assets/img/tour-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">見学可 19軒</span></span><span class="itile__body"><b>蔵見学ができる酒造所</b><span>無料・有料・休止中まで、公式サイトの記載を確認日つきで分類しました。</span></span></a><a class="itile" href="distillery/index.html"><span class="itile__img"><img src="assets/img/region-naha_south-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">47軒</span></span><span class="itile__body"><b>酒造所から探す</b><span>沖縄県酒造組合が公開する全47軒。正式社名・所在地・創業年つき。</span></span></a></div>
+  <div class="tiles"><a class="itile" href="find"><span class="itile__img"><img src="assets/img/hero-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">636銘柄</span></span><span class="itile__body"><b>条件で絞り込む</b><span>度数・古酒の年数・全量古酒かどうか・地域・種別を掛け合わせて探せます。</span></span></a><a class="itile" href="koshu"><span class="itile__img"><img src="assets/img/koshu-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">253銘柄</span></span><span class="itile__body"><b>古酒から探す</b><span>3年から50年まで。規約が求める「全量古酒」かどうかを併記しています。</span></span></a><a class="itile" href="abv/"><span class="itile__img"><img src="assets/img/abv-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">605銘柄</span></span><span class="itile__body"><b>度数から探す</b><span>10度から60度まで。30度・43度など度数ごとのページがあります。</span></span></a><a class="itile" href="hanazake"><span class="itile__img"><img src="assets/img/hanazake-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">14銘柄</span></span><span class="itile__body"><b>花酒（60度）</b><span>与那国島の3軒だけが造る60度。酒税法上は「原料用アルコール」になります。</span></span></a><a class="itile" href="tour"><span class="itile__img"><img src="assets/img/tour-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">見学可 19軒</span></span><span class="itile__body"><b>蔵見学ができる酒造所</b><span>無料・有料・休止中まで、公式サイトの記載を確認日つきで分類しました。</span></span></a><a class="itile" href="distillery/"><span class="itile__img"><img src="assets/img/region-naha_south-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">47軒</span></span><span class="itile__body"><b>酒造所から探す</b><span>沖縄県酒造組合が公開する全47軒。正式社名・所在地・創業年つき。</span></span></a><a class="itile" href="furusato"><span class="itile__img"><img src="assets/img/islands-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">47蔵対応</span></span><span class="itile__body"><b>ふるさと納税で探す</b><span>全47蔵ぶんのポータル検索リンク。返礼品は離島の自治体に多くあります。</span></span></a></div>
 </section>
 
 <section style="margin:44px 0;">
@@ -66,37 +70,37 @@
     <line x1="36" y1="62" x2="864" y2="62" stroke="#2c4d70" stroke-width="2"/>
     <text x="32" y="24" text-anchor="start" font-size="10.5" fill="#8fa5bc" font-family="sans-serif">西</text>
     <text x="868" y="24" text-anchor="end" font-size="10.5" fill="#8fa5bc" font-family="sans-serif">東</text>
-    <a href="region/yaeyama.html">
+    <a href="region/yaeyama">
       <circle cx="62" cy="62" r="28.5" fill="#1e3f63" stroke="#b0742a" stroke-width="1.5"/>
       <text class="arch__n" x="62" y="67" text-anchor="middle">10</text>
       <text x="62" y="108" text-anchor="middle">八重山</text>
       <text x="62" y="123" text-anchor="middle" font-size="9.5" fill="#8fa5bc">日本最西端・最南端</text>
     </a>
-    <a href="region/miyako.html">
+    <a href="region/miyako">
       <circle cx="217" cy="62" r="25.0" fill="#1e3f63" stroke="#b0742a" stroke-width="1.5"/>
       <text class="arch__n" x="217" y="67" text-anchor="middle">6</text>
       <text x="217" y="104" text-anchor="middle">宮古</text>
       
     </a>
-    <a href="region/kume.html">
+    <a href="region/kume">
       <circle cx="372" cy="62" r="19.9" fill="#1e3f63" stroke="#b0742a" stroke-width="1.5"/>
       <text class="arch__n" x="372" y="67" text-anchor="middle">2</text>
       <text x="372" y="99" text-anchor="middle">久米島</text>
       
     </a>
-    <a href="region/naha_south.html">
+    <a href="region/naha_south">
       <circle cx="528" cy="62" r="30.0" fill="#1e3f63" stroke="#b0742a" stroke-width="1.5"/>
       <text class="arch__n" x="528" y="67" text-anchor="middle">12</text>
       <text x="528" y="109" text-anchor="middle">那覇・南部</text>
       <text x="528" y="124" text-anchor="middle" font-size="9.5" fill="#8fa5bc">首里三箇</text>
     </a>
-    <a href="region/central.html">
+    <a href="region/central">
       <circle cx="683" cy="62" r="24.0" fill="#1e3f63" stroke="#b0742a" stroke-width="1.5"/>
       <text class="arch__n" x="683" y="67" text-anchor="middle">5</text>
       <text x="683" y="103" text-anchor="middle">本島中部</text>
       
     </a>
-    <a href="region/north.html">
+    <a href="region/north">
       <circle cx="838" cy="62" r="30.0" fill="#1e3f63" stroke="#b0742a" stroke-width="1.5"/>
       <text class="arch__n" x="838" y="67" text-anchor="middle">12</text>
       <text x="838" y="109" text-anchor="middle">本島北部</text>
@@ -109,27 +113,27 @@
   </p>
 </div>
 
-<div class="rcards">  <a class="rcard" href="region/north.html">
+<div class="rcards">  <a class="rcard" href="region/north">
     <img src="assets/img/region-north-sm.webp" alt="本島北部のイメージ" loading="lazy" width="720" height="305">
     <span class="rcard__body"><b>本島北部</b><span>12軒</span></span>
-  </a>  <a class="rcard" href="region/central.html">
+  </a>  <a class="rcard" href="region/central">
     <img src="assets/img/region-central-sm.webp" alt="本島中部のイメージ" loading="lazy" width="720" height="305">
     <span class="rcard__body"><b>本島中部</b><span>5軒</span></span>
-  </a>  <a class="rcard" href="region/naha_south.html">
+  </a>  <a class="rcard" href="region/naha_south">
     <img src="assets/img/region-naha_south-sm.webp" alt="那覇・南部のイメージ" loading="lazy" width="720" height="305">
     <span class="rcard__body"><b>那覇・南部</b><span>12軒</span></span>
-  </a>  <a class="rcard" href="region/kume.html">
+  </a>  <a class="rcard" href="region/kume">
     <img src="assets/img/region-kume-sm.webp" alt="久米島のイメージ" loading="lazy" width="720" height="305">
     <span class="rcard__body"><b>久米島</b><span>2軒</span></span>
-  </a>  <a class="rcard" href="region/miyako.html">
+  </a>  <a class="rcard" href="region/miyako">
     <img src="assets/img/region-miyako-sm.webp" alt="宮古のイメージ" loading="lazy" width="720" height="305">
     <span class="rcard__body"><b>宮古</b><span>6軒</span></span>
-  </a>  <a class="rcard" href="region/yaeyama.html">
+  </a>  <a class="rcard" href="region/yaeyama">
     <img src="assets/img/region-yaeyama-sm.webp" alt="八重山のイメージ" loading="lazy" width="720" height="305">
     <span class="rcard__body"><b>八重山</b><span>10軒</span></span>
   </a></div>
 <p style="margin:16px 0 0;font-size:13.5px;">
-  <a href="region/index.html">6つの地域の一覧を見る →</a></p>
+  <a href="region/">6つの地域の一覧を見る →</a></p>
 </section>
 
 <section style="margin:44px 0;">
@@ -163,84 +167,84 @@
 <h2 class="h-sec">読みもの</h2>
 <p style="font-size:13px;color:var(--muted);margin:-6px 0 16px;line-height:1.9;">
   法令と公正競争規約の<strong>条文原文</strong>にあたって書いた解説です。要約や伝聞は使っていません。</p>
-<div class="reads"><a class="read" href="guide/koshu-kiyaku.html">
+<div class="reads"><a class="read" href="guide/koshu-kiyaku">
     <span class="read__n">01</span>
     <span class="read__body">
       <b class="read__t">泡盛の「古酒（クース）」は何年から？ 公正競争規約の条文で確認する</b>
       <span class="read__d">泡盛の古酒は3年以上貯蔵かつ全量が古酒。公正競争規約と施行規則の条文原文、2013年改正の前後比較、施行日の正確な位置づけ、実際の商品での確認までまとめた。</span>
-      <span class="read__meta">13項目 ／ 更新 2026-08-30</span>
+      <span class="read__meta">13項目 ／ 更新 2026-09-02</span>
     </span>
     <span class="read__go" aria-hidden="true">読む →</span>
-  </a><a class="read" href="guide/abv.html">
+  </a><a class="read" href="guide/abv">
     <span class="read__n">02</span>
     <span class="read__body">
       <b class="read__t">泡盛の度数はなぜ30度と43度に集まるのか — 662件を数えた</b>
       <span class="read__d">泡盛の度数は10度から60度まで28種類ある。46酒造所の662件を数えると、30度と43度だけで半分を占めた。度数帯ごとの中身と、酒税法・公正競争規約が引いた45度と25度の線を条文で確認する。</span>
-      <span class="read__meta">8項目 ／ 更新 2026-09-01</span>
+      <span class="read__meta">8項目 ／ 更新 2026-09-02</span>
     </span>
     <span class="read__go" aria-hidden="true">読む →</span>
-  </a><a class="read" href="guide/awamori-shochu.html">
+  </a><a class="read" href="guide/awamori-shochu">
     <span class="read__n">03</span>
     <span class="read__body">
       <b class="read__t">泡盛と焼酎は何が違うのか — 法令の定義で確認する</b>
       <span class="read__d">泡盛は酒税法上の品目名ではなく単式蒸留焼酎の例外表示。公正競争規約と酒税法の条文、黒こうじ菌と全麹仕込み、GI「琉球」の生産基準を原文で確認する。</span>
-      <span class="read__meta">7項目 ／ 更新 2026-08-30</span>
+      <span class="read__meta">7項目 ／ 更新 2026-09-02</span>
     </span>
     <span class="read__go" aria-hidden="true">読む →</span>
-  </a><a class="read" href="guide/hanazake.html">
+  </a><a class="read" href="guide/hanazake">
     <span class="read__n">04</span>
     <span class="read__body">
       <b class="read__t">花酒とは — 与那国島だけの60度と、その酒税法上の扱い</b>
       <span class="read__d">与那国島の3酒造所だけが造る60度の花酒。酒税法の条文でたどる「原料用アルコール」という品目と、ラベルに泡盛と書ける根拠をまとめた。</span>
-      <span class="read__meta">9項目 ／ 更新 2026-08-30</span>
+      <span class="read__meta">9項目 ／ 更新 2026-09-02</span>
     </span>
     <span class="read__go" aria-hidden="true">読む →</span>
-  </a><a class="read" href="guide/awanami.html">
+  </a><a class="read" href="guide/awanami">
     <span class="read__n">05</span>
     <span class="read__body">
       <b class="read__t">幻の泡盛「泡波」とは — 公式が示す価格と、手に入りにくい理由</b>
       <span class="read__d">日本最南端の波照間酒造所が造る泡盛「泡波」。公式が示す容量別の価格表と、公式・準公式で確認できた入手困難の理由だけをまとめた。</span>
-      <span class="read__meta">8項目 ／ 更新 2026-08-30</span>
+      <span class="read__meta">8項目 ／ 更新 2026-09-02</span>
     </span>
     <span class="read__go" aria-hidden="true">読む →</span>
-  </a><a class="read" href="guide/calorie.html">
+  </a><a class="read" href="guide/calorie">
     <span class="read__n">06</span>
     <span class="read__body">
       <b class="read__t">泡盛のカロリーと糖質 — 糖質0gの根拠と、度数からの計算式</b>
       <span class="read__d">泡盛の糖質は0g。カロリーはすべてアルコール由来で、度数から計算できる。文部科学省の食品成分表と厚生労働省の式を原文で引き、度数別・容量別の実数値を出した。</span>
-      <span class="read__meta">6項目 ／ 更新 2026-09-01</span>
+      <span class="read__meta">6項目 ／ 更新 2026-09-02</span>
     </span>
     <span class="read__go" aria-hidden="true">読む →</span>
-  </a><a class="read" href="guide/donan.html">
+  </a><a class="read" href="guide/donan">
     <span class="read__n">07</span>
     <span class="read__body">
       <b class="read__t">どなんとは — 与那国島の60度と、社名が3通りある話</b>
       <span class="read__d">「どなん」は与那国島の酒造所が造る花酒の銘柄名であり、島の古い呼び名でもある。度数60度、酒税法上の品目は原料用アルコール。公式が示す価格と、社名が3通りに割れている件までを一次ソースで確認する。</span>
-      <span class="read__meta">7項目 ／ 更新 2026-09-01</span>
+      <span class="read__meta">7項目 ／ 更新 2026-09-02</span>
     </span>
     <span class="read__go" aria-hidden="true">読む →</span>
-  </a><a class="read" href="guide/awards.html">
+  </a><a class="read" href="guide/awards">
     <span class="read__n">08</span>
     <span class="read__body">
       <b class="read__t">泡盛の受賞歴はどこまで確かめられるか — 47蔵のうち2蔵しか整理していない</b>
       <span class="read__d">泡盛の受賞歴を公式に整理して公開しているのは47蔵中2蔵だけだった。115件を集めて分かった、コンテスト名の略称・部門名・賞の呼び方のばらつきと、本サイトが補わずに載せている理由。</span>
-      <span class="read__meta">5項目 ／ 更新 2026-09-01</span>
+      <span class="read__meta">5項目 ／ 更新 2026-09-02</span>
     </span>
     <span class="read__go" aria-hidden="true">読む →</span>
-  </a><a class="read" href="guide/price.html">
+  </a><a class="read" href="guide/price">
     <span class="read__n">09</span>
     <span class="read__body">
       <b class="read__t">泡盛に「定価」が見つからないのはなぜか — 47蔵を全部調べた</b>
       <span class="read__d">泡盛は公式サイトに価格を出していない酒造所が多い。47蔵を全数調査すると、13蔵は公式価格を1件も確認できなかった。税込・税抜の記載も揃っていない。何が確認できて何ができないのかを数字で示す。</span>
-      <span class="read__meta">6項目 ／ 更新 2026-09-01</span>
+      <span class="read__meta">6項目 ／ 更新 2026-09-02</span>
     </span>
     <span class="read__go" aria-hidden="true">読む →</span>
-  </a><a class="read" href="guide/volume.html">
+  </a><a class="read" href="guide/volume">
     <span class="read__n">10</span>
     <span class="read__body">
-      <b class="read__t">泡盛の容量 — 四合瓶・一升瓶・五升甕、831件を数えた</b>
-      <span class="read__d">泡盛の容量は100mlから18,000mlまで22種類。720mlと1,800mlで65%を占める。尺貫法の呼び名と実際の分布、そして「三合瓶」と呼ばれる600mlの扱いまで、831件の実データで確認する。</span>
-      <span class="read__meta">5項目 ／ 更新 2026-09-01</span>
+      <b class="read__t">泡盛の容量 — 四合瓶・一升瓶・五升甕、832件を数えた</b>
+      <span class="read__d">泡盛の容量は100mlから18,000mlまで22種類。720mlと1,800mlで65%を占める。尺貫法の呼び名と実際の分布、そして「三合瓶」と呼ばれる600mlの扱いまで、832件の実データで確認する。</span>
+      <span class="read__meta">5項目 ／ 更新 2026-09-02</span>
     </span>
     <span class="read__go" aria-hidden="true">読む →</span>
   </a></div>
@@ -250,7 +254,7 @@
   <h3>掲載情報について</h3>
   <p>正式社名・所在地・創業年・度数・容量・価格は、各酒造所の公式サイトで確認したものを載せています。
   公式サイトが確認できない5軒は沖縄県酒造組合の情報によっており、その旨を明示しています。
-  最終確認日は2026年8月30日です。<a href="about.html">このサイトについて</a></p>
+  最終確認日は2026年8月31日です。<a href="about">このサイトについて</a></p>
 </div>
 </main>
 
@@ -265,22 +269,22 @@
       </div>
       <div>
         <h4>探す</h4>
-        <a href="find.html">条件で絞り込む</a>
-        <a href="region/index.html">地域から探す</a>
-        <a href="koshu.html">古酒の年数から</a>
-        <a href="abv/index.html">度数から</a>
-        <a href="hanazake.html">花酒（60度）</a>
-        <a href="tour.html">蔵見学ができる酒造所</a>
-        <a href="calorie.html">カロリーと糖質</a>
-        <a href="furusato.html">ふるさと納税</a>
+        <a href="find">条件で絞り込む</a>
+        <a href="region/">地域から探す</a>
+        <a href="koshu">古酒の年数から</a>
+        <a href="abv/">度数から</a>
+        <a href="hanazake">花酒（60度）</a>
+        <a href="tour">蔵見学ができる酒造所</a>
+        <a href="calorie">カロリーと糖質</a>
+        <a href="furusato">ふるさと納税</a>
       </div>
       <div>
         <h4>サイトについて</h4>
-        <a href="distillery/index.html">酒造所一覧</a>
-        <a href="guide/index.html">読みもの</a>
-        <a href="about.html">このサイトについて</a>
-        <a href="disclaimer.html">免責事項</a>
-        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="distillery/">酒造所一覧</a>
+        <a href="guide/">読みもの</a>
+        <a href="about">このサイトについて</a>
+        <a href="disclaimer">免責事項</a>
+        <a href="privacy">プライバシーポリシー</a>
       </div>
     </div>
     <p class="ft__note">

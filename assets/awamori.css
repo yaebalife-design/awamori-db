@@ -70,7 +70,17 @@ a{color:var(--indigo);}
 .hd__logo{display:flex;align-items:baseline;gap:9px;text-decoration:none;color:inherit;flex:0 0 auto;}
 .hd__logo b{font-family:var(--serif);font-weight:700;font-size:19px;letter-spacing:.04em;}
 .hd__logo span{font-size:10.5px;color:#a9bdd3;letter-spacing:.06em;}
-.hd__nav{display:flex;gap:2px;margin-left:auto;flex-wrap:wrap;}
+/* ヘッダー検索。find の ?q= に素のGETで着地する（2026/09/02 監査：
+   636銘柄のDBなのにサイト全体に検索窓が無かった） */
+.hd__search{margin-left:auto;}
+.hd__search input{
+  width:170px;padding:7px 12px;border-radius:999px;font-size:12.5px;
+  border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.09);
+  color:#eef2f7;font-family:var(--sans);outline:none;transition:.15s;
+}
+.hd__search input::placeholder{color:#8fa5bc;}
+.hd__search input:focus{background:rgba(255,255,255,.16);border-color:var(--amber);width:210px;}
+.hd__nav{display:flex;gap:2px;flex-wrap:wrap;}
 .hd__nav a{
   color:#d5e0ec;text-decoration:none;font-size:13px;font-weight:500;
   padding:6px 11px;border-radius:6px;white-space:nowrap;
@@ -80,10 +90,17 @@ a{color:var(--indigo);}
 .hd__burger{display:none;margin-left:auto;background:none;border:1px solid rgba(255,255,255,.3);
   color:#eef2f7;border-radius:6px;padding:6px 9px;cursor:pointer;}
 @media(max-width:860px){
-  .hd__burger{display:block;}
+  /* タップ領域はApple/Google推奨の44px前後を確保する（2026/09/02 監査：
+     バーガー約31px・ナビ項目約34px・チップ約31pxで軒並み下回っていた） */
+  .hd__burger{display:block;padding:13px 16px;font-size:15px;line-height:1;}
+  .hd__search{order:2;margin-left:auto;flex:1;max-width:200px;}
+  .hd__search input{width:100%;padding:9px 12px;}
+  .hd__search input:focus{width:100%;}
   .hd__nav{display:none;width:100%;order:3;padding-bottom:8px;}
   .hd__nav.is-open{display:flex;flex-direction:column;}
+  .hd__nav.is-open a{padding:12px 12px;font-size:14px;}
   .hd__in{flex-wrap:wrap;}
+  .chip{padding:9px 14px;font-size:13px;}
 }
 
 /* --- パンくず ------------------------------------------------------------ */
@@ -390,10 +407,16 @@ table.db td.n--multi{white-space:normal;word-break:normal;overflow-wrap:break-wo
 .gate__box{max-width:420px;text-align:center;}
 .gate h2{font-size:21px;margin:0 0 14px;color:#fff;}
 .gate p{font-size:13.5px;line-height:1.95;color:#c9d7e5;margin:0 0 22px;}
-.gate__btns{display:flex;gap:11px;justify-content:center;}
+/* 「はい」を主役に、「いいえ」は控えめに。同格・11px間隔だと誤タップで
+   サイト外相当の画面に飛ぶ（2026/09/02 監査）。間隔も22pxに広げた */
+.gate__btns{display:flex;gap:22px;justify-content:center;align-items:center;}
 .gate button{padding:11px 26px;border-radius:7px;border:1px solid rgba(255,255,255,.35);
   background:transparent;color:#fff;font-size:14px;font-weight:700;cursor:pointer;font-family:var(--sans);}
-.gate button.yes{background:var(--amber);border-color:var(--amber);}
+.gate button.yes{background:var(--amber);border-color:var(--amber);
+  padding:13px 34px;font-weight:700;}
+.gate button.no{background:none;border-color:transparent;color:#9db2c6;
+  text-decoration:underline;font-size:13px;}
+.gate button.back{background:var(--amber);border-color:var(--amber);font-weight:700;}
 
 @media print{.hd,.ft,.buy,.gate{display:none;}}
 
@@ -504,7 +527,11 @@ table.db td.n--multi{white-space:normal;word-break:normal;overflow-wrap:break-wo
   border-radius:50%;background:var(--amber);border:2.5px solid var(--paper);
   box-shadow:0 0 0 1px var(--amber);}
 .tl__head{display:flex;align-items:baseline;gap:10px;margin-bottom:9px;flex-wrap:wrap;}
-.tl__head b{font-family:var(--serif);font-size:16px;}
+/* 年数の区切りは h2（「泡盛 10年古酒」の検索需要を見出しで受ける）。
+   見た目は従来の b と同じに保つ */
+.tl__head h2{font-family:var(--serif);font-size:16px;margin:0;border:none;padding:0;}
+/* チップから飛んだとき、sticky ヘッダー（約56px）に見出しが隠れないように */
+.tl__node{scroll-margin-top:76px;}
 .tl__head span{font-size:12px;color:var(--muted);font-family:var(--mono);}
 @media(max-width:600px){
   .tl{padding-left:56px;}
@@ -835,4 +862,24 @@ a[href^="http"]{overflow-wrap:anywhere;}
   .gbar__v{font-size:10.5px;}
   .waf i{width:13px;height:13px;}
   .flow__r{grid-template-columns:1fr;gap:6px;}
+}
+
+/* ヒーローの主導線。ヒーローにクリックできるものが無かった（2026/09/02 監査） */
+.phero__cta{display:flex;flex-wrap:wrap;gap:11px;margin-top:24px;}
+.pbtn{display:inline-flex;align-items:center;justify-content:center;
+  padding:12px 22px;border-radius:8px;font-size:14px;font-weight:700;
+  text-decoration:none;color:#f2f6fa;border:1px solid rgba(255,255,255,.45);
+  transition:.15s;}
+.pbtn:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.7);}
+.pbtn--main{background:var(--amber);border-color:var(--amber);color:#fff;}
+.pbtn--main:hover{background:var(--amber-deep);border-color:var(--amber-deep);}
+
+/* find の件数行と補足。狭い画面ではチップ群の下で見失うので固定する */
+.find-count{font-family:var(--mono);font-size:13px;color:var(--muted);margin:4px 0 14px;}
+.find-note{font-size:12px;color:var(--amber-deep);background:var(--amber-soft);
+  border-radius:6px;padding:8px 12px;margin:0 0 8px;}
+.chip.is-zero{opacity:.4;}
+@media(max-width:700px){
+  .find-count{position:sticky;top:56px;z-index:5;background:var(--paper);
+    padding:8px 0;margin:0;border-bottom:1px solid var(--line);}
 }

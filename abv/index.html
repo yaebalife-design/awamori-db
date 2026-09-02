@@ -5,18 +5,18 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="-5wjhv4IpfEJj_h6v5UEWNO8HnlC5YGOIewMCSUG4YA">
 <title>泡盛を度数から探す｜泡盛DB</title>
-<meta name="description" content="泡盛662銘柄を度数別に一覧。20度・25度・30度・43度・60度などから探せます。度数は公式サイトで確認したものだけを掲載。">
+<meta name="description" content="泡盛605銘柄を度数別に一覧。20度・25度・30度・43度・60度などから探せます。度数は公式サイトで確認したものだけを掲載。">
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap">
-<link rel="stylesheet" href="../assets/awamori.css?v=20260902j">
+<link rel="stylesheet" href="../assets/awamori.css?v=20260902m">
 <link rel="canonical" href="https://awamori-db.com/abv/">
 <meta property="og:site_name" content="泡盛DB">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://awamori-db.com/abv/">
 <meta property="og:title" content="泡盛を度数から探す｜泡盛DB">
-<meta property="og:description" content="泡盛662銘柄を度数別に一覧。20度・25度・30度・43度・60度などから探せます。度数は公式サイトで確認したものだけを掲載。">
+<meta property="og:description" content="泡盛605銘柄を度数別に一覧。20度・25度・30度・43度・60度などから探せます。度数は公式サイトで確認したものだけを掲載。">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://awamori-db.com/assets/img/abv.webp">
 <meta name="twitter:card" content="summary_large_image">
@@ -29,16 +29,19 @@
 <body>
 <header class="hd">
   <div class="wrap hd__in">
-    <a class="hd__logo" href="../index.html"><b>泡盛DB</b><span>琉球泡盛データベース</span></a>
-    <button class="hd__burger" type="button" aria-expanded="false" aria-label="メニュー">☰</button>
+    <a class="hd__logo" href="../"><b>泡盛DB</b><span>琉球泡盛データベース</span></a>
+    <form class="hd__search" action="../find" role="search">
+      <input type="search" name="q" placeholder="銘柄・酒造所名" aria-label="銘柄名・酒造所名で検索">
+    </form>
+    <button class="hd__burger" type="button" aria-expanded="false" aria-label="メニュー">☰ メニュー</button>
     <nav class="hd__nav">
-      <a href="../find.html">絞り込んで探す</a>
-      <a href="../koshu.html">古酒</a>
-      <a href="../abv/index.html">度数</a>
-      <a href="../hanazake.html">花酒</a>
-      <a href="../tour.html">蔵見学</a>
-      <a href="../distillery/index.html">酒造所</a>
-      <a href="../guide/index.html">読みもの</a>
+      <a href="../find">絞り込んで探す</a>
+      <a href="../koshu">古酒</a>
+      <a href="../abv/">度数</a>
+      <a href="../hanazake">花酒</a>
+      <a href="../tour">蔵見学</a>
+      <a href="../distillery/">酒造所</a>
+      <a href="../guide/">読みもの</a>
     </nav>
   </div>
 </header>
@@ -47,217 +50,217 @@
   <div class="phero__body"><div class="wrap">
     <p class="phero__kicker">度数から探す</p>
     <h1>泡盛を度数から探す</h1>
-    <p>公式サイトで度数を確認できた<strong>662銘柄</strong>を度数ごとに並べた。もっとも多いのは30度で181銘柄、次いで43度が161銘柄になる。</p>
+    <p>公式サイトで度数を確認できた<strong>605銘柄</strong>（度数違いを含め662件）を度数ごとに並べた。もっとも多いのは30度で181銘柄、次いで43度が161銘柄になる。</p>
     
   </div></div>
   <span class="phero__credit">画像はイメージ</span>
 </div>
-<nav class="crumb wrap" aria-label="パンくず"><ol><li><a href="../index.html">トップ</a></li><li>度数から探す</li></ol></nav>
+<nav class="crumb wrap" aria-label="パンくず"><ol><li><a href="../">トップ</a></li><li>度数から探す</li></ol></nav>
 <main class="wrap">
 
 <p class="lede">
   泡盛は10度から60度まで幅があり、同じ銘柄でも度数違いが用意されていることが多い。
   45度を超えると酒税法上の品目が「原料用アルコール」に変わる。その境目も含めて一本の軸に並べた。
 </p>
-<div class="scale"><div class="scale__track"><span class="scale__tick" style="left:0.00%;"><i class="scale__bar" style="height:10px;"></i></span><span class="scale__tick" style="left:4.00%;"><i class="scale__bar" style="height:11px;"></i></span><span class="scale__tick" style="left:8.00%;"><i class="scale__bar" style="height:10px;"></i></span><span class="scale__tick" style="left:10.00%;"><i class="scale__bar" style="height:12px;"></i></span><span class="scale__tick" style="left:20.00%;"><i class="scale__bar" style="height:17px;"></i></span><span class="scale__tick" style="left:30.00%;"><i class="scale__bar" style="height:37px;"></i></span><span class="scale__tick" style="left:34.00%;"><i class="scale__bar" style="height:11px;"></i></span><span class="scale__tick" style="left:38.00%;"><i class="scale__bar" style="height:11px;"></i></span><span class="scale__tick" style="left:40.00%;"><i class="scale__bar" style="height:52px;"></i></span><span class="scale__tick" style="left:48.00%;"><i class="scale__bar" style="height:11px;"></i></span><span class="scale__tick" style="left:50.00%;"><i class="scale__bar" style="height:27px;"></i></span><span class="scale__tick" style="left:52.00%;"><i class="scale__bar" style="height:11px;"></i></span><span class="scale__tick" style="left:56.00%;"><i class="scale__bar" style="height:10px;"></i></span><span class="scale__tick" style="left:58.00%;"><i class="scale__bar" style="height:12px;"></i></span><span class="scale__tick" style="left:60.00%;"><i class="scale__bar" style="height:30px;"></i></span><span class="scale__tick" style="left:62.00%;"><i class="scale__bar" style="height:14px;"></i></span><span class="scale__tick" style="left:64.00%;"><i class="scale__bar" style="height:18px;"></i></span><span class="scale__tick" style="left:66.00%;"><i class="scale__bar" style="height:49px;"></i></span><span class="scale__tick" style="left:68.00%;"><i class="scale__bar" style="height:27px;"></i></span><span class="scale__tick is-hana" style="left:70.00%;"><i class="scale__bar" style="height:10px;"></i></span><span class="scale__tick is-hana" style="left:72.00%;"><i class="scale__bar" style="height:10px;"></i></span><span class="scale__tick is-hana" style="left:74.00%;"><i class="scale__bar" style="height:11px;"></i></span><span class="scale__tick is-hana" style="left:80.00%;"><i class="scale__bar" style="height:11px;"></i></span><span class="scale__tick is-hana" style="left:82.00%;"><i class="scale__bar" style="height:10px;"></i></span><span class="scale__tick is-hana" style="left:84.00%;"><i class="scale__bar" style="height:10px;"></i></span><span class="scale__tick is-hana" style="left:86.00%;"><i class="scale__bar" style="height:10px;"></i></span><span class="scale__tick is-hana" style="left:98.00%;"><i class="scale__bar" style="height:10px;"></i></span><span class="scale__tick is-hana" style="left:100.00%;"><i class="scale__bar" style="height:17px;"></i></span></div><div class="scale__lbl"><span>10度</span><span>60度</span></div><div class="scale__marks"><a class="scale__mark" href="20.html" style="left:20.00%;top:6px;">20<small>14</small></a><a class="scale__mark" href="25.html" style="left:30.00%;top:6px;">25<small>90</small></a><a class="scale__mark" href="30.html" style="left:40.00%;top:6px;">30<small>181</small></a><a class="scale__mark" href="35.html" style="left:50.00%;top:6px;">35<small>46</small></a><a class="scale__mark" href="40.html" style="left:60.00%;top:6px;">40<small>58</small></a><a class="scale__mark" href="43.html" style="left:66.00%;top:6px;">43<small>161</small></a><a class="scale__mark" href="60.html" style="left:100.00%;top:6px;">60<small>13</small></a></div></div>
+<div class="scale"><div class="scale__track"><span class="scale__tick" style="left:0.00%;"><i class="scale__bar" style="height:10px;"></i></span><span class="scale__tick" style="left:4.00%;"><i class="scale__bar" style="height:11px;"></i></span><span class="scale__tick" style="left:8.00%;"><i class="scale__bar" style="height:10px;"></i></span><span class="scale__tick" style="left:10.00%;"><i class="scale__bar" style="height:12px;"></i></span><span class="scale__tick" style="left:20.00%;"><i class="scale__bar" style="height:17px;"></i></span><span class="scale__tick" style="left:30.00%;"><i class="scale__bar" style="height:37px;"></i></span><span class="scale__tick" style="left:34.00%;"><i class="scale__bar" style="height:11px;"></i></span><span class="scale__tick" style="left:38.00%;"><i class="scale__bar" style="height:11px;"></i></span><span class="scale__tick" style="left:40.00%;"><i class="scale__bar" style="height:52px;"></i></span><span class="scale__tick" style="left:48.00%;"><i class="scale__bar" style="height:11px;"></i></span><span class="scale__tick" style="left:50.00%;"><i class="scale__bar" style="height:27px;"></i></span><span class="scale__tick" style="left:52.00%;"><i class="scale__bar" style="height:11px;"></i></span><span class="scale__tick" style="left:56.00%;"><i class="scale__bar" style="height:10px;"></i></span><span class="scale__tick" style="left:58.00%;"><i class="scale__bar" style="height:12px;"></i></span><span class="scale__tick" style="left:60.00%;"><i class="scale__bar" style="height:30px;"></i></span><span class="scale__tick" style="left:62.00%;"><i class="scale__bar" style="height:14px;"></i></span><span class="scale__tick" style="left:64.00%;"><i class="scale__bar" style="height:18px;"></i></span><span class="scale__tick" style="left:66.00%;"><i class="scale__bar" style="height:49px;"></i></span><span class="scale__tick" style="left:68.00%;"><i class="scale__bar" style="height:27px;"></i></span><span class="scale__tick is-hana" style="left:70.00%;"><i class="scale__bar" style="height:10px;"></i></span><span class="scale__tick is-hana" style="left:72.00%;"><i class="scale__bar" style="height:10px;"></i></span><span class="scale__tick is-hana" style="left:74.00%;"><i class="scale__bar" style="height:11px;"></i></span><span class="scale__tick is-hana" style="left:80.00%;"><i class="scale__bar" style="height:11px;"></i></span><span class="scale__tick is-hana" style="left:82.00%;"><i class="scale__bar" style="height:10px;"></i></span><span class="scale__tick is-hana" style="left:84.00%;"><i class="scale__bar" style="height:10px;"></i></span><span class="scale__tick is-hana" style="left:86.00%;"><i class="scale__bar" style="height:10px;"></i></span><span class="scale__tick is-hana" style="left:98.00%;"><i class="scale__bar" style="height:10px;"></i></span><span class="scale__tick is-hana" style="left:100.00%;"><i class="scale__bar" style="height:17px;"></i></span></div><div class="scale__lbl"><span>10度</span><span>60度</span></div><div class="scale__marks"><a class="scale__mark" href="20" style="left:20.00%;top:6px;">20<small>14</small></a><a class="scale__mark" href="25" style="left:30.00%;top:6px;">25<small>90</small></a><a class="scale__mark" href="30" style="left:40.00%;top:6px;">30<small>181</small></a><a class="scale__mark" href="35" style="left:50.00%;top:6px;">35<small>46</small></a><a class="scale__mark" href="40" style="left:60.00%;top:6px;">40<small>58</small></a><a class="scale__mark" href="43" style="left:66.00%;top:6px;">43<small>161</small></a><a class="scale__mark" href="60" style="left:100.00%;top:6px;">60<small>13</small></a></div></div>
 <div class="panel panel--note">
   <p>度数は各酒造所の公式サイト（公式に記載がない場合は沖縄県酒造組合の泡盛データベース）で確認したものだけを載せている。
-  公式に度数の記載がない銘柄が<strong>36件</strong>あり、それらは推測で埋めずに除いた。
+  公式に度数の記載がない銘柄が<strong>31銘柄</strong>あり、それらは推測で埋めずに除いた。
   <span class="sub">確認日 2026年8月30日</span></p>
 </div>
 
 <section style="margin:32px 0;">
 <h2 class="h-sec">度数ごとの銘柄数</h2>
-  <a href="../find.html?abv=a1" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="../find?abv=a1" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">10度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:1%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">1</span>
   </a>
-  <a href="../find.html?abv=a1" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="../find?abv=a1" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">12度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:1%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">2</span>
   </a>
-  <a href="../find.html?abv=a1" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="../find?abv=a1" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">14度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:1%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">1</span>
   </a>
-  <a href="../find.html?abv=a1" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="../find?abv=a1" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">15度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:2%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">4</span>
   </a>
-  <a href="20.html" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="20" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">20度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:8%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">14</span>
   </a>
-  <a href="25.html" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="25" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">25度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:50%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">90</span>
   </a>
-  <a href="../find.html?abv=a3" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="../find?abv=a3" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">27度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:1%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">2</span>
   </a>
-  <a href="../find.html?abv=a3" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="../find?abv=a3" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">29度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:1%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">2</span>
   </a>
-  <a href="30.html" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="30" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">30度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:100%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">181</span>
   </a>
-  <a href="../find.html?abv=a4" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="../find?abv=a4" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">34度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:1%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">2</span>
   </a>
-  <a href="35.html" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="35" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">35度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:25%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">46</span>
   </a>
-  <a href="../find.html?abv=a5" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="../find?abv=a5" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">36度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:1%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">2</span>
   </a>
-  <a href="../find.html?abv=a5" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="../find?abv=a5" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">38度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:1%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">1</span>
   </a>
-  <a href="../find.html?abv=a5" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="../find?abv=a5" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">39度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:2%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">4</span>
   </a>
-  <a href="40.html" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="40" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">40度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:32%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">58</span>
   </a>
-  <a href="../find.html?abv=a5" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="../find?abv=a5" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">41度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:4%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">7</span>
   </a>
-  <a href="42.html" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="42" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">42度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:8%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">15</span>
   </a>
-  <a href="43.html" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="43" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">43度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:89%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">161</span>
   </a>
-  <a href="44.html" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="44" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">44度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:25%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">46</span>
   </a>
-  <a href="../find.html?abv=a7" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="../find?abv=a7" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">45度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:1%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">1</span>
   </a>
-  <a href="../find.html?abv=a7" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="../find?abv=a7" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">46度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:1%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">1</span>
   </a>
-  <a href="../find.html?abv=a7" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="../find?abv=a7" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">47度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:1%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">2</span>
   </a>
-  <a href="../find.html?abv=a7" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="../find?abv=a7" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">50度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:1%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">2</span>
   </a>
-  <a href="../find.html?abv=a7" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="../find?abv=a7" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">51度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:1%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">1</span>
   </a>
-  <a href="../find.html?abv=a7" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="../find?abv=a7" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">52度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:1%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">1</span>
   </a>
-  <a href="../find.html?abv=a7" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="../find?abv=a7" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">53度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:1%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">1</span>
   </a>
-  <a href="../find.html?abv=a7" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="../find?abv=a7" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">59度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
       <i style="display:block;height:100%;width:1%;background:var(--indigo);border-radius:3px;"></i></span>
     <span style="font-family:var(--mono);font-size:12px;color:var(--muted);">1</span>
   </a>
-  <a href="60.html" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
+  <a href="60" style="display:grid;grid-template-columns:56px 1fr 46px;gap:10px;
     align-items:center;text-decoration:none;color:inherit;padding:5px 0;">
     <span style="font-family:var(--mono);font-weight:700;text-align:right;color:var(--indigo);">60度</span>
     <span style="height:12px;background:#e8e2d5;border-radius:3px;overflow:hidden;">
@@ -267,20 +270,26 @@
 </section>
 
 <div class="panel">
+  <h3>なぜ30度と43度に集まるのか</h3>
+  <p>28種類の度数の分布と、酒税法・公正競争規約が引いた45度・25度の線については
+  <a href="../guide/abv">読みもの「泡盛の度数はなぜ30度と43度に集まるのか」</a>で
+  条文と数字を確認できる。</p>
+</div>
+<div class="panel">
   <h3>度数が分かるとカロリーも分かる</h3>
   <p>泡盛は糖質が0で、カロリーはすべてアルコール由来になる。つまり
   <strong>度数が同じなら、銘柄が違ってもカロリーは同じ</strong>だ。
-  計算式と度数別の早見表は<a href="../calorie.html">カロリーと糖質のページ</a>にまとめた。</p>
+  計算式と度数別の早見表は<a href="../calorie">カロリーと糖質のページ</a>にまとめた。</p>
 </div>
 
 <section style="margin:32px 0;">
 <h2 class="h-sec">度数別のページ</h2>
 <div class="chips">
-<a class="chip" href="20.html">20度 <small>14銘柄</small></a><a class="chip" href="25.html">25度 <small>90銘柄</small></a><a class="chip" href="30.html">30度 <small>181銘柄</small></a><a class="chip" href="35.html">35度 <small>46銘柄</small></a><a class="chip" href="40.html">40度 <small>58銘柄</small></a><a class="chip" href="42.html">42度 <small>15銘柄</small></a><a class="chip" href="43.html">43度 <small>161銘柄</small></a><a class="chip" href="44.html">44度 <small>46銘柄</small></a><a class="chip" href="60.html">60度 <small>13銘柄</small></a>
+<a class="chip" href="20">20度 <small>14銘柄</small></a><a class="chip" href="25">25度 <small>90銘柄</small></a><a class="chip" href="30">30度 <small>181銘柄</small></a><a class="chip" href="35">35度 <small>46銘柄</small></a><a class="chip" href="40">40度 <small>58銘柄</small></a><a class="chip" href="42">42度 <small>15銘柄</small></a><a class="chip" href="43">43度 <small>161銘柄</small></a><a class="chip" href="44">44度 <small>46銘柄</small></a><a class="chip" href="60">60度 <small>13銘柄</small></a>
 </div>
 <p style="font-size:12.5px;color:var(--muted);">
   上記以外の度数（10度・12度・14度・15度・27度・29度・34度・36度・38度・39度・41度・45度・46度・47度・50度・51度・52度・53度・59度）は銘柄数が少ないため個別ページを設けていない。
-  <a href="../find.html">条件で絞り込む</a>から探せる。</p>
+  <a href="../find">条件で絞り込む</a>から探せる。</p>
 </section>
 </main>
 
@@ -295,22 +304,22 @@
       </div>
       <div>
         <h4>探す</h4>
-        <a href="../find.html">条件で絞り込む</a>
-        <a href="../region/index.html">地域から探す</a>
-        <a href="../koshu.html">古酒の年数から</a>
-        <a href="../abv/index.html">度数から</a>
-        <a href="../hanazake.html">花酒（60度）</a>
-        <a href="../tour.html">蔵見学ができる酒造所</a>
-        <a href="../calorie.html">カロリーと糖質</a>
-        <a href="../furusato.html">ふるさと納税</a>
+        <a href="../find">条件で絞り込む</a>
+        <a href="../region/">地域から探す</a>
+        <a href="../koshu">古酒の年数から</a>
+        <a href="../abv/">度数から</a>
+        <a href="../hanazake">花酒（60度）</a>
+        <a href="../tour">蔵見学ができる酒造所</a>
+        <a href="../calorie">カロリーと糖質</a>
+        <a href="../furusato">ふるさと納税</a>
       </div>
       <div>
         <h4>サイトについて</h4>
-        <a href="../distillery/index.html">酒造所一覧</a>
-        <a href="../guide/index.html">読みもの</a>
-        <a href="../about.html">このサイトについて</a>
-        <a href="../disclaimer.html">免責事項</a>
-        <a href="../privacy.html">プライバシーポリシー</a>
+        <a href="../distillery/">酒造所一覧</a>
+        <a href="../guide/">読みもの</a>
+        <a href="../about">このサイトについて</a>
+        <a href="../disclaimer">免責事項</a>
+        <a href="../privacy">プライバシーポリシー</a>
       </div>
     </div>
     <p class="ft__note">

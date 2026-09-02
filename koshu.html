@@ -5,18 +5,18 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="google-site-verification" content="-5wjhv4IpfEJj_h6v5UEWNO8HnlC5YGOIewMCSUG4YA">
 <title>泡盛の古酒（クース）を年数から探す｜泡盛DB</title>
-<meta name="description" content="泡盛の古酒286銘柄を3年・5年・10年・20年などの年数別に一覧。公正競争規約が求める「全量古酒」かどうかまで併記しています。">
+<meta name="description" content="泡盛の古酒257銘柄を3年・5年・10年・20年などの年数別に一覧。公正競争規約が求める「全量古酒」かどうかまで併記しています。">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap">
-<link rel="stylesheet" href="assets/awamori.css?v=20260902j">
+<link rel="stylesheet" href="assets/awamori.css?v=20260902m">
 <link rel="canonical" href="https://awamori-db.com/koshu">
 <meta property="og:site_name" content="泡盛DB">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://awamori-db.com/koshu">
 <meta property="og:title" content="泡盛の古酒（クース）を年数から探す｜泡盛DB">
-<meta property="og:description" content="泡盛の古酒286銘柄を3年・5年・10年・20年などの年数別に一覧。公正競争規約が求める「全量古酒」かどうかまで併記しています。">
+<meta property="og:description" content="泡盛の古酒257銘柄を3年・5年・10年・20年などの年数別に一覧。公正競争規約が求める「全量古酒」かどうかまで併記しています。">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://awamori-db.com/assets/img/koshu.webp">
 <meta name="twitter:card" content="summary_large_image">
@@ -29,35 +29,38 @@
 <body>
 <header class="hd">
   <div class="wrap hd__in">
-    <a class="hd__logo" href="index.html"><b>泡盛DB</b><span>琉球泡盛データベース</span></a>
-    <button class="hd__burger" type="button" aria-expanded="false" aria-label="メニュー">☰</button>
+    <a class="hd__logo" href="./"><b>泡盛DB</b><span>琉球泡盛データベース</span></a>
+    <form class="hd__search" action="find" role="search">
+      <input type="search" name="q" placeholder="銘柄・酒造所名" aria-label="銘柄名・酒造所名で検索">
+    </form>
+    <button class="hd__burger" type="button" aria-expanded="false" aria-label="メニュー">☰ メニュー</button>
     <nav class="hd__nav">
-      <a href="find.html">絞り込んで探す</a>
-      <a href="koshu.html">古酒</a>
-      <a href="abv/index.html">度数</a>
-      <a href="hanazake.html">花酒</a>
-      <a href="tour.html">蔵見学</a>
-      <a href="distillery/index.html">酒造所</a>
-      <a href="guide/index.html">読みもの</a>
+      <a href="find">絞り込んで探す</a>
+      <a href="koshu">古酒</a>
+      <a href="abv/">度数</a>
+      <a href="hanazake">花酒</a>
+      <a href="tour">蔵見学</a>
+      <a href="distillery/">酒造所</a>
+      <a href="guide/">読みもの</a>
     </nav>
   </div>
 </header>
 <div class="phero">
   <img class="phero__img" src="assets/img/koshu.webp" srcset="assets/img/koshu-sm.webp 720w, assets/img/koshu.webp 1600w" sizes="100vw" alt="琥珀色の泡盛を注ぐイメージ" fetchpriority="high" width="1600" height="678">
   <div class="phero__body"><div class="wrap">
-    <p class="phero__kicker">古酒（クース）</p>
-    <h1>3年から50年へ。<br>時間が値段になる酒。</h1>
-    <p>公式で確認できた古酒286銘柄を、貯蔵年数の短い順に並べた。規約が求める<strong>全量古酒かどうか</strong>まで併記している。</p>
-    <div class="phero__stats"><div><b>50</b><span>最長の年数</span></div><div><b>286</b><span>古酒の銘柄</span></div><div><b>4</b><span>古酒と名乗れない商品</span></div></div>
+    <p class="phero__kicker">古酒（クース）── 3年から50年へ。時間が値段になる酒。</p>
+    <h1>泡盛の古酒257銘柄を年数から探す</h1>
+    <p>公式で確認できた古酒257銘柄（度数違いを含め286件）を、貯蔵年数の短い順に並べた。規約が求める<strong>全量古酒かどうか</strong>まで併記している。</p>
+    <div class="phero__stats"><div><b>50</b><span>最長の年数</span></div><div><b>257</b><span>古酒の銘柄</span></div><div><b>4</b><span>古酒と名乗れない商品</span></div></div>
   </div></div>
   <span class="phero__credit">画像はイメージ</span>
 </div>
-<nav class="crumb wrap" aria-label="パンくず"><ol><li><a href="index.html">トップ</a></li><li>古酒から探す</li></ol></nav>
+<nav class="crumb wrap" aria-label="パンくず"><ol><li><a href="./">トップ</a></li><li>古酒から探す</li></ol></nav>
 <main class="wrap">
 <p class="lede">
   泡盛の「古酒（クース）」は、公正競争規約で<strong>3年以上貯蔵したもの</strong>と定義されている。
   さらに2013年10月10日の改正以降は、<strong>全量が古酒でなければ「古酒」と表示できない</strong>。
-  公式で確認できた286銘柄を年数別に並べ、<strong>古酒の割合</strong>まで併記した。
+  公式で確認できた257銘柄（度数違いを含め286件）を年数別に並べ、<strong>古酒の割合</strong>まで併記した。
 </p>
 
 <div class="panel panel--note">
@@ -66,1422 +69,1422 @@
   古酒を60%だけ混ぜた商品は、中身に古酒が入っていても「古酒」とは名乗れない。
   この列は、公式サイトが古酒の割合を明記している場合にその数字を表示している。
   <strong>割合を明記しているのは39銘柄</strong>で、残りは公式に記載がないため「記載なし」とした。</p>
-  <p><a href="guide/koshu-kiyaku.html">→ 条文の解説を読む</a></p>
+  <p><a href="guide/koshu-kiyaku">→ 条文の解説を読む</a></p>
 </div>
 
 <div class="chips"><a class="chip" href="#y3">3年 <small>61</small></a><a class="chip" href="#y4">4年 <small>1</small></a><a class="chip" href="#y5">5年 <small>49</small></a><a class="chip" href="#y6">6年 <small>2</small></a><a class="chip" href="#y7">7年 <small>6</small></a><a class="chip" href="#y8">8年 <small>10</small></a><a class="chip" href="#y10">10年 <small>31</small></a><a class="chip" href="#y11">11年 <small>1</small></a><a class="chip" href="#y12">12年 <small>4</small></a><a class="chip" href="#y13">13年 <small>2</small></a><a class="chip" href="#y14">14年 <small>5</small></a><a class="chip" href="#y15">15年 <small>9</small></a><a class="chip" href="#y17">17年 <small>2</small></a><a class="chip" href="#y18">18年 <small>6</small></a><a class="chip" href="#y20">20年 <small>3</small></a><a class="chip" href="#y21">21年 <small>1</small></a><a class="chip" href="#y22">22年 <small>1</small></a><a class="chip" href="#y25">25年 <small>1</small></a><a class="chip" href="#y27">27年 <small>1</small></a><a class="chip" href="#y38">38年 <small>1</small></a><a class="chip" href="#y40">40年 <small>1</small></a><a class="chip" href="#y50">50年 <small>1</small></a><a class="chip" href="#yunknown">年数の記載なし <small>88</small></a></div>
 
 <div class="tl">
-<section class="tl__node" id="y3"><span class="tl__year">3<i>年</i></span><div class="tl__head"><b>3年貯蔵の古酒</b><span>61銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
-      <td class="name"><a href="brand/chuko-6a3163a8.html"><b>忠孝3年古酒（原料タイ米）</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+<section class="tl__node" id="y3"><span class="tl__year">3<i>年</i></span><div class="tl__head"><h2>3年貯蔵の古酒</h2><span>61銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
+      <td class="name"><a href="brand/chuko-6a3163a8"><b>忠孝3年古酒（原料タイ米）</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥3,795</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/chuko-c1b1e573.html"><b>琉球城焼3升甕3年古酒</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/chuko-c1b1e573"><b>琉球城焼3升甕3年古酒</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">5,400ml</td>
       <td class="n">¥49,862</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/chuko-f3d4e35d.html"><b>琉球城焼5升甕3年古酒</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/chuko-f3d4e35d"><b>琉球城焼5升甕3年古酒</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">9,000ml</td>
       <td class="n">¥76,185</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/chuko-501d3588.html"><b>琉球城焼1升甕3年古酒</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/chuko-501d3588"><b>琉球城焼1升甕3年古酒</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥20,115</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/chuko-3c0c5e14.html"><b>古琉球3年古酒</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/chuko-3c0c5e14"><b>古琉球3年古酒</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥2,055</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/chuko-eed565e6.html"><b>2025さざんか</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/chuko-eed565e6"><b>2025さざんか</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥2,500</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/helios-0284dbc3.html"><b>くら（オーク樽熟成三年古酒）</b></a></td>
-      <td><a href="distillery/helios.html">ヘリオス酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/helios-0284dbc3"><b>くら（オーク樽熟成三年古酒）</b></a></td>
+      <td><a href="distillery/helios">ヘリオス酒造</a><span class="sub">本島北部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">250ml / 720ml / 1,800ml</td>
       <td class="n">¥1,320</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/helios-d6e5cc0c.html"><b>くらプレミアムゴールド</b></a></td>
-      <td><a href="distillery/helios.html">ヘリオス酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/helios-d6e5cc0c"><b>くらプレミアムゴールド</b></a></td>
+      <td><a href="distillery/helios">ヘリオス酒造</a><span class="sub">本島北部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">250ml / 720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/helios-87deacdb.html"><b>くらブラック三年古酒</b></a></td>
-      <td><a href="distillery/helios.html">ヘリオス酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/helios-87deacdb"><b>くらブラック三年古酒</b></a></td>
+      <td><a href="distillery/helios">ヘリオス酒造</a><span class="sub">本島北部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/helios-cc65bd2d.html"><b>主（ぬーし）</b></a></td>
-      <td><a href="distillery/helios.html">ヘリオス酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/helios-cc65bd2d"><b>主（ぬーし）</b></a></td>
+      <td><a href="distillery/helios">ヘリオス酒造</a><span class="sub">本島北部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/higa-d07020b8.html"><b>ZANPA 43</b></a></td>
-      <td><a href="distillery/higa.html">比嘉酒造</a><span class="sub">本島中部</span></td>
+      <td class="name"><a href="brand/higa-d07020b8"><b>ZANPA 43</b></a></td>
+      <td><a href="distillery/higa">比嘉酒造</a><span class="sub">本島中部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n">¥2,640〜¥4,305</td>
       <td><span class="kv kv--part" title="全量古酒ではないため、公正競争規約上「古酒」と表示できません"><span class="kv__bar"><i style="width:60%"></i></span>古酒60%</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/ikehara-4d076331.html"><b>白百合 古酒 2020</b></a></td>
-      <td><a href="distillery/ikehara.html">池原酒造</a><span class="sub">八重山</span></td>
+      <td class="name"><a href="brand/ikehara-4d076331"><b>白百合 古酒 2020</b></a></td>
+      <td><a href="distillery/ikehara">池原酒造</a><span class="sub">八重山</span></td>
       <td class="n">40度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥5,500</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/izena-be0d5376.html"><b>古酒3年 いぜな島</b></a></td>
-      <td><a href="distillery/izena.html">伊是名酒造所</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/izena-be0d5376"><b>古酒3年 いぜな島</b></a></td>
+      <td><a href="distillery/izena">伊是名酒造所</a><span class="sub">本島北部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kamimura-38fab7d0.html"><b>暖流CRAFT3年古酒</b></a></td>
-      <td><a href="distillery/kamimura.html">神村酒造</a><span class="sub">本島中部</span></td>
+      <td class="name"><a href="brand/kamimura-38fab7d0"><b>暖流CRAFT3年古酒</b></a></td>
+      <td><a href="distillery/kamimura">神村酒造</a><span class="sub">本島中部</span></td>
       <td class="n">40度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n">¥3,960〜¥7,260</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kamimura-17c81c6e.html"><b>守禮3年古酒</b></a></td>
-      <td><a href="distillery/kamimura.html">神村酒造</a><span class="sub">本島中部</span></td>
+      <td class="name"><a href="brand/kamimura-17c81c6e"><b>守禮3年古酒</b></a></td>
+      <td><a href="distillery/kamimura">神村酒造</a><span class="sub">本島中部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n">¥3,520〜¥7,040</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kamiya-7c7b41f4.html"><b>神谷 三年古酒</b></a></td>
-      <td><a href="distillery/kamiya.html">神谷酒造所</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/kamiya-7c7b41f4"><b>神谷 三年古酒</b></a></td>
+      <td><a href="distillery/kamiya">神谷酒造所</a><span class="sub">那覇・南部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n">¥1,540〜¥2,750</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kikunotsuyu-e5d826f5.html"><b>菊之露 古酒 サザンバレル</b></a></td>
-      <td><a href="distillery/kikunotsuyu.html">菊之露酒造</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/kikunotsuyu-e5d826f5"><b>菊之露 古酒 サザンバレル</b></a></td>
+      <td><a href="distillery/kikunotsuyu">菊之露酒造</a><span class="sub">宮古</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n">¥1,573〜¥2,541</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kin-38678099.html"><b>龍 古酒 黒</b></a></td>
-      <td><a href="distillery/kin.html">金武酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/kin-38678099"><b>龍 古酒 黒</b></a></td>
+      <td><a href="distillery/kin">金武酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kumejima-kumesen-027e4c58.html"><b>真南風 3年古酒 (エッチング) 青</b></a></td>
-      <td><a href="distillery/kumejima-kumesen.html">久米島の久米仙</a><span class="sub">久米島</span></td>
+      <td class="name"><a href="brand/kumejima-kumesen-027e4c58"><b>真南風 3年古酒 (エッチング) 青</b></a></td>
+      <td><a href="distillery/kumejima-kumesen">久米島の久米仙</a><span class="sub">久米島</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥36,520</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kumejima-kumesen-e88634c1.html"><b>でいご 3年古酒</b></a></td>
-      <td><a href="distillery/kumejima-kumesen.html">久米島の久米仙</a><span class="sub">久米島</span></td>
+      <td class="name"><a href="brand/kumejima-kumesen-e88634c1"><b>でいご 3年古酒</b></a></td>
+      <td><a href="distillery/kumejima-kumesen">久米島の久米仙</a><span class="sub">久米島</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥3,122</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kumejima-kumesen-871e4fa4.html"><b>び 3年古酒</b></a></td>
-      <td><a href="distillery/kumejima-kumesen.html">久米島の久米仙</a><span class="sub">久米島</span></td>
+      <td class="name"><a href="brand/kumejima-kumesen-871e4fa4"><b>び 3年古酒</b></a></td>
+      <td><a href="distillery/kumejima-kumesen">久米島の久米仙</a><span class="sub">久米島</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥3,000</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/matsufuji-ecda667a.html"><b>松藤 3年古酒</b></a></td>
-      <td><a href="distillery/matsufuji.html">松藤（崎山酒造廠）</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/matsufuji-ecda667a"><b>松藤 3年古酒</b></a></td>
+      <td><a href="distillery/matsufuji">松藤（崎山酒造廠）</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi"><span class="na">—</span></td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/miyanohana-101e3269.html"><b>華ごころ</b></a></td>
-      <td><a href="distillery/miyanohana.html">宮の華</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/miyanohana-101e3269"><b>華ごころ</b></a></td>
+      <td><a href="distillery/miyanohana">宮の華</a><span class="sub">宮古</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">500ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/mizuho-1a0bbf8d.html"><b>瑞穂 熟成三年古酒</b></a></td>
-      <td><a href="distillery/mizuho.html">瑞穂酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/mizuho-1a0bbf8d"><b>瑞穂 熟成三年古酒</b></a></td>
+      <td><a href="distillery/mizuho">瑞穂酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥4,340</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/mizuho-1a0bbf8d.html"><b>瑞穂 熟成三年古酒</b></a></td>
-      <td><a href="distillery/mizuho.html">瑞穂酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/mizuho-1a0bbf8d"><b>瑞穂 熟成三年古酒</b></a></td>
+      <td><a href="distillery/mizuho">瑞穂酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥3,260</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/mizuho-1a0bbf8d.html"><b>瑞穂 熟成三年古酒</b></a></td>
-      <td><a href="distillery/mizuho.html">瑞穂酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/mizuho-1a0bbf8d"><b>瑞穂 熟成三年古酒</b></a></td>
+      <td><a href="distillery/mizuho">瑞穂酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥2,690</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/mizuho-e354cefc.html"><b>瑞穂 熟成三年古酒 純金箔入</b></a></td>
-      <td><a href="distillery/mizuho.html">瑞穂酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/mizuho-e354cefc"><b>瑞穂 熟成三年古酒 純金箔入</b></a></td>
+      <td><a href="distillery/mizuho">瑞穂酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥4,340</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/mizuho-99df1703.html"><b>瑞穂 三升繩巻壷 熟成三年古酒</b></a></td>
-      <td><a href="distillery/mizuho.html">瑞穂酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/mizuho-99df1703"><b>瑞穂 三升繩巻壷 熟成三年古酒</b></a></td>
+      <td><a href="distillery/mizuho">瑞穂酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">5,400ml</td>
       <td class="n">¥37,635</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/mizuho-12ea0579.html"><b>首里天 樽貯蔵 熟成三年古酒</b></a></td>
-      <td><a href="distillery/mizuho.html">瑞穂酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/mizuho-12ea0579"><b>首里天 樽貯蔵 熟成三年古酒</b></a></td>
+      <td><a href="distillery/mizuho">瑞穂酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥2,820</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/okishukyo-0a891e5a.html"><b>南風</b></a></td>
-      <td><a href="distillery/okishukyo.html">沖縄県酒造協同組合</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/okishukyo-0a891e5a"><b>南風</b></a></td>
+      <td><a href="distillery/okishukyo">沖縄県酒造協同組合</a><span class="sub">那覇・南部</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥3,181</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/okishukyo-0a891e5a.html"><b>南風</b></a></td>
-      <td><a href="distillery/okishukyo.html">沖縄県酒造協同組合</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/okishukyo-0a891e5a"><b>南風</b></a></td>
+      <td><a href="distillery/okishukyo">沖縄県酒造協同組合</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥4,098</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/okishukyo-485ee357.html"><b>琉球泡盛</b></a></td>
-      <td><a href="distillery/okishukyo.html">沖縄県酒造協同組合</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/okishukyo-485ee357"><b>琉球泡盛</b></a></td>
+      <td><a href="distillery/okishukyo">沖縄県酒造協同組合</a><span class="sub">那覇・南部</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥3,181</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/ryusen-23d345fc.html"><b>龍泉3年古酒</b></a></td>
-      <td><a href="distillery/ryusen.html">龍泉酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/ryusen-23d345fc"><b>龍泉3年古酒</b></a></td>
+      <td><a href="distillery/ryusen">龍泉酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/sakimoto-0ea2c855.html"><b>泡盛コンテスト2019年金賞受賞 三年古酒</b></a></td>
-      <td><a href="distillery/sakimoto.html">咲元酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/sakimoto-0ea2c855"><b>泡盛コンテスト2019年金賞受賞 三年古酒</b></a></td>
+      <td><a href="distillery/sakimoto">咲元酒造</a><span class="sub">本島北部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥2,100</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/seifuku-0c6157cc.html"><b>請福ビンテージ</b></a></td>
-      <td><a href="distillery/seifuku.html">請福酒造</a><span class="sub">八重山</span></td>
+      <td class="name"><a href="brand/seifuku-0c6157cc"><b>請福ビンテージ</b></a></td>
+      <td><a href="distillery/seifuku">請福酒造</a><span class="sub">八重山</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥2,200</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/seifuku-0c6157cc.html"><b>請福ビンテージ</b></a></td>
-      <td><a href="distillery/seifuku.html">請福酒造</a><span class="sub">八重山</span></td>
+      <td class="name"><a href="brand/seifuku-0c6157cc"><b>請福ビンテージ</b></a></td>
+      <td><a href="distillery/seifuku">請福酒造</a><span class="sub">八重山</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥2,750</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/seifuku-5e4c0005.html"><b>請福 南ぬ星（ぱいぬぶし）樽仕込</b></a></td>
-      <td><a href="distillery/seifuku.html">請福酒造</a><span class="sub">八重山</span></td>
+      <td class="name"><a href="brand/seifuku-5e4c0005"><b>請福 南ぬ星（ぱいぬぶし）樽仕込</b></a></td>
+      <td><a href="distillery/seifuku">請福酒造</a><span class="sub">八重山</span></td>
       <td class="n">42度</td>
       <td class="n n--multi">500ml</td>
       <td class="n">¥3,344</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/takamine-e9362149.html"><b>おもと 3年古酒</b></a></td>
-      <td><a href="distillery/takamine.html">髙嶺酒造所</a><span class="sub">八重山</span></td>
+      <td class="name"><a href="brand/takamine-e9362149"><b>おもと 3年古酒</b></a></td>
+      <td><a href="distillery/takamine">髙嶺酒造所</a><span class="sub">八重山</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">180ml / 720ml / 1,800ml</td>
       <td class="n">¥2,650〜¥5,000</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/takamine-e9362149.html"><b>おもと 3年古酒</b></a></td>
-      <td><a href="distillery/takamine.html">髙嶺酒造所</a><span class="sub">八重山</span></td>
+      <td class="name"><a href="brand/takamine-e9362149"><b>おもと 3年古酒</b></a></td>
+      <td><a href="distillery/takamine">髙嶺酒造所</a><span class="sub">八重山</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥2,200</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/tsukayama-bbbfc2d5.html"><b>國華3年古酒</b></a></td>
-      <td><a href="distillery/tsukayama.html">津嘉山酒造所</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/tsukayama-bbbfc2d5"><b>國華3年古酒</b></a></td>
+      <td><a href="distillery/tsukayama">津嘉山酒造所</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥4,000</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/uehara-ca66f254.html"><b>琉球泡盛「南都 神泉」</b></a></td>
-      <td><a href="distillery/uehara.html">上原酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/uehara-ca66f254"><b>琉球泡盛「南都 神泉」</b></a></td>
+      <td><a href="distillery/uehara">上原酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n">¥2,402〜¥4,077</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yaesen-d05b8653.html"><b>古酒八重泉</b></a></td>
-      <td><a href="distillery/yaesen.html">八重泉酒造</a><span class="sub">八重山</span></td>
+      <td class="name"><a href="brand/yaesen-d05b8653"><b>古酒八重泉</b></a></td>
+      <td><a href="distillery/yaesen">八重泉酒造</a><span class="sub">八重山</span></td>
       <td class="n">44度</td>
       <td class="n n--multi">300ml / 720ml / 1,800ml</td>
       <td class="n">¥1,640〜¥6,240</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yamakawa-0499240e.html"><b>さんご礁 3年古酒</b></a></td>
-      <td><a href="distillery/yamakawa.html">山川酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yamakawa-0499240e"><b>さんご礁 3年古酒</b></a></td>
+      <td><a href="distillery/yamakawa">山川酒造</a><span class="sub">本島北部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n">¥2,080〜¥3,550</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yamakawa-da89e9e1.html"><b>珊瑚礁 3年古酒</b></a></td>
-      <td><a href="distillery/yamakawa.html">山川酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yamakawa-da89e9e1"><b>珊瑚礁 3年古酒</b></a></td>
+      <td><a href="distillery/yamakawa">山川酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥5,270</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yamakawa-484b57ff.html"><b>さくらいちばん さくら酵母仕込み 3年古酒</b></a></td>
-      <td><a href="distillery/yamakawa.html">山川酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yamakawa-484b57ff"><b>さくらいちばん さくら酵母仕込み 3年古酒</b></a></td>
+      <td><a href="distillery/yamakawa">山川酒造</a><span class="sub">本島北部</span></td>
       <td class="n">40度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥3,270</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yamakawa-02333101.html"><b>珊瑚礁3年古酒 5升壷</b></a></td>
-      <td><a href="distillery/yamakawa.html">山川酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yamakawa-02333101"><b>珊瑚礁3年古酒 5升壷</b></a></td>
+      <td><a href="distillery/yamakawa">山川酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">9,000ml</td>
       <td class="n">¥50,300</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yamakawa-a4c9a673.html"><b>やんばる3年古酒</b></a></td>
-      <td><a href="distillery/yamakawa.html">山川酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yamakawa-a4c9a673"><b>やんばる3年古酒</b></a></td>
+      <td><a href="distillery/yamakawa">山川酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">300ml</td>
       <td class="n">¥1,500</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yanbaru-7f678750.html"><b>まるた30度 3年古酒100％</b></a></td>
-      <td><a href="distillery/yanbaru.html">やんばる酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yanbaru-7f678750"><b>まるた30度 3年古酒100％</b></a></td>
+      <td><a href="distillery/yanbaru">やんばる酒造</a><span class="sub">本島北部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n">¥1,560〜¥2,700</td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yanbaru-fcd73e7d.html"><b>まるた30度クース</b></a></td>
-      <td><a href="distillery/yanbaru.html">やんばる酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yanbaru-fcd73e7d"><b>まるた30度クース</b></a></td>
+      <td><a href="distillery/yanbaru">やんばる酒造</a><span class="sub">本島北部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi"><span class="na">—</span></td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yanbaru-4e562d6c.html"><b>山原くいな 3年古酒100%</b></a></td>
-      <td><a href="distillery/yanbaru.html">やんばる酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yanbaru-4e562d6c"><b>山原くいな 3年古酒100%</b></a></td>
+      <td><a href="distillery/yanbaru">やんばる酒造</a><span class="sub">本島北部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥2,700</td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yanbaru-4e562d6c.html"><b>山原くいな 3年古酒100%</b></a></td>
-      <td><a href="distillery/yanbaru.html">やんばる酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yanbaru-4e562d6c"><b>山原くいな 3年古酒100%</b></a></td>
+      <td><a href="distillery/yanbaru">やんばる酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥4,180</td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yanbaru-97235e4d.html"><b>やんばるくいな（3升壺） 3年古酒100%</b></a></td>
-      <td><a href="distillery/yanbaru.html">やんばる酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yanbaru-97235e4d"><b>やんばるくいな（3升壺） 3年古酒100%</b></a></td>
+      <td><a href="distillery/yanbaru">やんばる酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">5,400ml</td>
       <td class="n">¥38,000</td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yanbaru-1f6c39d0.html"><b>やんばるくいな（5升壺） 3年古酒100%</b></a></td>
-      <td><a href="distillery/yanbaru.html">やんばる酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yanbaru-1f6c39d0"><b>やんばるくいな（5升壺） 3年古酒100%</b></a></td>
+      <td><a href="distillery/yanbaru">やんばる酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">9,000ml</td>
       <td class="n">¥50,000</td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/zuisen-6ba778f9.html"><b>瑞泉青龍3年古酒</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/zuisen-6ba778f9"><b>瑞泉青龍3年古酒</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥1,650</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/zuisen-324c0932.html"><b>瑞泉青龍3年古酒一升</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/zuisen-324c0932"><b>瑞泉青龍3年古酒一升</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥3,080</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/zuisen-ae792fde.html"><b>瑞泉鳳凰</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/zuisen-ae792fde"><b>瑞泉鳳凰</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥2,970</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/zuisen-6d2a267d.html"><b>瑞泉1斗壷</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/zuisen-6d2a267d"><b>瑞泉1斗壷</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">18,000ml</td>
       <td class="n">¥82,500</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/zuisen-280b20ec.html"><b>瑞泉甕貯蔵古酒</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/zuisen-280b20ec"><b>瑞泉甕貯蔵古酒</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥3,960</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/zuisen-c05e5366.html"><b>瑞泉古酒720ml（40度）</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/zuisen-c05e5366"><b>瑞泉古酒720ml（40度）</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">40度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥2,640</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/zuisen-006848f9.html"><b>瑞泉古酒43度7</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/zuisen-006848f9"><b>瑞泉古酒43度7</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥2,420</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/zuisen-742af9e4.html"><b>瑞泉 首里昇龍古酒30度7</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/zuisen-742af9e4"><b>瑞泉 首里昇龍古酒30度7</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥3,300</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr></tbody></table></div></section>
-<section class="tl__node" id="y4"><span class="tl__year">4<i>年</i></span><div class="tl__head"><b>4年貯蔵の古酒</b><span>1銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
-      <td class="name"><a href="brand/ikehara-4204ef91.html"><b>白百合 古酒 2020 Ver.1.1</b></a></td>
-      <td><a href="distillery/ikehara.html">池原酒造</a><span class="sub">八重山</span></td>
+<section class="tl__node" id="y4"><span class="tl__year">4<i>年</i></span><div class="tl__head"><h2>4年貯蔵の古酒</h2><span>1銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
+      <td class="name"><a href="brand/ikehara-4204ef91"><b>白百合 古酒 2020 Ver.1.1</b></a></td>
+      <td><a href="distillery/ikehara">池原酒造</a><span class="sub">八重山</span></td>
       <td class="n">41度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥7,700</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr></tbody></table></div></section>
-<section class="tl__node" id="y5"><span class="tl__year">5<i>年</i></span><div class="tl__head"><b>5年貯蔵の古酒</b><span>49銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
-      <td class="name"><a href="brand/chuko-1d1b5706.html"><b>忠孝5年古酒</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+<section class="tl__node" id="y5"><span class="tl__year">5<i>年</i></span><div class="tl__head"><h2>5年貯蔵の古酒</h2><span>49銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
+      <td class="name"><a href="brand/chuko-1d1b5706"><b>忠孝5年古酒</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n">¥3,300〜¥5,898</td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/chuko-cbbda081.html"><b>琉球城焼1升甕5年古酒</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/chuko-cbbda081"><b>琉球城焼1升甕5年古酒</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥23,650</td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/chuko-0d0f8103.html"><b>琉球城焼3升甕5年古酒</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/chuko-0d0f8103"><b>琉球城焼3升甕5年古酒</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">5,400ml</td>
       <td class="n">¥56,957</td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/chuko-35636870.html"><b>琉球城焼5升甕5年古酒</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/chuko-35636870"><b>琉球城焼5升甕5年古酒</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">9,000ml</td>
       <td class="n">¥83,370</td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/helios-cc65bd2d.html"><b>主（ぬーし）</b></a></td>
-      <td><a href="distillery/helios.html">ヘリオス酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/helios-cc65bd2d"><b>主（ぬーし）</b></a></td>
+      <td><a href="distillery/helios">ヘリオス酒造</a><span class="sub">本島北部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/helios-cc65bd2d.html"><b>主（ぬーし）</b></a></td>
-      <td><a href="distillery/helios.html">ヘリオス酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/helios-cc65bd2d"><b>主（ぬーし）</b></a></td>
+      <td><a href="distillery/helios">ヘリオス酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/higa-7643e699.html"><b>残波プレミアム30</b></a></td>
-      <td><a href="distillery/higa.html">比嘉酒造</a><span class="sub">本島中部</span></td>
+      <td class="name"><a href="brand/higa-7643e699"><b>残波プレミアム30</b></a></td>
+      <td><a href="distillery/higa">比嘉酒造</a><span class="sub">本島中部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n">¥2,150〜¥4,120</td>
       <td><span class="kv kv--part" title="全量古酒ではないため、公正競争規約上「古酒」と表示できません"><span class="kv__bar"><i style="width:60%"></i></span>古酒60%</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/higa-06283018.html"><b>ZANPA PREMIUM 35</b></a></td>
-      <td><a href="distillery/higa.html">比嘉酒造</a><span class="sub">本島中部</span></td>
+      <td class="name"><a href="brand/higa-06283018"><b>ZANPA PREMIUM 35</b></a></td>
+      <td><a href="distillery/higa">比嘉酒造</a><span class="sub">本島中部</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥2,860</td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/irinamihira-e71c1576.html"><b>ゆのん（5年古酒）</b></a></td>
-      <td><a href="distillery/irinamihira.html">入波平酒造</a><span class="sub">八重山</span></td>
+      <td class="name"><a href="brand/irinamihira-e71c1576"><b>ゆのん（5年古酒）</b></a></td>
+      <td><a href="distillery/irinamihira">入波平酒造</a><span class="sub">八重山</span></td>
       <td class="n"><span class="na">—</span></td>
       <td class="n n--multi"><span class="na">—</span></td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/ishikawa-2b1c3868.html"><b>甕仕込5年古酒</b></a></td>
-      <td><a href="distillery/ishikawa.html">石川酒造場</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/ishikawa-2b1c3868"><b>甕仕込5年古酒</b></a></td>
+      <td><a href="distillery/ishikawa">石川酒造場</a><span class="sub">那覇・南部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n">¥1,880〜¥3,740</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/ishikawa-2b1c3868.html"><b>甕仕込5年古酒</b></a></td>
-      <td><a href="distillery/ishikawa.html">石川酒造場</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/ishikawa-2b1c3868"><b>甕仕込5年古酒</b></a></td>
+      <td><a href="distillery/ishikawa">石川酒造場</a><span class="sub">那覇・南部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n">¥2,310〜¥4,936</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/ishikawa-2b1c3868.html"><b>甕仕込5年古酒</b></a></td>
-      <td><a href="distillery/ishikawa.html">石川酒造場</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/ishikawa-2b1c3868"><b>甕仕込5年古酒</b></a></td>
+      <td><a href="distillery/ishikawa">石川酒造場</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n">¥3,300〜¥5,500</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/ishikawa-b63739fa.html"><b>玉友 甕仕込 縄巻き甕5合</b></a></td>
-      <td><a href="distillery/ishikawa.html">石川酒造場</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/ishikawa-b63739fa"><b>玉友 甕仕込 縄巻き甕5合</b></a></td>
+      <td><a href="distillery/ishikawa">石川酒造場</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">900ml</td>
       <td class="n">¥4,818</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/ishikawa-115a3822.html"><b>玉友 甕仕込 縄巻き甕1升</b></a></td>
-      <td><a href="distillery/ishikawa.html">石川酒造場</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/ishikawa-115a3822"><b>玉友 甕仕込 縄巻き甕1升</b></a></td>
+      <td><a href="distillery/ishikawa">石川酒造場</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥8,800</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/ishikawa-bf5aed2a.html"><b>玉友 甕仕込 縄巻き甕3升</b></a></td>
-      <td><a href="distillery/ishikawa.html">石川酒造場</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/ishikawa-bf5aed2a"><b>玉友 甕仕込 縄巻き甕3升</b></a></td>
+      <td><a href="distillery/ishikawa">石川酒造場</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">5,400ml</td>
       <td class="n">¥33,000</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/ishikawa-83ad6763.html"><b>玉友 甕仕込 縄巻き甕5升</b></a></td>
-      <td><a href="distillery/ishikawa.html">石川酒造場</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/ishikawa-83ad6763"><b>玉友 甕仕込 縄巻き甕5升</b></a></td>
+      <td><a href="distillery/ishikawa">石川酒造場</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">9,000ml</td>
       <td class="n">¥44,000</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/ishikawa-8ab4d216.html"><b>玉友 甕仕込 縄巻き甕1斗</b></a></td>
-      <td><a href="distillery/ishikawa.html">石川酒造場</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/ishikawa-8ab4d216"><b>玉友 甕仕込 縄巻き甕1斗</b></a></td>
+      <td><a href="distillery/ishikawa">石川酒造場</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">18,000ml</td>
       <td class="n">¥79,200</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/izena-8d385cba.html"><b>5年貯蔵古酒 常盤</b></a></td>
-      <td><a href="distillery/izena.html">伊是名酒造所</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/izena-8d385cba"><b>5年貯蔵古酒 常盤</b></a></td>
+      <td><a href="distillery/izena">伊是名酒造所</a><span class="sub">本島北部</span></td>
       <td class="n">40度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/izena-9906e866.html"><b>5年古酒 伊是名島</b></a></td>
-      <td><a href="distillery/izena.html">伊是名酒造所</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/izena-9906e866"><b>5年古酒 伊是名島</b></a></td>
+      <td><a href="distillery/izena">伊是名酒造所</a><span class="sub">本島北部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kikunotsuyu-aa0c68d0.html"><b>菊之露 古酒 V.I.P スタンダード</b></a></td>
-      <td><a href="distillery/kikunotsuyu.html">菊之露酒造</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/kikunotsuyu-aa0c68d0"><b>菊之露 古酒 V.I.P スタンダード</b></a></td>
+      <td><a href="distillery/kikunotsuyu">菊之露酒造</a><span class="sub">宮古</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥1,863</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kikunotsuyu-194fd431.html"><b>菊之露 古酒5年 一升瓶</b></a></td>
-      <td><a href="distillery/kikunotsuyu.html">菊之露酒造</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/kikunotsuyu-194fd431"><b>菊之露 古酒5年 一升瓶</b></a></td>
+      <td><a href="distillery/kikunotsuyu">菊之露酒造</a><span class="sub">宮古</span></td>
       <td class="n">40度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥3,795</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kikunotsuyu-12890875.html"><b>菊之露 古酒5年</b></a></td>
-      <td><a href="distillery/kikunotsuyu.html">菊之露酒造</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/kikunotsuyu-12890875"><b>菊之露 古酒5年</b></a></td>
+      <td><a href="distillery/kikunotsuyu">菊之露酒造</a><span class="sub">宮古</span></td>
       <td class="n">41度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥3,278</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kikunotsuyu-df296183.html"><b>菊之露 古酒 V.I.Pスタンダード紙パック</b></a></td>
-      <td><a href="distillery/kikunotsuyu.html">菊之露酒造</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/kikunotsuyu-df296183"><b>菊之露 古酒 V.I.Pスタンダード紙パック</b></a></td>
+      <td><a href="distillery/kikunotsuyu">菊之露酒造</a><span class="sub">宮古</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">900ml / 1,800ml</td>
       <td class="n">¥2,057〜¥2,783</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kikunotsuyu-cf910feb.html"><b>壺浪漫</b></a></td>
-      <td><a href="distillery/kikunotsuyu.html">菊之露酒造</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/kikunotsuyu-cf910feb"><b>壺浪漫</b></a></td>
+      <td><a href="distillery/kikunotsuyu">菊之露酒造</a><span class="sub">宮古</span></td>
       <td class="n">40度</td>
       <td class="n n--multi">1,800ml / 5,400ml / 9,000ml</td>
       <td class="n">¥9,812〜¥35,239</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kin-8d881d5d.html"><b>龍 5年古酒</b></a></td>
-      <td><a href="distillery/kin.html">金武酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/kin-8d881d5d"><b>龍 5年古酒</b></a></td>
+      <td><a href="distillery/kin">金武酒造</a><span class="sub">本島北部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kumejima-kumesen-fef78d07.html"><b>ブラック5年古酒</b></a></td>
-      <td><a href="distillery/kumejima-kumesen.html">久米島の久米仙</a><span class="sub">久米島</span></td>
+      <td class="name"><a href="brand/kumejima-kumesen-fef78d07"><b>ブラック5年古酒</b></a></td>
+      <td><a href="distillery/kumejima-kumesen">久米島の久米仙</a><span class="sub">久米島</span></td>
       <td class="n">40度</td>
       <td class="n n--multi"><span class="na">—</span></td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kusunosato-73ebac8a.html"><b>古酒の郷 5年古酒</b></a></td>
-      <td><a href="distillery/kusunosato.html">琉球泡盛古酒の郷</a><span class="sub">本島中部</span></td>
+      <td class="name"><a href="brand/kusunosato-73ebac8a"><b>古酒の郷 5年古酒</b></a></td>
+      <td><a href="distillery/kusunosato">琉球泡盛古酒の郷</a><span class="sub">本島中部</span></td>
       <td class="n">40度</td>
       <td class="n n--multi"><span class="na">—</span></td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/masahiro-107fb06c.html"><b>五年古酒まさひろGOLD</b></a></td>
-      <td><a href="distillery/masahiro.html">まさひろ酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/masahiro-107fb06c"><b>五年古酒まさひろGOLD</b></a></td>
+      <td><a href="distillery/masahiro">まさひろ酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">300ml / 720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/miyazato-0b4839f3.html"><b>春雨5年古酒</b></a></td>
-      <td><a href="distillery/miyazato.html">宮里酒造所</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/miyazato-0b4839f3"><b>春雨5年古酒</b></a></td>
+      <td><a href="distillery/miyazato">宮里酒造所</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/miyazato-0b4839f3.html"><b>春雨5年古酒</b></a></td>
-      <td><a href="distillery/miyazato.html">宮里酒造所</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/miyazato-0b4839f3"><b>春雨5年古酒</b></a></td>
+      <td><a href="distillery/miyazato">宮里酒造所</a><span class="sub">那覇・南部</span></td>
       <td class="n"><span class="na">—</span></td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/mizuho-50bbdae0.html"><b>ロイヤル瑞穂 熟成五年古酒</b></a></td>
-      <td><a href="distillery/mizuho.html">瑞穂酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/mizuho-50bbdae0"><b>ロイヤル瑞穂 熟成五年古酒</b></a></td>
+      <td><a href="distillery/mizuho">瑞穂酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥3,630</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/mizuho-b4539205.html"><b>マイルド瑞穂 熟成五年古酒</b></a></td>
-      <td><a href="distillery/mizuho.html">瑞穂酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/mizuho-b4539205"><b>マイルド瑞穂 熟成五年古酒</b></a></td>
+      <td><a href="distillery/mizuho">瑞穂酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥2,100</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/okishukyo-8b105fc4.html"><b>紺碧</b></a></td>
-      <td><a href="distillery/okishukyo.html">沖縄県酒造協同組合</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/okishukyo-8b105fc4"><b>紺碧</b></a></td>
+      <td><a href="distillery/okishukyo">沖縄県酒造協同組合</a><span class="sub">那覇・南部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥1,817</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/okishukyo-79913cdd.html"><b>紺碧ゴールド</b></a></td>
-      <td><a href="distillery/okishukyo.html">沖縄県酒造協同組合</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/okishukyo-79913cdd"><b>紺碧ゴールド</b></a></td>
+      <td><a href="distillery/okishukyo">沖縄県酒造協同組合</a><span class="sub">那覇・南部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥1,865</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/seifuku-74acdd06.html"><b>伍 ichichi</b></a></td>
-      <td><a href="distillery/seifuku.html">請福酒造</a><span class="sub">八重山</span></td>
+      <td class="name"><a href="brand/seifuku-74acdd06"><b>伍 ichichi</b></a></td>
+      <td><a href="distillery/seifuku">請福酒造</a><span class="sub">八重山</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">300ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/tamanaha-4c05a2d1.html"><b>玉の露 5年古酒 金</b></a></td>
-      <td><a href="distillery/tamanaha.html">玉那覇酒造所</a><span class="sub">八重山</span></td>
+      <td class="name"><a href="brand/tamanaha-4c05a2d1"><b>玉の露 5年古酒 金</b></a></td>
+      <td><a href="distillery/tamanaha">玉那覇酒造所</a><span class="sub">八重山</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥18,600</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/tokuyama-048bab82.html"><b>琉球泡盛古酒豊年</b></a></td>
-      <td><a href="distillery/tokuyama.html">渡久山酒造</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/tokuyama-048bab82"><b>琉球泡盛古酒豊年</b></a></td>
+      <td><a href="distillery/tokuyama">渡久山酒造</a><span class="sub">宮古</span></td>
       <td class="n"><span class="na">—</span></td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yaesen-221d1764.html"><b>古酒みやらび</b></a></td>
-      <td><a href="distillery/yaesen.html">八重泉酒造</a><span class="sub">八重山</span></td>
+      <td class="name"><a href="brand/yaesen-221d1764"><b>古酒みやらび</b></a></td>
+      <td><a href="distillery/yaesen">八重泉酒造</a><span class="sub">八重山</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥3,850</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yamakawa-34d54197.html"><b>珊瑚礁 5年古酒</b></a></td>
-      <td><a href="distillery/yamakawa.html">山川酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yamakawa-34d54197"><b>珊瑚礁 5年古酒</b></a></td>
+      <td><a href="distillery/yamakawa">山川酒造</a><span class="sub">本島北部</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥2,860</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yamakawa-34d54197.html"><b>珊瑚礁 5年古酒</b></a></td>
-      <td><a href="distillery/yamakawa.html">山川酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yamakawa-34d54197"><b>珊瑚礁 5年古酒</b></a></td>
+      <td><a href="distillery/yamakawa">山川酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n">¥3,850〜¥8,580</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yamakawa-6f1a99ad.html"><b>さくらいちばん</b></a></td>
-      <td><a href="distillery/yamakawa.html">山川酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yamakawa-6f1a99ad"><b>さくらいちばん</b></a></td>
+      <td><a href="distillery/yamakawa">山川酒造</a><span class="sub">本島北部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">180ml / 720ml / 1,800ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yamakawa-37110477.html"><b>琉球の女</b></a></td>
-      <td><a href="distillery/yamakawa.html">山川酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yamakawa-37110477"><b>琉球の女</b></a></td>
+      <td><a href="distillery/yamakawa">山川酒造</a><span class="sub">本島北部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yamakawa-e5af2185.html"><b>珊瑚礁5年古酒 5升壷</b></a></td>
-      <td><a href="distillery/yamakawa.html">山川酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yamakawa-e5af2185"><b>珊瑚礁5年古酒 5升壷</b></a></td>
+      <td><a href="distillery/yamakawa">山川酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">9,000ml</td>
       <td class="n">¥66,760</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yanbaru-b30228fa.html"><b>クイナブラック5年</b></a></td>
-      <td><a href="distillery/yanbaru.html">やんばる酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yanbaru-b30228fa"><b>クイナブラック5年</b></a></td>
+      <td><a href="distillery/yanbaru">やんばる酒造</a><span class="sub">本島北部</span></td>
       <td class="n"><span class="na">—</span></td>
       <td class="n n--multi"><span class="na">—</span></td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yanbaru-4cfad6f0.html"><b>KUINA BLACK 5年古酒100%シルバー</b></a></td>
-      <td><a href="distillery/yanbaru.html">やんばる酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yanbaru-4cfad6f0"><b>KUINA BLACK 5年古酒100%シルバー</b></a></td>
+      <td><a href="distillery/yanbaru">やんばる酒造</a><span class="sub">本島北部</span></td>
       <td class="n">40度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥2,670</td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yanbaru-3af12f4b.html"><b>KUINA BLACK 5年古酒100%ゴールド</b></a></td>
-      <td><a href="distillery/yanbaru.html">やんばる酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yanbaru-3af12f4b"><b>KUINA BLACK 5年古酒100%ゴールド</b></a></td>
+      <td><a href="distillery/yanbaru">やんばる酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥3,300</td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/zuisen-4a5e41a8.html"><b>おもろ5年古酒</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/zuisen-4a5e41a8"><b>おもろ5年古酒</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n"><span class="na">—</span></td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥2,940</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/zuisen-6bbf502c.html"><b>古酒 南風原premium</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/zuisen-6bbf502c"><b>古酒 南風原premium</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥2,585</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/zuisen-4ccbc3ea.html"><b>護佐丸伝説</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/zuisen-4ccbc3ea"><b>護佐丸伝説</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥3,025</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr></tbody></table></div></section>
-<section class="tl__node" id="y6"><span class="tl__year">6<i>年</i></span><div class="tl__head"><b>6年貯蔵の古酒</b><span>2銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
-      <td class="name"><a href="brand/chuko-7cc11ccf.html"><b>忠孝6年古酒</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+<section class="tl__node" id="y6"><span class="tl__year">6<i>年</i></span><div class="tl__head"><h2>6年貯蔵の古酒</h2><span>2銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
+      <td class="name"><a href="brand/chuko-7cc11ccf"><b>忠孝6年古酒</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">500ml</td>
       <td class="n">¥3,300</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/tsuhako-de0b342e.html"><b>太平古酒6年</b></a></td>
-      <td><a href="distillery/tsuhako.html">津波古酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/tsuhako-de0b342e"><b>太平古酒6年</b></a></td>
+      <td><a href="distillery/tsuhako">津波古酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">44度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr></tbody></table></div></section>
-<section class="tl__node" id="y7"><span class="tl__year">7<i>年</i></span><div class="tl__head"><b>7年貯蔵の古酒</b><span>6銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
-      <td class="name"><a href="brand/chuko-ec639d04.html"><b>古琉球7年古酒</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+<section class="tl__node" id="y7"><span class="tl__year">7<i>年</i></span><div class="tl__head"><h2>7年貯蔵の古酒</h2><span>6銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
+      <td class="name"><a href="brand/chuko-ec639d04"><b>古琉球7年古酒</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥2,673</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kikunotsuyu-9f18885e.html"><b>菊之露 古酒7年</b></a></td>
-      <td><a href="distillery/kikunotsuyu.html">菊之露酒造</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/kikunotsuyu-9f18885e"><b>菊之露 古酒7年</b></a></td>
+      <td><a href="distillery/kikunotsuyu">菊之露酒造</a><span class="sub">宮古</span></td>
       <td class="n">38度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥3,630</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kusunosato-e2479b43.html"><b>沖縄国税事務所長賞受賞 古酒の郷 7年古酒</b></a></td>
-      <td><a href="distillery/kusunosato.html">琉球泡盛古酒の郷</a><span class="sub">本島中部</span></td>
+      <td class="name"><a href="brand/kusunosato-e2479b43"><b>沖縄国税事務所長賞受賞 古酒の郷 7年古酒</b></a></td>
+      <td><a href="distillery/kusunosato">琉球泡盛古酒の郷</a><span class="sub">本島中部</span></td>
       <td class="n">44度</td>
       <td class="n n--multi"><span class="na">—</span></td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/mizuho-6f07ba3e.html"><b>珊瑚の森 熟成七年古酒</b></a></td>
-      <td><a href="distillery/mizuho.html">瑞穂酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/mizuho-6f07ba3e"><b>珊瑚の森 熟成七年古酒</b></a></td>
+      <td><a href="distillery/mizuho">瑞穂酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">300ml / 720ml</td>
       <td class="n">¥2,031〜¥4,000</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/seifuku-30683e4c.html"><b>請福 7年古酒</b></a></td>
-      <td><a href="distillery/seifuku.html">請福酒造</a><span class="sub">八重山</span></td>
+      <td class="name"><a href="brand/seifuku-30683e4c"><b>請福 7年古酒</b></a></td>
+      <td><a href="distillery/seifuku">請福酒造</a><span class="sub">八重山</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥2,871</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/shikina-2b65e612.html"><b>時雨熟成7年古酒</b></a></td>
-      <td><a href="distillery/shikina.html">識名酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/shikina-2b65e612"><b>時雨熟成7年古酒</b></a></td>
+      <td><a href="distillery/shikina">識名酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">42度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr></tbody></table></div></section>
-<section class="tl__node" id="y8"><span class="tl__year">8<i>年</i></span><div class="tl__head"><b>8年貯蔵の古酒</b><span>10銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
-      <td class="name"><a href="brand/helios-8f7e6e73.html"><b>大琉球國八年古酒</b></a></td>
-      <td><a href="distillery/helios.html">ヘリオス酒造</a><span class="sub">本島北部</span></td>
+<section class="tl__node" id="y8"><span class="tl__year">8<i>年</i></span><div class="tl__head"><h2>8年貯蔵の古酒</h2><span>10銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
+      <td class="name"><a href="brand/helios-8f7e6e73"><b>大琉球國八年古酒</b></a></td>
+      <td><a href="distillery/helios">ヘリオス酒造</a><span class="sub">本島北部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/helios-8f7e6e73.html"><b>大琉球國八年古酒</b></a></td>
-      <td><a href="distillery/helios.html">ヘリオス酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/helios-8f7e6e73"><b>大琉球國八年古酒</b></a></td>
+      <td><a href="distillery/helios">ヘリオス酒造</a><span class="sub">本島北部</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/helios-8f7e6e73.html"><b>大琉球國八年古酒</b></a></td>
-      <td><a href="distillery/helios.html">ヘリオス酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/helios-8f7e6e73"><b>大琉球國八年古酒</b></a></td>
+      <td><a href="distillery/helios">ヘリオス酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kikunotsuyu-1c9b0c26.html"><b>菊之露 古酒 V.I.P ゴールド</b></a></td>
-      <td><a href="distillery/kikunotsuyu.html">菊之露酒造</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/kikunotsuyu-1c9b0c26"><b>菊之露 古酒 V.I.P ゴールド</b></a></td>
+      <td><a href="distillery/kikunotsuyu">菊之露酒造</a><span class="sub">宮古</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml / 4,500ml</td>
       <td class="n">¥2,497〜¥20,680</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kumejima-kumesen-7e8ca5e9.html"><b>8年古酒</b></a></td>
-      <td><a href="distillery/kumejima-kumesen.html">久米島の久米仙</a><span class="sub">久米島</span></td>
+      <td class="name"><a href="brand/kumejima-kumesen-7e8ca5e9"><b>8年古酒</b></a></td>
+      <td><a href="distillery/kumejima-kumesen">久米島の久米仙</a><span class="sub">久米島</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/masahiro-162b2dde.html"><b>8年古酒 黄金まさひろ</b></a></td>
-      <td><a href="distillery/masahiro.html">まさひろ酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/masahiro-162b2dde"><b>8年古酒 黄金まさひろ</b></a></td>
+      <td><a href="distillery/masahiro">まさひろ酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥1,980</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/miyazato-8d039c80.html"><b>春雨8年古酒</b></a></td>
-      <td><a href="distillery/miyazato.html">宮里酒造所</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/miyazato-8d039c80"><b>春雨8年古酒</b></a></td>
+      <td><a href="distillery/miyazato">宮里酒造所</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/miyazato-8d039c80.html"><b>春雨8年古酒</b></a></td>
-      <td><a href="distillery/miyazato.html">宮里酒造所</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/miyazato-8d039c80"><b>春雨8年古酒</b></a></td>
+      <td><a href="distillery/miyazato">宮里酒造所</a><span class="sub">那覇・南部</span></td>
       <td class="n"><span class="na">—</span></td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/takamine-c3852af9.html"><b>おもと 8年古酒 ゴールド</b></a></td>
-      <td><a href="distillery/takamine.html">髙嶺酒造所</a><span class="sub">八重山</span></td>
+      <td class="name"><a href="brand/takamine-c3852af9"><b>おもと 8年古酒 ゴールド</b></a></td>
+      <td><a href="distillery/takamine">髙嶺酒造所</a><span class="sub">八重山</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥3,400</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/zuisen-7bacd07b.html"><b>瑞泉白龍8年</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/zuisen-7bacd07b"><b>瑞泉白龍8年</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n"><span class="na">—</span></td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥3,150</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr></tbody></table></div></section>
-<section class="tl__node" id="y10"><span class="tl__year">10<i>年</i></span><div class="tl__head"><b>10年貯蔵の古酒</b><span>31銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
-      <td class="name"><a href="brand/chuko-25886f14.html"><b>忠孝10年古酒</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+<section class="tl__node" id="y10"><span class="tl__year">10<i>年</i></span><div class="tl__head"><h2>10年貯蔵の古酒</h2><span>31銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
+      <td class="name"><a href="brand/chuko-25886f14"><b>忠孝10年古酒</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">42度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n">¥6,489〜¥14,156</td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/chuko-813a9e01.html"><b>琉球城焼豊見1升10年古酒</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/chuko-813a9e01"><b>琉球城焼豊見1升10年古酒</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">42度</td>
       <td class="n n--multi"><span class="na">—</span></td>
       <td class="n">¥27,832</td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/chuko-6de177fc.html"><b>琉球城焼豊見(窯変入)10年古酒</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/chuko-6de177fc"><b>琉球城焼豊見(窯変入)10年古酒</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">42度</td>
       <td class="n n--multi">3,200ml</td>
       <td class="n">¥65,639</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/chuko-f24a1c84.html"><b>琉球城焼1升甕10年古酒</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/chuko-f24a1c84"><b>琉球城焼1升甕10年古酒</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">42度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥32,577</td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/chuko-3e7e03bc.html"><b>琉球城焼3升甕10年古酒</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/chuko-3e7e03bc"><b>琉球城焼3升甕10年古酒</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">42度</td>
       <td class="n n--multi">5,400ml</td>
       <td class="n">¥91,218</td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/chuko-5664ba03.html"><b>琉球城焼5升甕10年古酒</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/chuko-5664ba03"><b>琉球城焼5升甕10年古酒</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">42度</td>
       <td class="n n--multi">9,000ml</td>
       <td class="n">¥146,510</td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/ishikawa-50f13c59.html"><b>玉友 甕仕込10年古酒</b></a></td>
-      <td><a href="distillery/ishikawa.html">石川酒造場</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/ishikawa-50f13c59"><b>玉友 甕仕込10年古酒</b></a></td>
+      <td><a href="distillery/ishikawa">石川酒造場</a><span class="sub">那覇・南部</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥6,372</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/izena-b63ff6b5.html"><b>古酒10年 金丸</b></a></td>
-      <td><a href="distillery/izena.html">伊是名酒造所</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/izena-b63ff6b5"><b>古酒10年 金丸</b></a></td>
+      <td><a href="distillery/izena">伊是名酒造所</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/izena-b63ff6b5.html"><b>古酒10年 金丸</b></a></td>
-      <td><a href="distillery/izena.html">伊是名酒造所</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/izena-b63ff6b5"><b>古酒10年 金丸</b></a></td>
+      <td><a href="distillery/izena">伊是名酒造所</a><span class="sub">本島北部</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/izena-e8426058.html"><b>手作り琉球ガラス 金丸</b></a></td>
-      <td><a href="distillery/izena.html">伊是名酒造所</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/izena-e8426058"><b>手作り琉球ガラス 金丸</b></a></td>
+      <td><a href="distillery/izena">伊是名酒造所</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kamiya-4cc3795f.html"><b>琉球泡盛 K 10年古酒</b></a></td>
-      <td><a href="distillery/kamiya.html">神谷酒造所</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/kamiya-4cc3795f"><b>琉球泡盛 K 10年古酒</b></a></td>
+      <td><a href="distillery/kamiya">神谷酒造所</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥4,400</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kin-43c23564.html"><b>2002年製造 古酒 龍</b></a></td>
-      <td><a href="distillery/kin.html">金武酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/kin-43c23564"><b>2002年製造 古酒 龍</b></a></td>
+      <td><a href="distillery/kin">金武酒造</a><span class="sub">本島北部</span></td>
       <td class="n">40度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/masahiro-dbc566b0.html"><b>10年古酒 五頭馬</b></a></td>
-      <td><a href="distillery/masahiro.html">まさひろ酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/masahiro-dbc566b0"><b>10年古酒 五頭馬</b></a></td>
+      <td><a href="distillery/masahiro">まさひろ酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n"><span class="na">—</span></td>
       <td class="n n--multi"><span class="na">—</span></td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/miyazato-7d373d4c.html"><b>春雨10年古酒</b></a></td>
-      <td><a href="distillery/miyazato.html">宮里酒造所</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/miyazato-7d373d4c"><b>春雨10年古酒</b></a></td>
+      <td><a href="distillery/miyazato">宮里酒造所</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/miyazato-7d373d4c.html"><b>春雨10年古酒</b></a></td>
-      <td><a href="distillery/miyazato.html">宮里酒造所</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/miyazato-7d373d4c"><b>春雨10年古酒</b></a></td>
+      <td><a href="distillery/miyazato">宮里酒造所</a><span class="sub">那覇・南部</span></td>
       <td class="n"><span class="na">—</span></td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/mizuho-2dae0563.html"><b>熟成十年古酒 古都首里</b></a></td>
-      <td><a href="distillery/mizuho.html">瑞穂酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/mizuho-2dae0563"><b>熟成十年古酒 古都首里</b></a></td>
+      <td><a href="distillery/mizuho">瑞穂酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">40度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥5,000</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/mizuho-2dae0563.html"><b>熟成十年古酒 古都首里</b></a></td>
-      <td><a href="distillery/mizuho.html">瑞穂酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/mizuho-2dae0563"><b>熟成十年古酒 古都首里</b></a></td>
+      <td><a href="distillery/mizuho">瑞穂酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥4,220</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/mizuho-2dae0563.html"><b>熟成十年古酒 古都首里</b></a></td>
-      <td><a href="distillery/mizuho.html">瑞穂酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/mizuho-2dae0563"><b>熟成十年古酒 古都首里</b></a></td>
+      <td><a href="distillery/mizuho">瑞穂酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥2,910</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/okinohikari-d5f59923.html"><b>35度10年古酒沖之光</b></a></td>
-      <td><a href="distillery/okinohikari.html">沖之光酒造</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/okinohikari-d5f59923"><b>35度10年古酒沖之光</b></a></td>
+      <td><a href="distillery/okinohikari">沖之光酒造</a><span class="sub">宮古</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/okinohikari-12f59fe2.html"><b>30度10年古酒2001年</b></a></td>
-      <td><a href="distillery/okinohikari.html">沖之光酒造</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/okinohikari-12f59fe2"><b>30度10年古酒2001年</b></a></td>
+      <td><a href="distillery/okinohikari">沖之光酒造</a><span class="sub">宮古</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/okishukyo-3dec3f5d.html"><b>海乃邦</b></a></td>
-      <td><a href="distillery/okishukyo.html">沖縄県酒造協同組合</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/okishukyo-3dec3f5d"><b>海乃邦</b></a></td>
+      <td><a href="distillery/okishukyo">沖縄県酒造協同組合</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">180ml / 300ml / 720ml / 1,800ml</td>
       <td class="n">¥1,320〜¥10,469</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/okishukyo-3dec3f5d.html"><b>海乃邦</b></a></td>
-      <td><a href="distillery/okishukyo.html">沖縄県酒造協同組合</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/okishukyo-3dec3f5d"><b>海乃邦</b></a></td>
+      <td><a href="distillery/okishukyo">沖縄県酒造協同組合</a><span class="sub">那覇・南部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥2,365</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/okishukyo-f28e5a83.html"><b>海乃邦 金箔入り</b></a></td>
-      <td><a href="distillery/okishukyo.html">沖縄県酒造協同組合</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/okishukyo-f28e5a83"><b>海乃邦 金箔入り</b></a></td>
+      <td><a href="distillery/okishukyo">沖縄県酒造協同組合</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥6,050</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/onna-37dcaeb1.html"><b>萬座 10年古酒</b></a></td>
-      <td><a href="distillery/onna.html">恩納酒造所</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/onna-37dcaeb1"><b>萬座 10年古酒</b></a></td>
+      <td><a href="distillery/onna">恩納酒造所</a><span class="sub">本島北部</span></td>
       <td class="n">40度</td>
       <td class="n n--multi"><span class="na">—</span></td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/taragawa-76acb7df.html"><b>久遠</b></a></td>
-      <td><a href="distillery/taragawa.html">多良川</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/taragawa-76acb7df"><b>久遠</b></a></td>
+      <td><a href="distillery/taragawa">多良川</a><span class="sub">宮古</span></td>
       <td class="n">43度</td>
       <td class="n n--multi"><span class="na">—</span></td>
       <td class="n">¥6,600</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yamakawa-d7577a16.html"><b>珊瑚礁 10年古酒</b></a></td>
-      <td><a href="distillery/yamakawa.html">山川酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yamakawa-d7577a16"><b>珊瑚礁 10年古酒</b></a></td>
+      <td><a href="distillery/yamakawa">山川酒造</a><span class="sub">本島北部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥4,580</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yamakawa-d7577a16.html"><b>珊瑚礁 10年古酒</b></a></td>
-      <td><a href="distillery/yamakawa.html">山川酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yamakawa-d7577a16"><b>珊瑚礁 10年古酒</b></a></td>
+      <td><a href="distillery/yamakawa">山川酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">500ml / 720ml / 1,800ml</td>
       <td class="n">¥3,620〜¥12,090</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/zuisen-17d8d6a9.html"><b>瑞泉黒龍10年</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/zuisen-17d8d6a9"><b>瑞泉黒龍10年</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n"><span class="na">—</span></td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥3,780</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/zuisen-8d4c3844.html"><b>おもろ10年</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/zuisen-8d4c3844"><b>おもろ10年</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n">¥4,180〜¥9,625</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/zuisen-3b999796.html"><b>瑞泉King crown 10年古酒 1</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/zuisen-3b999796"><b>瑞泉King crown 10年古酒 1</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">180ml</td>
       <td class="n">¥990</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/zuisen-415e1316.html"><b>瑞泉King crown 10年古酒 7</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/zuisen-415e1316"><b>瑞泉King crown 10年古酒 7</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥3,080</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr></tbody></table></div></section>
-<section class="tl__node" id="y11"><span class="tl__year">11<i>年</i></span><div class="tl__head"><b>11年貯蔵の古酒</b><span>1銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
-      <td class="name"><a href="brand/zuisen-ec54bb96.html"><b>瑞泉御酒古酒</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+<section class="tl__node" id="y11"><span class="tl__year">11<i>年</i></span><div class="tl__head"><h2>11年貯蔵の古酒</h2><span>1銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
+      <td class="name"><a href="brand/zuisen-ec54bb96"><b>瑞泉御酒古酒</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">40度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥5,400</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr></tbody></table></div></section>
-<section class="tl__node" id="y12"><span class="tl__year">12<i>年</i></span><div class="tl__head"><b>12年貯蔵の古酒</b><span>4銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
-      <td class="name"><a href="brand/kumejima-kumesen-9427d53a.html"><b>ホワイト12年古酒</b></a></td>
-      <td><a href="distillery/kumejima-kumesen.html">久米島の久米仙</a><span class="sub">久米島</span></td>
+<section class="tl__node" id="y12"><span class="tl__year">12<i>年</i></span><div class="tl__head"><h2>12年貯蔵の古酒</h2><span>4銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
+      <td class="name"><a href="brand/kumejima-kumesen-9427d53a"><b>ホワイト12年古酒</b></a></td>
+      <td><a href="distillery/kumejima-kumesen">久米島の久米仙</a><span class="sub">久米島</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">375ml / 720ml</td>
       <td class="n">¥3,575〜¥6,930</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kumejima-kumesen-2fcbf59f.html"><b>ホワイト12年古酒 2026干支 午</b></a></td>
-      <td><a href="distillery/kumejima-kumesen.html">久米島の久米仙</a><span class="sub">久米島</span></td>
+      <td class="name"><a href="brand/kumejima-kumesen-2fcbf59f"><b>ホワイト12年古酒 2026干支 午</b></a></td>
+      <td><a href="distillery/kumejima-kumesen">久米島の久米仙</a><span class="sub">久米島</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥6,930</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/okishukyo-3dec3f5d.html"><b>海乃邦</b></a></td>
-      <td><a href="distillery/okishukyo.html">沖縄県酒造協同組合</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/okishukyo-3dec3f5d"><b>海乃邦</b></a></td>
+      <td><a href="distillery/okishukyo">沖縄県酒造協同組合</a><span class="sub">那覇・南部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">300ml / 720ml</td>
       <td class="n">¥1,700〜¥3,482</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/okishukyo-5ff94e30.html"><b>海乃邦KOHAKU</b></a></td>
-      <td><a href="distillery/okishukyo.html">沖縄県酒造協同組合</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/okishukyo-5ff94e30"><b>海乃邦KOHAKU</b></a></td>
+      <td><a href="distillery/okishukyo">沖縄県酒造協同組合</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥5,720</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr></tbody></table></div></section>
-<section class="tl__node" id="y13"><span class="tl__year">13<i>年</i></span><div class="tl__head"><b>13年貯蔵の古酒</b><span>2銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
-      <td class="name"><a href="brand/chatanchoro-ffac311b.html"><b>北谷長老 13年古酒</b></a></td>
-      <td><a href="distillery/chatanchoro.html">北谷長老酒造工場</a><span class="sub">本島中部</span></td>
+<section class="tl__node" id="y13"><span class="tl__year">13<i>年</i></span><div class="tl__head"><h2>13年貯蔵の古酒</h2><span>2銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
+      <td class="name"><a href="brand/chatanchoro-ffac311b"><b>北谷長老 13年古酒</b></a></td>
+      <td><a href="distillery/chatanchoro">北谷長老酒造工場</a><span class="sub">本島中部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">180ml / 450ml / 720ml / 1,800ml</td>
       <td class="n">¥1,020〜¥9,670</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/chatanchoro-ffac311b.html"><b>北谷長老 13年古酒</b></a></td>
-      <td><a href="distillery/chatanchoro.html">北谷長老酒造工場</a><span class="sub">本島中部</span></td>
+      <td class="name"><a href="brand/chatanchoro-ffac311b"><b>北谷長老 13年古酒</b></a></td>
+      <td><a href="distillery/chatanchoro">北谷長老酒造工場</a><span class="sub">本島中部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">180ml / 450ml / 720ml / 1,800ml</td>
       <td class="n">¥1,630〜¥15,750</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr></tbody></table></div></section>
-<section class="tl__node" id="y14"><span class="tl__year">14<i>年</i></span><div class="tl__head"><b>14年貯蔵の古酒</b><span>5銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
-      <td class="name"><a href="brand/chuko-ae6d4790.html"><b>忠孝 The Vanilla14年古酒</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+<section class="tl__node" id="y14"><span class="tl__year">14<i>年</i></span><div class="tl__head"><h2>14年貯蔵の古酒</h2><span>5銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
+      <td class="name"><a href="brand/chuko-ae6d4790"><b>忠孝 The Vanilla14年古酒</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">500ml</td>
       <td class="n">¥12,000</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/chuko-54765313.html"><b>The Vanilla14年古酒（お試しサイズ）</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/chuko-54765313"><b>The Vanilla14年古酒（お試しサイズ）</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">100ml</td>
       <td class="n">¥2,500</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/higa-bf2054ec.html"><b>ZANPA PREMIUM 43</b></a></td>
-      <td><a href="distillery/higa.html">比嘉酒造</a><span class="sub">本島中部</span></td>
+      <td class="name"><a href="brand/higa-bf2054ec"><b>ZANPA PREMIUM 43</b></a></td>
+      <td><a href="distillery/higa">比嘉酒造</a><span class="sub">本島中部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥4,000</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/seifuku-4fb73be9.html"><b>南雪</b></a></td>
-      <td><a href="distillery/seifuku.html">請福酒造</a><span class="sub">八重山</span></td>
+      <td class="name"><a href="brand/seifuku-4fb73be9"><b>南雪</b></a></td>
+      <td><a href="distillery/seifuku">請福酒造</a><span class="sub">八重山</span></td>
       <td class="n">41度</td>
       <td class="n n--multi">300ml / 720ml</td>
       <td class="n">¥5,060</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/tsuhako-6ccee11a.html"><b>太平古酒14年</b></a></td>
-      <td><a href="distillery/tsuhako.html">津波古酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/tsuhako-6ccee11a"><b>太平古酒14年</b></a></td>
+      <td><a href="distillery/tsuhako">津波古酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">44度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr></tbody></table></div></section>
-<section class="tl__node" id="y15"><span class="tl__year">15<i>年</i></span><div class="tl__head"><b>15年貯蔵の古酒</b><span>9銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
-      <td class="name"><a href="brand/chuko-fe42982a.html"><b>忠孝15年古酒</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+<section class="tl__node" id="y15"><span class="tl__year">15<i>年</i></span><div class="tl__head"><h2>15年貯蔵の古酒</h2><span>9銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
+      <td class="name"><a href="brand/chuko-fe42982a"><b>忠孝15年古酒</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">40度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n">¥11,795〜¥23,590</td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/chuko-c380f3b0.html"><b>琉球城焼1升甕15年古酒</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/chuko-c380f3b0"><b>琉球城焼1升甕15年古酒</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">40度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥39,325</td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/chuko-78aae24c.html"><b>琉球城焼5升甕15年古酒</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/chuko-78aae24c"><b>琉球城焼5升甕15年古酒</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">40度</td>
       <td class="n n--multi">9,000ml</td>
       <td class="n">¥205,607</td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/chuko-edb9b151.html"><b>琉球城焼3升甕15年古酒</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/chuko-edb9b151"><b>琉球城焼3升甕15年古酒</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">40度</td>
       <td class="n n--multi">5,400ml</td>
       <td class="n">¥126,675</td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/iheya-4591e997.html"><b>芭蕉布15年貯蔵酒</b></a></td>
-      <td><a href="distillery/iheya.html">伊平屋酒造所</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/iheya-4591e997"><b>芭蕉布15年貯蔵酒</b></a></td>
+      <td><a href="distillery/iheya">伊平屋酒造所</a><span class="sub">本島北部</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥5,290</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/miyazato-eeb906f4.html"><b>春雨15年古酒</b></a></td>
-      <td><a href="distillery/miyazato.html">宮里酒造所</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/miyazato-eeb906f4"><b>春雨15年古酒</b></a></td>
+      <td><a href="distillery/miyazato">宮里酒造所</a><span class="sub">那覇・南部</span></td>
       <td class="n"><span class="na">—</span></td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/tsukayama-f42f96d6.html"><b>國華老麹34%15年古酒</b></a></td>
-      <td><a href="distillery/tsukayama.html">津嘉山酒造所</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/tsukayama-f42f96d6"><b>國華老麹34%15年古酒</b></a></td>
+      <td><a href="distillery/tsukayama">津嘉山酒造所</a><span class="sub">本島北部</span></td>
       <td class="n">34度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥12,000</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yamakawa-79c7c5c6.html"><b>秘蔵酒かねやま 15年古酒</b></a></td>
-      <td><a href="distillery/yamakawa.html">山川酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yamakawa-79c7c5c6"><b>秘蔵酒かねやま 15年古酒</b></a></td>
+      <td><a href="distillery/yamakawa">山川酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥12,650</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/zuisen-4fb291da.html"><b>おもろ15年</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/zuisen-4fb291da"><b>おもろ15年</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥6,600</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr></tbody></table></div></section>
-<section class="tl__node" id="y17"><span class="tl__year">17<i>年</i></span><div class="tl__head"><b>17年貯蔵の古酒</b><span>2銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
-      <td class="name"><a href="brand/zuisen-f00311b9.html"><b>瑞泉竜鳳17年</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+<section class="tl__node" id="y17"><span class="tl__year">17<i>年</i></span><div class="tl__head"><h2>17年貯蔵の古酒</h2><span>2銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
+      <td class="name"><a href="brand/zuisen-f00311b9"><b>瑞泉竜鳳17年</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n"><span class="na">—</span></td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥10,500</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/zuisen-29e56015.html"><b>おもろ17年</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/zuisen-29e56015"><b>おもろ17年</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n"><span class="na">—</span></td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥8,694</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr></tbody></table></div></section>
-<section class="tl__node" id="y18"><span class="tl__year">18<i>年</i></span><div class="tl__head"><b>18年貯蔵の古酒</b><span>6銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
-      <td class="name"><a href="brand/chuko-938b4c70.html"><b>忠孝 甕熟成18年古酒（2024年IWSC最高金賞）</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+<section class="tl__node" id="y18"><span class="tl__year">18<i>年</i></span><div class="tl__head"><h2>18年貯蔵の古酒</h2><span>6銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
+      <td class="name"><a href="brand/chuko-938b4c70"><b>忠孝 甕熟成18年古酒（2024年IWSC最高金賞）</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">40度</td>
       <td class="n n--multi">500ml</td>
       <td class="n">¥18,000</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/chuko-aea3a99a.html"><b>忠孝 甕熟成18年古酒 お試しサイズ（2024IWSC最高金賞受賞）</b></a></td>
-      <td><a href="distillery/chuko.html">忠孝酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/chuko-aea3a99a"><b>忠孝 甕熟成18年古酒 お試しサイズ（2024IWSC最高金賞受賞）</b></a></td>
+      <td><a href="distillery/chuko">忠孝酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">40度</td>
       <td class="n n--multi">100ml</td>
       <td class="n">¥3,800</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yamakawa-7d880fca.html"><b>秘蔵酒かねやま 18年古酒</b></a></td>
-      <td><a href="distillery/yamakawa.html">山川酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yamakawa-7d880fca"><b>秘蔵酒かねやま 18年古酒</b></a></td>
+      <td><a href="distillery/yamakawa">山川酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">200ml</td>
       <td class="n">¥6,160</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yamakawa-16c5522c.html"><b>さくらいちばん さくら酵母仕込み</b></a></td>
-      <td><a href="distillery/yamakawa.html">山川酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yamakawa-16c5522c"><b>さくらいちばん さくら酵母仕込み</b></a></td>
+      <td><a href="distillery/yamakawa">山川酒造</a><span class="sub">本島北部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">300ml</td>
       <td class="n">¥1,500</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/zuisen-3809321b.html"><b>おもろ18年</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/zuisen-3809321b"><b>おもろ18年</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">39度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥11,000</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/zuisen-3b932823.html"><b>おもろ18年ポケット瓶</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/zuisen-3b932823"><b>おもろ18年ポケット瓶</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">39度</td>
       <td class="n n--multi">180ml</td>
       <td class="n">¥2,750</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr></tbody></table></div></section>
-<section class="tl__node" id="y20"><span class="tl__year">20<i>年</i></span><div class="tl__head"><b>20年貯蔵の古酒</b><span>3銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
-      <td class="name"><a href="brand/miyazato-d2651b83.html"><b>春雨20年古酒</b></a></td>
-      <td><a href="distillery/miyazato.html">宮里酒造所</a><span class="sub">那覇・南部</span></td>
+<section class="tl__node" id="y20"><span class="tl__year">20<i>年</i></span><div class="tl__head"><h2>20年貯蔵の古酒</h2><span>3銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
+      <td class="name"><a href="brand/miyazato-d2651b83"><b>春雨20年古酒</b></a></td>
+      <td><a href="distillery/miyazato">宮里酒造所</a><span class="sub">那覇・南部</span></td>
       <td class="n"><span class="na">—</span></td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/shikina-80f20798.html"><b>時雨 無濾過</b></a></td>
-      <td><a href="distillery/shikina.html">識名酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/shikina-80f20798"><b>時雨 無濾過</b></a></td>
+      <td><a href="distillery/shikina">識名酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yamakawa-46db2971.html"><b>秘蔵酒かねやま 20年古酒</b></a></td>
-      <td><a href="distillery/yamakawa.html">山川酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yamakawa-46db2971"><b>秘蔵酒かねやま 20年古酒</b></a></td>
+      <td><a href="distillery/yamakawa">山川酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥25,300</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr></tbody></table></div></section>
-<section class="tl__node" id="y21"><span class="tl__year">21<i>年</i></span><div class="tl__head"><b>21年貯蔵の古酒</b><span>1銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
-      <td class="name"><a href="brand/zuisen-0e366091.html"><b>おもろ21年</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+<section class="tl__node" id="y21"><span class="tl__year">21<i>年</i></span><div class="tl__head"><h2>21年貯蔵の古酒</h2><span>1銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
+      <td class="name"><a href="brand/zuisen-0e366091"><b>おもろ21年</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥14,850</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr></tbody></table></div></section>
-<section class="tl__node" id="y22"><span class="tl__year">22<i>年</i></span><div class="tl__head"><b>22年貯蔵の古酒</b><span>1銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
-      <td class="name"><a href="brand/kumesen-353aaac7.html"><b>久米仙 BLUE</b></a></td>
-      <td><a href="distillery/kumesen.html">久米仙酒造</a><span class="sub">那覇・南部</span></td>
+<section class="tl__node" id="y22"><span class="tl__year">22<i>年</i></span><div class="tl__head"><h2>22年貯蔵の古酒</h2><span>1銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
+      <td class="name"><a href="brand/kumesen-353aaac7"><b>久米仙 BLUE</b></a></td>
+      <td><a href="distillery/kumesen">久米仙酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">42度</td>
       <td class="n n--multi">700ml</td>
       <td class="n">¥8,000</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr></tbody></table></div></section>
-<section class="tl__node" id="y25"><span class="tl__year">25<i>年</i></span><div class="tl__head"><b>25年貯蔵の古酒</b><span>1銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
-      <td class="name"><a href="brand/yamakawa-6ab68562.html"><b>秘蔵酒かねやま 25年古酒</b></a></td>
-      <td><a href="distillery/yamakawa.html">山川酒造</a><span class="sub">本島北部</span></td>
+<section class="tl__node" id="y25"><span class="tl__year">25<i>年</i></span><div class="tl__head"><h2>25年貯蔵の古酒</h2><span>1銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
+      <td class="name"><a href="brand/yamakawa-6ab68562"><b>秘蔵酒かねやま 25年古酒</b></a></td>
+      <td><a href="distillery/yamakawa">山川酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr></tbody></table></div></section>
-<section class="tl__node" id="y27"><span class="tl__year">27<i>年</i></span><div class="tl__head"><b>27年貯蔵の古酒</b><span>1銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
-      <td class="name"><a href="brand/tsuhako-d15eb8f3.html"><b>白露の玉</b></a></td>
-      <td><a href="distillery/tsuhako.html">津波古酒造</a><span class="sub">那覇・南部</span></td>
+<section class="tl__node" id="y27"><span class="tl__year">27<i>年</i></span><div class="tl__head"><h2>27年貯蔵の古酒</h2><span>1銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
+      <td class="name"><a href="brand/tsuhako-d15eb8f3"><b>白露の玉</b></a></td>
+      <td><a href="distillery/tsuhako">津波古酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi"><span class="na">—</span></td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr></tbody></table></div></section>
-<section class="tl__node" id="y38"><span class="tl__year">38<i>年</i></span><div class="tl__head"><b>38年貯蔵の古酒</b><span>1銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
-      <td class="name"><a href="brand/yamakawa-87243e19.html"><b>葛飾北斎 琉球八景 かねやま 38年古酒</b></a></td>
-      <td><a href="distillery/yamakawa.html">山川酒造</a><span class="sub">本島北部</span></td>
+<section class="tl__node" id="y38"><span class="tl__year">38<i>年</i></span><div class="tl__head"><h2>38年貯蔵の古酒</h2><span>1銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
+      <td class="name"><a href="brand/yamakawa-87243e19"><b>葛飾北斎 琉球八景 かねやま 38年古酒</b></a></td>
+      <td><a href="distillery/yamakawa">山川酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥200,000</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr></tbody></table></div></section>
-<section class="tl__node" id="y40"><span class="tl__year">40<i>年</i></span><div class="tl__head"><b>40年貯蔵の古酒</b><span>1銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
-      <td class="name"><a href="brand/yamakawa-0ff2baba.html"><b>秘蔵酒かねやま 40年古酒</b></a></td>
-      <td><a href="distillery/yamakawa.html">山川酒造</a><span class="sub">本島北部</span></td>
+<section class="tl__node" id="y40"><span class="tl__year">40<i>年</i></span><div class="tl__head"><h2>40年貯蔵の古酒</h2><span>1銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
+      <td class="name"><a href="brand/yamakawa-0ff2baba"><b>秘蔵酒かねやま 40年古酒</b></a></td>
+      <td><a href="distillery/yamakawa">山川酒造</a><span class="sub">本島北部</span></td>
       <td class="n">41度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr></tbody></table></div></section>
-<section class="tl__node" id="y50"><span class="tl__year">50<i>年</i></span><div class="tl__head"><b>50年貯蔵の古酒</b><span>1銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
-      <td class="name"><a href="brand/yamakawa-68fa3a19.html"><b>秘蔵酒かねやま 1967 50年古酒</b></a></td>
-      <td><a href="distillery/yamakawa.html">山川酒造</a><span class="sub">本島北部</span></td>
+<section class="tl__node" id="y50"><span class="tl__year">50<i>年</i></span><div class="tl__head"><h2>50年貯蔵の古酒</h2><span>1銘柄</span></div><div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
+      <td class="name"><a href="brand/yamakawa-68fa3a19"><b>秘蔵酒かねやま 1967 50年古酒</b></a></td>
+      <td><a href="distillery/yamakawa">山川酒造</a><span class="sub">本島北部</span></td>
       <td class="n">42度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
@@ -1489,621 +1492,621 @@
     </tr></tbody></table></div></section>
 <section class="tl__node" id="yunknown">
 <span class="tl__year">—<i>年数なし</i></span>
-<div class="tl__head"><b>「古酒」表示だが年数の記載がないもの</b><span>88銘柄</span></div>
+<div class="tl__head"><h2>「古酒」表示だが年数の記載がないもの</h2><span>88銘柄</span></div>
 <p style="font-size:13px;color:var(--muted);margin:0 0 12px;">
   公正競争規約は年数の表示を義務づけていない。3年以上貯蔵した全量古酒であれば、年数を書かずに「古酒」と表示できる。</p>
 <div class="tblwrap"><table class="db"><thead><tr><th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th><th style="text-align:right;">容量</th><th style="text-align:right;">公式価格</th><th>古酒の割合</th></tr></thead><tbody>    <tr>
-      <td class="name"><a href="brand/donan-28f97a88.html"><b>島米古酒30度(2006年蒸留)</b></a></td>
-      <td><a href="distillery/donan.html">どなん酒造</a><span class="sub">八重山</span></td>
+      <td class="name"><a href="brand/donan-28f97a88"><b>島米古酒30度(2006年蒸留)</b></a></td>
+      <td><a href="distillery/donan">どなん酒造</a><span class="sub">八重山</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥9,000</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/helios-351950ea.html"><b>くらクース</b></a></td>
-      <td><a href="distillery/helios.html">ヘリオス酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/helios-351950ea"><b>くらクース</b></a></td>
+      <td><a href="distillery/helios">ヘリオス酒造</a><span class="sub">本島北部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/helios-d2918955.html"><b>くらスーパーセレクション</b></a></td>
-      <td><a href="distillery/helios.html">ヘリオス酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/helios-d2918955"><b>くらスーパーセレクション</b></a></td>
+      <td><a href="distillery/helios">ヘリオス酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/ikema-3d206715.html"><b>ずなら</b></a></td>
-      <td><a href="distillery/ikema.html">池間酒造</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/ikema-3d206715"><b>ずなら</b></a></td>
+      <td><a href="distillery/ikema">池間酒造</a><span class="sub">宮古</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/ikema-4b65a470.html"><b>瑞光熟成古酒</b></a></td>
-      <td><a href="distillery/ikema.html">池間酒造</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/ikema-4b65a470"><b>瑞光熟成古酒</b></a></td>
+      <td><a href="distillery/ikema">池間酒造</a><span class="sub">宮古</span></td>
       <td class="n"><span class="na">—</span></td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kamiya-c94d1b67.html"><b>熟成古酒 南光</b></a></td>
-      <td><a href="distillery/kamiya.html">神谷酒造所</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/kamiya-c94d1b67"><b>熟成古酒 南光</b></a></td>
+      <td><a href="distillery/kamiya">神谷酒造所</a><span class="sub">那覇・南部</span></td>
       <td class="n">40度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n">¥2,420〜¥3,850</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kamiya-f7bf6ebf.html"><b>古酒 はなはな</b></a></td>
-      <td><a href="distillery/kamiya.html">神谷酒造所</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/kamiya-f7bf6ebf"><b>古酒 はなはな</b></a></td>
+      <td><a href="distillery/kamiya">神谷酒造所</a><span class="sub">那覇・南部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n">¥1,540〜¥2,420</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kikunotsuyu-fa39e989.html"><b>古酒V.I.Pゴールドカップ</b></a></td>
-      <td><a href="distillery/kikunotsuyu.html">菊之露酒造</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/kikunotsuyu-fa39e989"><b>古酒V.I.Pゴールドカップ</b></a></td>
+      <td><a href="distillery/kikunotsuyu">菊之露酒造</a><span class="sub">宮古</span></td>
       <td class="n">12度</td>
       <td class="n n--multi">200ml</td>
       <td class="n">¥275</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kikunotsuyu-44a3749e.html"><b>琉球泡盛 古酒 洋々 2007年蒸留</b></a></td>
-      <td><a href="distillery/kikunotsuyu.html">菊之露酒造</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/kikunotsuyu-44a3749e"><b>琉球泡盛 古酒 洋々 2007年蒸留</b></a></td>
+      <td><a href="distillery/kikunotsuyu">菊之露酒造</a><span class="sub">宮古</span></td>
       <td class="n">40度</td>
       <td class="n n--multi">700ml</td>
       <td class="n">¥9,152</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kikunotsuyu-5e8affa1.html"><b>沖縄の宝物 古酒</b></a></td>
-      <td><a href="distillery/kikunotsuyu.html">菊之露酒造</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/kikunotsuyu-5e8affa1"><b>沖縄の宝物 古酒</b></a></td>
+      <td><a href="distillery/kikunotsuyu">菊之露酒造</a><span class="sub">宮古</span></td>
       <td class="n">40度</td>
       <td class="n n--multi">300ml</td>
       <td class="n">¥1,834</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kin-647c18e9.html"><b>鍾乳洞古酒 龍</b></a></td>
-      <td><a href="distillery/kin.html">金武酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/kin-647c18e9"><b>鍾乳洞古酒 龍</b></a></td>
+      <td><a href="distillery/kin">金武酒造</a><span class="sub">本島北部</span></td>
       <td class="n">40度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kin-46e108fd.html"><b>龍 古酒ブレンド</b></a></td>
-      <td><a href="distillery/kin.html">金武酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/kin-46e108fd"><b>龍 古酒ブレンド</b></a></td>
+      <td><a href="distillery/kin">金武酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">500ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kin-7dbb728c.html"><b>平成元年古酒</b></a></td>
-      <td><a href="distillery/kin.html">金武酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/kin-7dbb728c"><b>平成元年古酒</b></a></td>
+      <td><a href="distillery/kin">金武酒造</a><span class="sub">本島北部</span></td>
       <td class="n">42度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kumejima-kumesen-aad995f4.html"><b>でいご古酒</b></a></td>
-      <td><a href="distillery/kumejima-kumesen.html">久米島の久米仙</a><span class="sub">久米島</span></td>
+      <td class="name"><a href="brand/kumejima-kumesen-aad995f4"><b>でいご古酒</b></a></td>
+      <td><a href="distillery/kumejima-kumesen">久米島の久米仙</a><span class="sub">久米島</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kumejima-kumesen-aad995f4.html"><b>でいご古酒</b></a></td>
-      <td><a href="distillery/kumejima-kumesen.html">久米島の久米仙</a><span class="sub">久米島</span></td>
+      <td class="name"><a href="brand/kumejima-kumesen-aad995f4"><b>でいご古酒</b></a></td>
+      <td><a href="distillery/kumejima-kumesen">久米島の久米仙</a><span class="sub">久米島</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kumesen-a923b545.html"><b>久米仙 一升瓶 古酒</b></a></td>
-      <td><a href="distillery/kumesen.html">久米仙酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/kumesen-a923b545"><b>久米仙 一升瓶 古酒</b></a></td>
+      <td><a href="distillery/kumesen">久米仙酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥3,278</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kumesen-dddbcaf3.html"><b>ブラック古酒</b></a></td>
-      <td><a href="distillery/kumesen.html">久米仙酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/kumesen-dddbcaf3"><b>ブラック古酒</b></a></td>
+      <td><a href="distillery/kumesen">久米仙酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥2,420</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kumesen-dddbcaf3.html"><b>ブラック古酒</b></a></td>
-      <td><a href="distillery/kumesen.html">久米仙酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/kumesen-dddbcaf3"><b>ブラック古酒</b></a></td>
+      <td><a href="distillery/kumesen">久米仙酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥2,035</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/kumesen-cb59d05e.html"><b>久米仙 古酒ゴールド</b></a></td>
-      <td><a href="distillery/kumesen.html">久米仙酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/kumesen-cb59d05e"><b>久米仙 古酒ゴールド</b></a></td>
+      <td><a href="distillery/kumesen">久米仙酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥1,815</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/masahiro-dcec5d1e.html"><b>古酒まさひろ 43度 1升瓶</b></a></td>
-      <td><a href="distillery/masahiro.html">まさひろ酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/masahiro-dcec5d1e"><b>古酒まさひろ 43度 1升瓶</b></a></td>
+      <td><a href="distillery/masahiro">まさひろ酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/matsufuji-65c06e78.html"><b>松藤 古酒ブレンド</b></a></td>
-      <td><a href="distillery/matsufuji.html">松藤（崎山酒造廠）</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/matsufuji-65c06e78"><b>松藤 古酒ブレンド</b></a></td>
+      <td><a href="distillery/matsufuji">松藤（崎山酒造廠）</a><span class="sub">本島北部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi"><span class="na">—</span></td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/matsufuji-542ec951.html"><b>THE BLOOM</b></a></td>
-      <td><a href="distillery/matsufuji.html">松藤（崎山酒造廠）</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/matsufuji-542ec951"><b>THE BLOOM</b></a></td>
+      <td><a href="distillery/matsufuji">松藤（崎山酒造廠）</a><span class="sub">本島北部</span></td>
       <td class="n">44度</td>
       <td class="n n--multi"><span class="na">—</span></td>
       <td class="n">¥8,360</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/miyanohana-76fd3fa2.html"><b>華翁</b></a></td>
-      <td><a href="distillery/miyanohana.html">宮の華</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/miyanohana-76fd3fa2"><b>華翁</b></a></td>
+      <td><a href="distillery/miyanohana">宮の華</a><span class="sub">宮古</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/miyanohana-a891fc67.html"><b>華翁（家庭用）</b></a></td>
-      <td><a href="distillery/miyanohana.html">宮の華</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/miyanohana-a891fc67"><b>華翁（家庭用）</b></a></td>
+      <td><a href="distillery/miyanohana">宮の華</a><span class="sub">宮古</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/miyanohana-3c840f3e.html"><b>豊見親（とぅゆみゃ）</b></a></td>
-      <td><a href="distillery/miyanohana.html">宮の華</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/miyanohana-3c840f3e"><b>豊見親（とぅゆみゃ）</b></a></td>
+      <td><a href="distillery/miyanohana">宮の華</a><span class="sub">宮古</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">100ml / 300ml / 720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/miyanohana-abae94d7.html"><b>熟成古酒</b></a></td>
-      <td><a href="distillery/miyanohana.html">宮の華</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/miyanohana-abae94d7"><b>熟成古酒</b></a></td>
+      <td><a href="distillery/miyanohana">宮の華</a><span class="sub">宮古</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/miyanohana-1430fd6c.html"><b>樽酒</b></a></td>
-      <td><a href="distillery/miyanohana.html">宮の華</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/miyanohana-1430fd6c"><b>樽酒</b></a></td>
+      <td><a href="distillery/miyanohana">宮の華</a><span class="sub">宮古</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/miyanohana-62a56a1f.html"><b>古酒壺</b></a></td>
-      <td><a href="distillery/miyanohana.html">宮の華</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/miyanohana-62a56a1f"><b>古酒壺</b></a></td>
+      <td><a href="distillery/miyanohana">宮の華</a><span class="sub">宮古</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">900ml / 9,000ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/miyanohana-5fa57f82.html"><b>下地島</b></a></td>
-      <td><a href="distillery/miyanohana.html">宮の華</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/miyanohana-5fa57f82"><b>下地島</b></a></td>
+      <td><a href="distillery/miyanohana">宮の華</a><span class="sub">宮古</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">300ml / 720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/nakijin-08368f09.html"><b>美しき古里レジェンド25度古酒</b></a></td>
-      <td><a href="distillery/nakijin.html">今帰仁酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/nakijin-08368f09"><b>美しき古里レジェンド25度古酒</b></a></td>
+      <td><a href="distillery/nakijin">今帰仁酒造</a><span class="sub">本島北部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥1,271</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/nakijin-a78dac91.html"><b>千年の響 長期熟成古酒</b></a></td>
-      <td><a href="distillery/nakijin.html">今帰仁酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/nakijin-a78dac91"><b>千年の響 長期熟成古酒</b></a></td>
+      <td><a href="distillery/nakijin">今帰仁酒造</a><span class="sub">本島北部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">200ml</td>
       <td class="n">¥1,200</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/nakijin-a78dac91.html"><b>千年の響 長期熟成古酒</b></a></td>
-      <td><a href="distillery/nakijin.html">今帰仁酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/nakijin-a78dac91"><b>千年の響 長期熟成古酒</b></a></td>
+      <td><a href="distillery/nakijin">今帰仁酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥4,785</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/nakijin-c00ae4fe.html"><b>今帰仁城 古酒</b></a></td>
-      <td><a href="distillery/nakijin.html">今帰仁酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/nakijin-c00ae4fe"><b>今帰仁城 古酒</b></a></td>
+      <td><a href="distillery/nakijin">今帰仁酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n">¥2,926〜¥4,147</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/nakijin-d341b9c5.html"><b>天使の夢 古酒</b></a></td>
-      <td><a href="distillery/nakijin.html">今帰仁酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/nakijin-d341b9c5"><b>天使の夢 古酒</b></a></td>
+      <td><a href="distillery/nakijin">今帰仁酒造</a><span class="sub">本島北部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n">¥1,804〜¥2,926</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/nakijin-377ba3fb.html"><b>美しき古里 古酒</b></a></td>
-      <td><a href="distillery/nakijin.html">今帰仁酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/nakijin-377ba3fb"><b>美しき古里 古酒</b></a></td>
+      <td><a href="distillery/nakijin">今帰仁酒造</a><span class="sub">本島北部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥2,178</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/nakijin-31e1e5d8.html"><b>今帰仁城 一斗壷</b></a></td>
-      <td><a href="distillery/nakijin.html">今帰仁酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/nakijin-31e1e5d8"><b>今帰仁城 一斗壷</b></a></td>
+      <td><a href="distillery/nakijin">今帰仁酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">18,000ml</td>
       <td class="n">¥77,886</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/nakijin-d3338a9b.html"><b>今帰仁城 一升壷</b></a></td>
-      <td><a href="distillery/nakijin.html">今帰仁酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/nakijin-d3338a9b"><b>今帰仁城 一升壷</b></a></td>
+      <td><a href="distillery/nakijin">今帰仁酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥8,182</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/nakijin-a119e092.html"><b>美しき古里 古酒 金粉入り</b></a></td>
-      <td><a href="distillery/nakijin.html">今帰仁酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/nakijin-a119e092"><b>美しき古里 古酒 金粉入り</b></a></td>
+      <td><a href="distillery/nakijin">今帰仁酒造</a><span class="sub">本島北部</span></td>
       <td class="n">20度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥3,036</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/nakijin-dc2eed80.html"><b>今帰仁城 五升壷</b></a></td>
-      <td><a href="distillery/nakijin.html">今帰仁酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/nakijin-dc2eed80"><b>今帰仁城 五升壷</b></a></td>
+      <td><a href="distillery/nakijin">今帰仁酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">9,000ml</td>
       <td class="n">¥48,926</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/nakijin-898131bb.html"><b>美しき古里レジェンド古酒</b></a></td>
-      <td><a href="distillery/nakijin.html">今帰仁酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/nakijin-898131bb"><b>美しき古里レジェンド古酒</b></a></td>
+      <td><a href="distillery/nakijin">今帰仁酒造</a><span class="sub">本島北部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥1,271</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/nakijin-b06be6c4.html"><b>千年の響 かめ壷貯蔵7年古酒</b></a></td>
-      <td><a href="distillery/nakijin.html">今帰仁酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/nakijin-b06be6c4"><b>千年の響 かめ壷貯蔵7年古酒</b></a></td>
+      <td><a href="distillery/nakijin">今帰仁酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥5,544</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/nakijin-b114ffe3.html"><b>今帰仁城10年古酒</b></a></td>
-      <td><a href="distillery/nakijin.html">今帰仁酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/nakijin-b114ffe3"><b>今帰仁城10年古酒</b></a></td>
+      <td><a href="distillery/nakijin">今帰仁酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥14,740</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/nakijin-4cc2a86b.html"><b>今帰仁城 10年古酒</b></a></td>
-      <td><a href="distillery/nakijin.html">今帰仁酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/nakijin-4cc2a86b"><b>今帰仁城 10年古酒</b></a></td>
+      <td><a href="distillery/nakijin">今帰仁酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥6,001</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/nakijin-6effc73c.html"><b>千年の響 2006年限定古酒</b></a></td>
-      <td><a href="distillery/nakijin.html">今帰仁酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/nakijin-6effc73c"><b>千年の響 2006年限定古酒</b></a></td>
+      <td><a href="distillery/nakijin">今帰仁酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥13,000</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/nakijin-ece798f0.html"><b>美しき古里 古酒 紙パック</b></a></td>
-      <td><a href="distillery/nakijin.html">今帰仁酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/nakijin-ece798f0"><b>美しき古里 古酒 紙パック</b></a></td>
+      <td><a href="distillery/nakijin">今帰仁酒造</a><span class="sub">本島北部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥2,728</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/nakijin-a140111a.html"><b>令和5年度泡盛鑑評会 県知事賞受賞酒</b></a></td>
-      <td><a href="distillery/nakijin.html">今帰仁酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/nakijin-a140111a"><b>令和5年度泡盛鑑評会 県知事賞受賞酒</b></a></td>
+      <td><a href="distillery/nakijin">今帰仁酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥7,150</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/nakijin-fd9f2273.html"><b>今帰仁城古酒 伊平屋米仕込み</b></a></td>
-      <td><a href="distillery/nakijin.html">今帰仁酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/nakijin-fd9f2273"><b>今帰仁城古酒 伊平屋米仕込み</b></a></td>
+      <td><a href="distillery/nakijin">今帰仁酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">200ml</td>
       <td class="n">¥2,200</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/okinohikari-c160836d.html"><b>43度古酒沖之光</b></a></td>
-      <td><a href="distillery/okinohikari.html">沖之光酒造</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/okinohikari-c160836d"><b>43度古酒沖之光</b></a></td>
+      <td><a href="distillery/okinohikari">沖之光酒造</a><span class="sub">宮古</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/okinohikari-3d38030f.html"><b>35度古酒沖之光</b></a></td>
-      <td><a href="distillery/okinohikari.html">沖之光酒造</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/okinohikari-3d38030f"><b>35度古酒沖之光</b></a></td>
+      <td><a href="distillery/okinohikari">沖之光酒造</a><span class="sub">宮古</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/okinohikari-0dffb557.html"><b>25度古酒月桃の花</b></a></td>
-      <td><a href="distillery/okinohikari.html">沖之光酒造</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/okinohikari-0dffb557"><b>25度古酒月桃の花</b></a></td>
+      <td><a href="distillery/okinohikari">沖之光酒造</a><span class="sub">宮古</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/onna-e6c7e589.html"><b>萬座 古酒</b></a></td>
-      <td><a href="distillery/onna.html">恩納酒造所</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/onna-e6c7e589"><b>萬座 古酒</b></a></td>
+      <td><a href="distillery/onna">恩納酒造所</a><span class="sub">本島北部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi"><span class="na">—</span></td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/onna-e6c7e589.html"><b>萬座 古酒</b></a></td>
-      <td><a href="distillery/onna.html">恩納酒造所</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/onna-e6c7e589"><b>萬座 古酒</b></a></td>
+      <td><a href="distillery/onna">恩納酒造所</a><span class="sub">本島北部</span></td>
       <td class="n">40度</td>
       <td class="n n--multi"><span class="na">—</span></td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/onna-e6c7e589.html"><b>萬座 古酒</b></a></td>
-      <td><a href="distillery/onna.html">恩納酒造所</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/onna-e6c7e589"><b>萬座 古酒</b></a></td>
+      <td><a href="distillery/onna">恩納酒造所</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi"><span class="na">—</span></td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/onna-dfaaa70b.html"><b>NAVI 古酒</b></a></td>
-      <td><a href="distillery/onna.html">恩納酒造所</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/onna-dfaaa70b"><b>NAVI 古酒</b></a></td>
+      <td><a href="distillery/onna">恩納酒造所</a><span class="sub">本島北部</span></td>
       <td class="n">20度</td>
       <td class="n n--multi"><span class="na">—</span></td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/onna-68628a9b.html"><b>萬座 ワンカップ古酒</b></a></td>
-      <td><a href="distillery/onna.html">恩納酒造所</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/onna-68628a9b"><b>萬座 ワンカップ古酒</b></a></td>
+      <td><a href="distillery/onna">恩納酒造所</a><span class="sub">本島北部</span></td>
       <td class="n">15度</td>
       <td class="n n--multi"><span class="na">—</span></td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/seifuku-167a17bc.html"><b>古酒いしがき</b></a></td>
-      <td><a href="distillery/seifuku.html">請福酒造</a><span class="sub">八重山</span></td>
+      <td class="name"><a href="brand/seifuku-167a17bc"><b>古酒いしがき</b></a></td>
+      <td><a href="distillery/seifuku">請福酒造</a><span class="sub">八重山</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">600ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/shikina-3ce3ea94.html"><b>時雨 古酒 ピンクボトル</b></a></td>
-      <td><a href="distillery/shikina.html">識名酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/shikina-3ce3ea94"><b>時雨 古酒 ピンクボトル</b></a></td>
+      <td><a href="distillery/shikina">識名酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">29度</td>
       <td class="n n--multi">300ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/shikina-6a761d69.html"><b>2003年貯蔵 古酒</b></a></td>
-      <td><a href="distillery/shikina.html">識名酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/shikina-6a761d69"><b>2003年貯蔵 古酒</b></a></td>
+      <td><a href="distillery/shikina">識名酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">29度</td>
       <td class="n n--multi">600ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/shinzato-6cb4df48.html"><b>古酒琉球クラシック</b></a></td>
-      <td><a href="distillery/shinzato.html">新里酒造</a><span class="sub">本島中部</span></td>
+      <td class="name"><a href="brand/shinzato-6cb4df48"><b>古酒琉球クラシック</b></a></td>
+      <td><a href="distillery/shinzato">新里酒造</a><span class="sub">本島中部</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n">¥1,980〜¥3,300</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/shinzato-5dacc4f4.html"><b>古酒琉球プレミアム</b></a></td>
-      <td><a href="distillery/shinzato.html">新里酒造</a><span class="sub">本島中部</span></td>
+      <td class="name"><a href="brand/shinzato-5dacc4f4"><b>古酒琉球プレミアム</b></a></td>
+      <td><a href="distillery/shinzato">新里酒造</a><span class="sub">本島中部</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥3,342</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/shinzato-0fb4d6a2.html"><b>古酒琉球2007</b></a></td>
-      <td><a href="distillery/shinzato.html">新里酒造</a><span class="sub">本島中部</span></td>
+      <td class="name"><a href="brand/shinzato-0fb4d6a2"><b>古酒琉球2007</b></a></td>
+      <td><a href="distillery/shinzato">新里酒造</a><span class="sub">本島中部</span></td>
       <td class="n">40度</td>
       <td class="n n--multi"><span class="na">—</span></td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/shinzato-2b6df0b6.html"><b>琉球GOLD</b></a></td>
-      <td><a href="distillery/shinzato.html">新里酒造</a><span class="sub">本島中部</span></td>
+      <td class="name"><a href="brand/shinzato-2b6df0b6"><b>琉球GOLD</b></a></td>
+      <td><a href="distillery/shinzato">新里酒造</a><span class="sub">本島中部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml / 1,800ml</td>
       <td class="n">¥2,157〜¥3,450</td>
       <td><span class="kv kv--part" title="全量古酒ではないため、公正競争規約上「古酒」と表示できません"><span class="kv__bar"><i style="width:60%"></i></span>古酒60%</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/shinzato-595adbff.html"><b>琉球</b></a></td>
-      <td><a href="distillery/shinzato.html">新里酒造</a><span class="sub">本島中部</span></td>
+      <td class="name"><a href="brand/shinzato-595adbff"><b>琉球</b></a></td>
+      <td><a href="distillery/shinzato">新里酒造</a><span class="sub">本島中部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥4,319</td>
       <td><span class="kv kv--part" title="全量古酒ではないため、公正競争規約上「古酒」と表示できません"><span class="kv__bar"><i style="width:60%"></i></span>古酒60%</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/takamine-7106d5cd.html"><b>黒真珠のふるさと 古酒</b></a></td>
-      <td><a href="distillery/takamine.html">髙嶺酒造所</a><span class="sub">八重山</span></td>
+      <td class="name"><a href="brand/takamine-7106d5cd"><b>黒真珠のふるさと 古酒</b></a></td>
+      <td><a href="distillery/takamine">髙嶺酒造所</a><span class="sub">八重山</span></td>
       <td class="n">25度</td>
       <td class="n n--multi">180ml / 720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/taragawa-e7784a20.html"><b>琉球王朝 特選古酒</b></a></td>
-      <td><a href="distillery/taragawa.html">多良川</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/taragawa-e7784a20"><b>琉球王朝 特選古酒</b></a></td>
+      <td><a href="distillery/taragawa">多良川</a><span class="sub">宮古</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥2,880</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/taragawa-76acb7df.html"><b>久遠</b></a></td>
-      <td><a href="distillery/taragawa.html">多良川</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/taragawa-76acb7df"><b>久遠</b></a></td>
+      <td><a href="distillery/taragawa">多良川</a><span class="sub">宮古</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">375ml / 720ml</td>
       <td class="n">¥2,500〜¥5,000</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/taragawa-89f40b53.html"><b>長期熟成古酒 久遠</b></a></td>
-      <td><a href="distillery/taragawa.html">多良川</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/taragawa-89f40b53"><b>長期熟成古酒 久遠</b></a></td>
+      <td><a href="distillery/taragawa">多良川</a><span class="sub">宮古</span></td>
       <td class="n">35度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥5,000</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/taragawa-a6576546.html"><b>古酒 弐千年ボトル 多良川 2000年記念限定琉球泡盛 宮古島</b></a></td>
-      <td><a href="distillery/taragawa.html">多良川</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/taragawa-a6576546"><b>古酒 弐千年ボトル 多良川 2000年記念限定琉球泡盛 宮古島</b></a></td>
+      <td><a href="distillery/taragawa">多良川</a><span class="sub">宮古</span></td>
       <td class="n">40度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥13,200</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/taragawa-fea2fe95.html"><b>多良川プレミアム</b></a></td>
-      <td><a href="distillery/taragawa.html">多良川</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/taragawa-fea2fe95"><b>多良川プレミアム</b></a></td>
+      <td><a href="distillery/taragawa">多良川</a><span class="sub">宮古</span></td>
       <td class="n">42度</td>
       <td class="n n--multi">700ml</td>
       <td class="n">¥15,000</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/taragawa-f89bca40.html"><b>琉球王朝</b></a></td>
-      <td><a href="distillery/taragawa.html">多良川</a><span class="sub">宮古</span></td>
+      <td class="name"><a href="brand/taragawa-f89bca40"><b>琉球王朝</b></a></td>
+      <td><a href="distillery/taragawa">多良川</a><span class="sub">宮古</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">300ml / 1,800ml</td>
       <td class="n">¥1,055〜¥5,000</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/tsuhako-211c28e0.html"><b>太平古酒</b></a></td>
-      <td><a href="distillery/tsuhako.html">津波古酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/tsuhako-211c28e0"><b>太平古酒</b></a></td>
+      <td><a href="distillery/tsuhako">津波古酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/tsuhako-211c28e0.html"><b>太平古酒</b></a></td>
-      <td><a href="distillery/tsuhako.html">津波古酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/tsuhako-211c28e0"><b>太平古酒</b></a></td>
+      <td><a href="distillery/tsuhako">津波古酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">40度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/tsuhako-156d3830.html"><b>杜氏の晩酌</b></a></td>
-      <td><a href="distillery/tsuhako.html">津波古酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/tsuhako-156d3830"><b>杜氏の晩酌</b></a></td>
+      <td><a href="distillery/tsuhako">津波古酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi"><span class="na">—</span></td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yaesen-a25ad801.html"><b>古酒かんむり鷲</b></a></td>
-      <td><a href="distillery/yaesen.html">八重泉酒造</a><span class="sub">八重山</span></td>
+      <td class="name"><a href="brand/yaesen-a25ad801"><b>古酒かんむり鷲</b></a></td>
+      <td><a href="distillery/yaesen">八重泉酒造</a><span class="sub">八重山</span></td>
       <td class="n">42度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yaesen-0e777be1.html"><b>古酒樽八重泉</b></a></td>
-      <td><a href="distillery/yaesen.html">八重泉酒造</a><span class="sub">八重山</span></td>
+      <td class="name"><a href="brand/yaesen-0e777be1"><b>古酒樽八重泉</b></a></td>
+      <td><a href="distillery/yaesen">八重泉酒造</a><span class="sub">八重山</span></td>
       <td class="n">36度</td>
       <td class="n n--multi">700ml</td>
       <td class="n">¥4,500</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yamakawa-c291f10c.html"><b>やんばる</b></a></td>
-      <td><a href="distillery/yamakawa.html">山川酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yamakawa-c291f10c"><b>やんばる</b></a></td>
+      <td><a href="distillery/yamakawa">山川酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">300ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yamakawa-c84e0831.html"><b>珊瑚礁 甕貯蔵</b></a></td>
-      <td><a href="distillery/yamakawa.html">山川酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yamakawa-c84e0831"><b>珊瑚礁 甕貯蔵</b></a></td>
+      <td><a href="distillery/yamakawa">山川酒造</a><span class="sub">本島北部</span></td>
       <td class="n"><span class="na">—</span></td>
       <td class="n n--multi">500ml</td>
       <td class="n">¥5,720</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yamakawa-ce3f18b3.html"><b>ゆうもどろの花</b></a></td>
-      <td><a href="distillery/yamakawa.html">山川酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yamakawa-ce3f18b3"><b>ゆうもどろの花</b></a></td>
+      <td><a href="distillery/yamakawa">山川酒造</a><span class="sub">本島北部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi">720ml</td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yamakawa-9d256ce4.html"><b>長寿伝説 ゴールド（甕貯蔵）</b></a></td>
-      <td><a href="distillery/yamakawa.html">山川酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yamakawa-9d256ce4"><b>長寿伝説 ゴールド（甕貯蔵）</b></a></td>
+      <td><a href="distillery/yamakawa">山川酒造</a><span class="sub">本島北部</span></td>
       <td class="n">41度</td>
       <td class="n n--multi">500ml</td>
       <td class="n">¥17,600</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yamakawa-b4b23b51.html"><b>長寿伝説 シルバー（甕貯蔵）</b></a></td>
-      <td><a href="distillery/yamakawa.html">山川酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yamakawa-b4b23b51"><b>長寿伝説 シルバー（甕貯蔵）</b></a></td>
+      <td><a href="distillery/yamakawa">山川酒造</a><span class="sub">本島北部</span></td>
       <td class="n">41度</td>
       <td class="n n--multi">500ml</td>
       <td class="n">¥9,500</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yanbaru-b5982cf7.html"><b>30度古酒</b></a></td>
-      <td><a href="distillery/yanbaru.html">やんばる酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yanbaru-b5982cf7"><b>30度古酒</b></a></td>
+      <td><a href="distillery/yanbaru">やんばる酒造</a><span class="sub">本島北部</span></td>
       <td class="n">30度</td>
       <td class="n n--multi"><span class="na">—</span></td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yanbaru-1493adfb.html"><b>43度クース</b></a></td>
-      <td><a href="distillery/yanbaru.html">やんばる酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yanbaru-1493adfb"><b>43度クース</b></a></td>
+      <td><a href="distillery/yanbaru">やんばる酒造</a><span class="sub">本島北部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi"><span class="na">—</span></td>
       <td class="n"><span class="na">—</span></td>
       <td><span class="kv kv--full" title="全量が古酒。公正競争規約の「古酒」表示の要件を満たします"><span class="kv__bar"><i style="width:100%"></i></span>全量古酒</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yanbaru-318abb7f.html"><b>古酒づくり用泡盛 粗濾過 まるた</b></a></td>
-      <td><a href="distillery/yanbaru.html">やんばる酒造</a><span class="sub">本島北部</span></td>
+      <td class="name"><a href="brand/yanbaru-318abb7f"><b>古酒づくり用泡盛 粗濾過 まるた</b></a></td>
+      <td><a href="distillery/yanbaru">やんばる酒造</a><span class="sub">本島北部</span></td>
       <td class="n">44度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥2,940</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/yoneshima-c2fe51bf.html"><b>初蒸留 美ら波</b></a></td>
-      <td><a href="distillery/yoneshima.html">米島酒造</a><span class="sub">久米島</span></td>
+      <td class="name"><a href="brand/yoneshima-c2fe51bf"><b>初蒸留 美ら波</b></a></td>
+      <td><a href="distillery/yoneshima">米島酒造</a><span class="sub">久米島</span></td>
       <td class="n">40度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥6,050</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/zuisen-98e48c2f.html"><b>瑞泉古酒</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/zuisen-98e48c2f"><b>瑞泉古酒</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">40度</td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥2,160</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/zuisen-4d101c70.html"><b>瑞泉古酒43度一升</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/zuisen-4d101c70"><b>瑞泉古酒43度一升</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n">43度</td>
       <td class="n n--multi">1,800ml</td>
       <td class="n">¥3,067</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/zuisen-f52d5b5b.html"><b>飛泉漱玉</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/zuisen-f52d5b5b"><b>飛泉漱玉</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n"><span class="na">—</span></td>
       <td class="n n--multi">720ml</td>
       <td class="n">¥2,500</td>
       <td><span class="kv kv--none" title="古酒の割合について公式サイトに記載がありません">割合の記載なし</span></td>
     </tr>    <tr>
-      <td class="name"><a href="brand/zuisen-91b6206b.html"><b>おもろ一升</b></a></td>
-      <td><a href="distillery/zuisen.html">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
+      <td class="name"><a href="brand/zuisen-91b6206b"><b>おもろ一升</b></a></td>
+      <td><a href="distillery/zuisen">瑞泉酒造</a><span class="sub">那覇・南部</span></td>
       <td class="n"><span class="na">—</span></td>
       <td class="n n--multi">1,800ml</td>
       <td class="n"><span class="na">—</span></td>
@@ -2120,23 +2123,23 @@
 <div class="tblwrap"><table class="db">
   <thead><tr><th>銘柄</th><th>酒造所</th><th>古酒の割合</th><th style="text-align:right;">ベースの年数</th></tr></thead>
   <tbody>    <tr>
-      <td class="name"><a href="brand/higa-7643e699.html"><b>残波プレミアム30</b></a></td>
-      <td><a href="distillery/higa.html">比嘉酒造</a><span class="sub">本島中部</span></td>
+      <td class="name"><a href="brand/higa-7643e699"><b>残波プレミアム30</b></a></td>
+      <td><a href="distillery/higa">比嘉酒造</a><span class="sub">本島中部</span></td>
       <td><span class="kv kv--part" title="全量古酒ではないため、公正競争規約上「古酒」と表示できません"><span class="kv__bar"><i style="width:60%"></i></span>古酒60%</span></td>
       <td class="n">5</td>
     </tr>    <tr>
-      <td class="name"><a href="brand/higa-d07020b8.html"><b>ZANPA 43</b></a></td>
-      <td><a href="distillery/higa.html">比嘉酒造</a><span class="sub">本島中部</span></td>
+      <td class="name"><a href="brand/higa-d07020b8"><b>ZANPA 43</b></a></td>
+      <td><a href="distillery/higa">比嘉酒造</a><span class="sub">本島中部</span></td>
       <td><span class="kv kv--part" title="全量古酒ではないため、公正競争規約上「古酒」と表示できません"><span class="kv__bar"><i style="width:60%"></i></span>古酒60%</span></td>
       <td class="n">3</td>
     </tr>    <tr>
-      <td class="name"><a href="brand/shinzato-2b6df0b6.html"><b>琉球GOLD</b></a></td>
-      <td><a href="distillery/shinzato.html">新里酒造</a><span class="sub">本島中部</span></td>
+      <td class="name"><a href="brand/shinzato-2b6df0b6"><b>琉球GOLD</b></a></td>
+      <td><a href="distillery/shinzato">新里酒造</a><span class="sub">本島中部</span></td>
       <td><span class="kv kv--part" title="全量古酒ではないため、公正競争規約上「古酒」と表示できません"><span class="kv__bar"><i style="width:60%"></i></span>古酒60%</span></td>
       <td class="n">—</td>
     </tr>    <tr>
-      <td class="name"><a href="brand/shinzato-595adbff.html"><b>琉球</b></a></td>
-      <td><a href="distillery/shinzato.html">新里酒造</a><span class="sub">本島中部</span></td>
+      <td class="name"><a href="brand/shinzato-595adbff"><b>琉球</b></a></td>
+      <td><a href="distillery/shinzato">新里酒造</a><span class="sub">本島中部</span></td>
       <td><span class="kv kv--part" title="全量古酒ではないため、公正競争規約上「古酒」と表示できません"><span class="kv__bar"><i style="width:60%"></i></span>古酒60%</span></td>
       <td class="n">—</td>
     </tr></tbody>
@@ -2145,7 +2148,7 @@
 
 <div class="panel">
   <p>度数や地域と掛け合わせて絞り込みたい場合は
-  <a href="find.html?koshu=k3,k4">条件で絞り込む</a>から探せる。</p>
+  <a href="find?koshu=k3,k4">条件で絞り込む</a>から探せる。</p>
 </div>
 </main>
 
@@ -2160,22 +2163,22 @@
       </div>
       <div>
         <h4>探す</h4>
-        <a href="find.html">条件で絞り込む</a>
-        <a href="region/index.html">地域から探す</a>
-        <a href="koshu.html">古酒の年数から</a>
-        <a href="abv/index.html">度数から</a>
-        <a href="hanazake.html">花酒（60度）</a>
-        <a href="tour.html">蔵見学ができる酒造所</a>
-        <a href="calorie.html">カロリーと糖質</a>
-        <a href="furusato.html">ふるさと納税</a>
+        <a href="find">条件で絞り込む</a>
+        <a href="region/">地域から探す</a>
+        <a href="koshu">古酒の年数から</a>
+        <a href="abv/">度数から</a>
+        <a href="hanazake">花酒（60度）</a>
+        <a href="tour">蔵見学ができる酒造所</a>
+        <a href="calorie">カロリーと糖質</a>
+        <a href="furusato">ふるさと納税</a>
       </div>
       <div>
         <h4>サイトについて</h4>
-        <a href="distillery/index.html">酒造所一覧</a>
-        <a href="guide/index.html">読みもの</a>
-        <a href="about.html">このサイトについて</a>
-        <a href="disclaimer.html">免責事項</a>
-        <a href="privacy.html">プライバシーポリシー</a>
+        <a href="distillery/">酒造所一覧</a>
+        <a href="guide/">読みもの</a>
+        <a href="about">このサイトについて</a>
+        <a href="disclaimer">免責事項</a>
+        <a href="privacy">プライバシーポリシー</a>
       </div>
     </div>
     <p class="ft__note">

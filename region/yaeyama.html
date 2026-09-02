@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap">
-<link rel="stylesheet" href="../assets/awamori.css?v=20260902j">
+<link rel="stylesheet" href="../assets/awamori.css?v=20260902m">
 <link rel="canonical" href="https://awamori-db.com/region/yaeyama">
 <meta property="og:site_name" content="泡盛DB">
 <meta property="og:type" content="website">
@@ -29,16 +29,19 @@
 <body>
 <header class="hd">
   <div class="wrap hd__in">
-    <a class="hd__logo" href="../index.html"><b>泡盛DB</b><span>琉球泡盛データベース</span></a>
-    <button class="hd__burger" type="button" aria-expanded="false" aria-label="メニュー">☰</button>
+    <a class="hd__logo" href="../"><b>泡盛DB</b><span>琉球泡盛データベース</span></a>
+    <form class="hd__search" action="../find" role="search">
+      <input type="search" name="q" placeholder="銘柄・酒造所名" aria-label="銘柄名・酒造所名で検索">
+    </form>
+    <button class="hd__burger" type="button" aria-expanded="false" aria-label="メニュー">☰ メニュー</button>
     <nav class="hd__nav">
-      <a href="../find.html">絞り込んで探す</a>
-      <a href="../koshu.html">古酒</a>
-      <a href="../abv/index.html">度数</a>
-      <a href="../hanazake.html">花酒</a>
-      <a href="../tour.html">蔵見学</a>
-      <a href="../distillery/index.html">酒造所</a>
-      <a href="../guide/index.html">読みもの</a>
+      <a href="../find">絞り込んで探す</a>
+      <a href="../koshu">古酒</a>
+      <a href="../abv/">度数</a>
+      <a href="../hanazake">花酒</a>
+      <a href="../tour">蔵見学</a>
+      <a href="../distillery/">酒造所</a>
+      <a href="../guide/">読みもの</a>
     </nav>
   </div>
 </header>
@@ -51,7 +54,7 @@
   </div></div>
   <span class="banner__credit">画像はイメージ</span>
 </div>
-<nav class="crumb wrap" aria-label="パンくず"><ol><li><a href="../index.html">トップ</a></li><li>八重山</li></ol></nav>
+<nav class="crumb wrap" aria-label="パンくず"><ol><li><a href="../">トップ</a></li><li>八重山</li></ol></nav>
 <main class="wrap">
 <p class="lede">
   10軒の酒造所から97銘柄を掲載している。度数の中央値は30度。掲載銘柄の19%が古酒。日本でここだけの花酒が14銘柄ある。創業年が確認できた9軒は1927年から1989年に分布する。
@@ -62,7 +65,7 @@
   <thead><tr><th>酒造所</th><th>所在地</th><th>代表銘柄</th><th>創業・設立</th>
   <th style="text-align:right;">掲載銘柄</th><th>出典</th></tr></thead>
   <tbody>    <tr>
-      <td class="name"><a href="../distillery/donan.html"><b>どなん酒造</b></a>
+      <td class="name"><a href="../distillery/donan"><b>どなん酒造</b></a>
         <span class="sub">株式会社どなん酒造（公式サイト会社情報は「国泉泡盛合名会社」）</span></td>
       <td style="font-size:12px;">〒907-1801 沖縄県八重山郡与那国町字与那国2087</td>
       <td>どなん</td>
@@ -70,7 +73,7 @@
       <td class="n">7</td>
       <td><span class="src src--official" title="酒造所の公式サイトで確認">公式</span></td>
     </tr>    <tr>
-      <td class="name"><a href="../distillery/sakimoto-yonaguni.html"><b>崎元酒造所</b></a>
+      <td class="name"><a href="../distillery/sakimoto-yonaguni"><b>崎元酒造所</b></a>
         <span class="sub">合名会社崎元酒造所</span></td>
       <td style="font-size:12px;">〒907-1801 沖縄県八重山郡与那国町字与那国2329番地</td>
       <td>与那国</td>
@@ -78,7 +81,7 @@
       <td class="n">36</td>
       <td><span class="src src--official" title="酒造所の公式サイトで確認">公式</span></td>
     </tr>    <tr>
-      <td class="name"><a href="../distillery/irinamihira.html"><b>入波平酒造</b></a>
+      <td class="name"><a href="../distillery/irinamihira"><b>入波平酒造</b></a>
         <span class="sub">入波平酒造株式会社</span></td>
       <td style="font-size:12px;">与那国町字与那国4147-1（組合の酒造所一覧）／4171-1（組合ストーリー記事）※組合公式内で不一致</td>
       <td>舞富名</td>
@@ -86,7 +89,7 @@
       <td class="n">25</td>
       <td><span class="src src--union" title="沖縄県酒造組合（準一次ソース）">組合公式</span></td>
     </tr>    <tr>
-      <td class="name"><a href="../distillery/ikehara.html"><b>池原酒造</b></a>
+      <td class="name"><a href="../distillery/ikehara"><b>池原酒造</b></a>
         <span class="sub">株式会社池原酒造</span></td>
       <td style="font-size:12px;">〒907-0022 沖縄県石垣市大川175</td>
       <td>白百合</td>
@@ -94,7 +97,7 @@
       <td class="n">15</td>
       <td><span class="src src--official" title="酒造所の公式サイトで確認">公式</span></td>
     </tr>    <tr>
-      <td class="name"><a href="../distillery/nakama.html"><b>仲間酒造</b></a>
+      <td class="name"><a href="../distillery/nakama"><b>仲間酒造</b></a>
         <span class="sub">仲間酒造株式会社</span></td>
       <td style="font-size:12px;">〒907-0243 沖縄県石垣市宮良956番地</td>
       <td>宮之鶴</td>
@@ -102,7 +105,7 @@
       <td class="n">4</td>
       <td><span class="src src--official" title="酒造所の公式サイトで確認">公式</span></td>
     </tr>    <tr>
-      <td class="name"><a href="../distillery/seifuku.html"><b>請福酒造</b></a>
+      <td class="name"><a href="../distillery/seifuku"><b>請福酒造</b></a>
         <span class="sub">請福酒造有限会社</span></td>
       <td style="font-size:12px;">〒907-0243 沖縄県石垣市宮良959</td>
       <td>請福</td>
@@ -110,7 +113,7 @@
       <td class="n">26</td>
       <td><span class="src src--official" title="酒造所の公式サイトで確認">公式</span></td>
     </tr>    <tr>
-      <td class="name"><a href="../distillery/takamine.html"><b>髙嶺酒造所</b></a>
+      <td class="name"><a href="../distillery/takamine"><b>髙嶺酒造所</b></a>
         <span class="sub">有限会社髙嶺酒造所</span></td>
       <td style="font-size:12px;">〒907-0453 沖縄県石垣市字川平930-2</td>
       <td>於茂登</td>
@@ -118,7 +121,7 @@
       <td class="n">21</td>
       <td><span class="src src--official" title="酒造所の公式サイトで確認">公式</span></td>
     </tr>    <tr>
-      <td class="name"><a href="../distillery/yaesen.html"><b>八重泉酒造</b></a>
+      <td class="name"><a href="../distillery/yaesen"><b>八重泉酒造</b></a>
         <span class="sub">有限会社八重泉酒造</span></td>
       <td style="font-size:12px;">〒907-0023 沖縄県石垣市字石垣1834番地</td>
       <td>八重泉</td>
@@ -126,7 +129,7 @@
       <td class="n">35</td>
       <td><span class="src src--official" title="酒造所の公式サイトで確認">公式</span></td>
     </tr>    <tr>
-      <td class="name"><a href="../distillery/tamanaha.html"><b>玉那覇酒造所</b></a>
+      <td class="name"><a href="../distillery/tamanaha"><b>玉那覇酒造所</b></a>
         <span class="sub">株式会社玉那覇酒造所</span></td>
       <td style="font-size:12px;">〒907-0023 沖縄県石垣市字石垣47番地</td>
       <td>玉の露</td>
@@ -134,7 +137,7 @@
       <td class="n">6</td>
       <td><span class="src src--official" title="酒造所の公式サイトで確認">公式</span></td>
     </tr>    <tr>
-      <td class="name"><a href="../distillery/hateruma.html"><b>波照間酒造所</b></a>
+      <td class="name"><a href="../distillery/hateruma"><b>波照間酒造所</b></a>
         <span class="sub">波照間酒造所</span></td>
       <td style="font-size:12px;">沖縄県八重山郡竹富町字波照間156番地</td>
       <td>泡波</td>
@@ -143,10 +146,10 @@
       <td><span class="src src--union" title="沖縄県酒造組合・自治体サイト（準一次ソース）">組合公式＋自治体</span></td>
     </tr></tbody>
 </table></div>
-<div class="panel"><p>この地域で公式に蔵見学の案内があるのは池原酒造、請福酒造、髙嶺酒造所、八重泉酒造です。受け入れ状況は変わるため、<a href="../tour.html">蔵見学のページ</a>で公式の記載と確認日をご覧ください。</p></div>
+<div class="panel"><p>この地域で公式に蔵見学の案内があるのは池原酒造、請福酒造、髙嶺酒造所、八重泉酒造です。受け入れ状況は変わるため、<a href="../tour">蔵見学のページ</a>で公式の記載と確認日をご覧ください。</p></div>
 <div class="panel">
-  <p><a href="../find.html?reg=yaeyama">八重山の泡盛を条件で絞り込む</a>／
-  <a href="../koshu.html">古酒から探す</a>／<a href="../abv/index.html">度数から探す</a></p>
+  <p><a href="../find?reg=yaeyama">八重山の泡盛を条件で絞り込む</a>／
+  <a href="../koshu">古酒から探す</a>／<a href="../abv/">度数から探す</a></p>
 </div>
 </main>
 
@@ -161,22 +164,22 @@
       </div>
       <div>
         <h4>探す</h4>
-        <a href="../find.html">条件で絞り込む</a>
-        <a href="../region/index.html">地域から探す</a>
-        <a href="../koshu.html">古酒の年数から</a>
-        <a href="../abv/index.html">度数から</a>
-        <a href="../hanazake.html">花酒（60度）</a>
-        <a href="../tour.html">蔵見学ができる酒造所</a>
-        <a href="../calorie.html">カロリーと糖質</a>
-        <a href="../furusato.html">ふるさと納税</a>
+        <a href="../find">条件で絞り込む</a>
+        <a href="../region/">地域から探す</a>
+        <a href="../koshu">古酒の年数から</a>
+        <a href="../abv/">度数から</a>
+        <a href="../hanazake">花酒（60度）</a>
+        <a href="../tour">蔵見学ができる酒造所</a>
+        <a href="../calorie">カロリーと糖質</a>
+        <a href="../furusato">ふるさと納税</a>
       </div>
       <div>
         <h4>サイトについて</h4>
-        <a href="../distillery/index.html">酒造所一覧</a>
-        <a href="../guide/index.html">読みもの</a>
-        <a href="../about.html">このサイトについて</a>
-        <a href="../disclaimer.html">免責事項</a>
-        <a href="../privacy.html">プライバシーポリシー</a>
+        <a href="../distillery/">酒造所一覧</a>
+        <a href="../guide/">読みもの</a>
+        <a href="../about">このサイトについて</a>
+        <a href="../disclaimer">免責事項</a>
+        <a href="../privacy">プライバシーポリシー</a>
       </div>
     </div>
     <p class="ft__note">
