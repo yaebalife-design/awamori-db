@@ -113,6 +113,86 @@
     }).observe(buyEl);
   });
 
+  /* --- ふるさと納税：ポータルで絞り込む --------------------------------------
+     2026/09/03 社長「ふるさと納税のサイトごとに絞れたらいいね」。
+     仕組み：[data-p="choice aupay …"] を持つ要素（品・ポータルのボタン）のうち、
+     選んだキーを含まないものを hidden にする。一覧ページでは行ごとの品数
+     （data-n-<key>）で行の表示と「N品を確認」「全N品を見る」を差し替え、
+     蔵ごとの箇条書きは先頭 data-limit 品だけ見せる。?portal=rakuten で直リンク可。 */
+  document.addEventListener("DOMContentLoaded", function () {
+    var box = document.querySelector("[data-fportal]");
+    if (!box) return;
+    var chips = Array.prototype.slice.call(box.querySelectorAll(".chip[data-key]"));
+    var keys = chips.map(function (c) { return c.getAttribute("data-key"); });
+
+    function has(el, key) {
+      return key === "all" || (" " + (el.getAttribute("data-p") || "") + " ").indexOf(" " + key + " ") > -1;
+    }
+    function apply(key, push) {
+      chips.forEach(function (c) {
+        c.setAttribute("aria-pressed", c.getAttribute("data-key") === key ? "true" : "false");
+      });
+      /* 隠したリンクの直後の「PR」印も一緒に隠す（印だけが残っていた） */
+      function hideWithPr(el, hide) {
+        el.hidden = hide;
+        var sup = el.nextElementSibling;
+        if (sup && sup.classList && sup.classList.contains("prsup")) sup.hidden = hide;
+      }
+      document.querySelectorAll("[data-p]").forEach(function (el) { hideWithPr(el, !has(el, key)); });
+      /* 品ごとのポータルのリンクも、選んだポータルだけにする（押す先が迷わない） */
+      document.querySelectorAll("[data-pk]").forEach(function (a) {
+        hideWithPr(a, key !== "all" && a.getAttribute("data-pk") !== key);
+      });
+      /* 箇条書きは先頭 N 品まで */
+      document.querySelectorAll("[data-flist]").forEach(function (ul) {
+        var lim = parseInt(ul.getAttribute("data-limit"), 10) || 5, n = 0;
+        ul.querySelectorAll("li").forEach(function (li) {
+          if (li.hidden) return;
+          n++;
+          if (n > lim) li.hidden = true;
+        });
+        ul.setAttribute("data-shown", n > lim ? lim : n);
+      });
+      /* 一覧の行：そのポータルの品数で表示・件数を切り替える */
+      document.querySelectorAll("tr[data-n-all]").forEach(function (tr) {
+        var n = parseInt(tr.getAttribute("data-n-" + key), 10) || 0;
+        tr.hidden = n === 0;
+        var sub = tr.querySelector("[data-count]");
+        if (sub) sub.textContent = n + "品を確認";
+        var more = tr.querySelector("[data-more]");
+        var ul = tr.querySelector("[data-flist]");
+        if (more) {
+          var shown = ul ? parseInt(ul.getAttribute("data-shown"), 10) || 0 : 0;
+          more.textContent = "全" + n + "品を見る →";
+          more.hidden = n <= shown;
+        }
+      });
+      document.querySelectorAll("[data-fsec]").forEach(function (sec) {
+        var any = Array.prototype.some.call(sec.querySelectorAll("tr[data-n-all]"), function (tr) { return !tr.hidden; });
+        sec.hidden = !any;
+      });
+      var empty = document.querySelector(".fempty");
+      if (empty) {
+        empty.hidden = Array.prototype.some.call(document.querySelectorAll("[data-fsec]"), function (s) { return !s.hidden; })
+          || !document.querySelector("[data-fsec]");
+      }
+      if (push) {
+        try {
+          var u = new URL(location.href);
+          if (key === "all") u.searchParams.delete("portal"); else u.searchParams.set("portal", key);
+          history.replaceState(null, "", u.toString());
+        } catch (e) {}
+      }
+    }
+    chips.forEach(function (c) {
+      c.addEventListener("click", function () { apply(c.getAttribute("data-key"), true); });
+    });
+    var init = "all";
+    try { init = new URLSearchParams(location.search).get("portal") || "all"; } catch (e) {}
+    if (keys.indexOf(init) === -1) init = "all";
+    apply(init, false);
+  });
+
   /* --- 現在地をナビに反映 ------------------------------------------------ */
   document.addEventListener("DOMContentLoaded", function () {
     var here = location.pathname.replace(/index\.html$/, "").replace(/\/$/, "");
