@@ -9,8 +9,9 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap">
-<link rel="stylesheet" href="assets/awamori.css?v=20260905d">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap"></noscript>
+<link rel="stylesheet" href="assets/awamori.css?v=20260905g">
 <link rel="canonical" href="https://awamori-db.com/calorie">
 <meta property="og:site_name" content="泡盛DB">
 <meta property="og:type" content="website">
@@ -20,13 +21,14 @@
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://awamori-db.com/assets/img/abv.webp">
 <meta name="twitter:card" content="summary_large_image">
-<script src="assets/awamori.js?v=20260905d" defer></script>
+<script src="assets/awamori.js?v=20260905g" defer></script>
 <script>(function(){try{var s=location.search;if(s.indexOf('ga=off')>-1){localStorage.setItem('adb_noga','1');}if(s.indexOf('ga=on')>-1){localStorage.removeItem('adb_noga');}if(localStorage.getItem('adb_noga')==='1'){window['ga-disable-G-ZYFBNN3H9E']=true;}}catch(e){}})();</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYFBNN3H9E"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZYFBNN3H9E');</script>
 <script type="application/ld+json">{"@context": "https://schema.org/", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "トップ", "item": "https://awamori-db.com/"}, {"@type": "ListItem", "position": 2, "name": "カロリーと糖質"}]}</script>
 </head>
 <body>
+<a class="skip" href="#main">本文へ移動</a>
 <header class="hd">
   <div class="wrap hd__in">
     <a class="hd__logo" href="./"><b>泡盛DB</b><span>琉球泡盛データベース</span></a>
@@ -57,14 +59,14 @@
   <span class="phero__credit">画像はイメージ</span>
 </div>
 <nav class="crumb wrap" aria-label="パンくず"><ol><li><a href="./">トップ</a></li><li>カロリーと糖質</li></ol></nav>
-<main class="wrap">
+<main class="wrap" id="main">
 <p class="lede">
   「泡盛は太る／太らない」という話ではなく、<strong>公表されている数値から計算するとどうなるか</strong>だけを載せる。
   使った式と定数、その出典はページの最後に原文つきで置いた。
 </p>
 
 <div class="panel panel--note">
-  <h3>先に結論</h3>
+  <p class="panel__h">先に結論</p>
   <p><strong>糖質は0g。</strong>文部科学省の日本食品標準成分表（八訂・増補2023年）で、泡盛が当たる
   <strong>16015「単式蒸留しょうちゅう」</strong>は可食部100gあたり
   <strong>炭水化物 0g</strong>、たんぱく質0g、脂質0g、アルコール20.5g、
@@ -317,18 +319,18 @@
   </tbody>
 </table></div>
 <p style="font-size:12px;color:var(--muted);margin-top:10px;">
-  公式に度数の記載がない銘柄が36件ある。推測で埋めずに、この表からは外している。
+  公式に度数の記載がない銘柄が31件ある。推測で埋めずに、この表からは外している。
 </p>
 </section>
 
 <div class="panel">
-  <h3>計算式の根拠をくわしく</h3>
+  <p class="panel__h">計算式の根拠をくわしく</p>
   <p>糖質0gの根拠（食品成分表の実測値）と、7kcal/gという換算係数がアトウォーター係数（7.1）と
   別ものである理由は<a href="guide/calorie">読みもの「泡盛のカロリーと糖質」</a>で
   出典つきで説明している。</p>
 </div>
 <div class="panel">
-  <h3>純アルコール40g・20gという目安について</h3>
+  <p class="panel__h">純アルコール40g・20gという目安について</p>
   <p>厚生労働省 e-ヘルスネットは、健康日本21（第二次）における
   「生活習慣病のリスクを高める量」を
   <strong>「一日当たりの純アルコール摂取量が男性40ｇ以上、女性20ｇ以上の者」</strong>
@@ -801,7 +803,7 @@
         公式に記載がない項目は「未確認」と表示しています。</p>
       </div>
       <div>
-        <h4>探す</h4>
+        <b class="ft__h">探す</b>
         <a href="find">条件で絞り込む</a>
         <a href="region/">地域から探す</a>
         <a href="koshu">古酒の年数から</a>
@@ -812,7 +814,7 @@
         <a href="furusato">ふるさと納税</a>
       </div>
       <div>
-        <h4>サイトについて</h4>
+        <b class="ft__h">サイトについて</b>
         <a href="distillery/">酒造所一覧</a>
         <a href="guide/">読みもの</a>
         <a href="about">このサイトについて</a>

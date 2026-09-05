@@ -9,8 +9,9 @@
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap">
-<link rel="stylesheet" href="../assets/awamori.css?v=20260905d">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap"></noscript>
+<link rel="stylesheet" href="../assets/awamori.css?v=20260905g">
 <link rel="canonical" href="https://awamori-db.com/region/yaeyama">
 <meta property="og:site_name" content="泡盛DB">
 <meta property="og:type" content="website">
@@ -20,13 +21,14 @@
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://awamori-db.com/assets/img/region-yaeyama.webp">
 <meta name="twitter:card" content="summary_large_image">
-<script src="../assets/awamori.js?v=20260905d" defer></script>
+<script src="../assets/awamori.js?v=20260905g" defer></script>
 <script>(function(){try{var s=location.search;if(s.indexOf('ga=off')>-1){localStorage.setItem('adb_noga','1');}if(s.indexOf('ga=on')>-1){localStorage.removeItem('adb_noga');}if(localStorage.getItem('adb_noga')==='1'){window['ga-disable-G-ZYFBNN3H9E']=true;}}catch(e){}})();</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYFBNN3H9E"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZYFBNN3H9E');</script>
 <script type="application/ld+json">{"@context": "https://schema.org/", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "トップ", "item": "https://awamori-db.com/"}, {"@type": "ListItem", "position": 2, "name": "八重山"}]}</script>
 </head>
 <body>
+<a class="skip" href="#main">本文へ移動</a>
 <header class="hd">
   <div class="wrap hd__in">
     <a class="hd__logo" href="../"><b>泡盛DB</b><span>琉球泡盛データベース</span></a>
@@ -47,7 +49,7 @@
   </div>
 </header>
 <div class="banner">
-  <img src="../assets/img/region-yaeyama.webp" srcset="../assets/img/region-yaeyama-sm.webp 720w, ../assets/img/region-yaeyama.webp 1600w" sizes="100vw" alt="八重山の風景のイメージ" loading="eager" width="1600" height="678">
+  <img src="../assets/img/region-yaeyama.webp" srcset="../assets/img/region-yaeyama-sm.webp 720w, ../assets/img/region-yaeyama.webp 1600w" sizes="100vw" alt="八重山の風景のイメージ" loading="eager" fetchpriority="high" width="1600" height="678">
   <div class="banner__body"><div class="wrap">
     <p class="hero__kicker">地域から探す</p>
     <h1>八重山の泡盛酒造所 10軒</h1>
@@ -56,7 +58,7 @@
   <span class="banner__credit">画像はイメージ</span>
 </div>
 <nav class="crumb wrap" aria-label="パンくず"><ol><li><a href="../">トップ</a></li><li>八重山</li></ol></nav>
-<main class="wrap">
+<main class="wrap" id="main">
 <p class="lede">
   10軒の酒造所から97銘柄を掲載している。度数の中央値は30度。掲載銘柄の19%が古酒。日本でここだけの花酒が14銘柄ある。創業年が確認できた9軒は1927年から1989年に分布する。
   地域の区分は沖縄県酒造組合の「酒造所一覧」のエリア分けに合わせている。
@@ -71,7 +73,7 @@
       <td style="font-size:12px;">〒907-1801 沖縄県八重山郡与那国町字与那国2087</td>
       <td>どなん</td>
       <td style="font-size:12px;">1958年</td>
-      <td class="n">7</td>
+      <td class="n">5</td>
       <td><span class="src src--official" title="酒造所の公式サイトで確認">公式</span></td>
     </tr>    <tr>
       <td class="name"><a href="../distillery/sakimoto-yonaguni"><b>崎元酒造所</b></a>
@@ -79,7 +81,7 @@
       <td style="font-size:12px;">〒907-1801 沖縄県八重山郡与那国町字与那国2329番地</td>
       <td>与那国</td>
       <td style="font-size:12px;">1927年に17人の共同で設立、1971年に現在の社名に改名（組合公式。自社公式には創業年の記載なし）</td>
-      <td class="n">36</td>
+      <td class="n">13</td>
       <td><span class="src src--official" title="酒造所の公式サイトで確認">公式</span></td>
     </tr>    <tr>
       <td class="name"><a href="../distillery/irinamihira"><b>入波平酒造</b></a>
@@ -87,7 +89,7 @@
       <td style="font-size:12px;">与那国町字与那国4147-1（組合の酒造所一覧）／4171-1（組合ストーリー記事）※組合公式内で不一致</td>
       <td>舞富名</td>
       <td style="font-size:12px;">1989年（前身は1949年に先代が興した入波平酒屋。合名会社として国泉泡盛を立ち上げた後、平成に入って独立）</td>
-      <td class="n">25</td>
+      <td class="n">12</td>
       <td><span class="src src--union" title="沖縄県酒造組合（準一次ソース）">組合公式</span></td>
     </tr>    <tr>
       <td class="name"><a href="../distillery/ikehara"><b>池原酒造</b></a>
@@ -95,7 +97,7 @@
       <td style="font-size:12px;">〒907-0022 沖縄県石垣市大川175</td>
       <td>白百合</td>
       <td style="font-size:12px;">1951年（昭和26年）※2026年に創業75周年企画を実施中</td>
-      <td class="n">15</td>
+      <td class="n">10</td>
       <td><span class="src src--official" title="酒造所の公式サイトで確認">公式</span></td>
     </tr>    <tr>
       <td class="name"><a href="../distillery/nakama"><b>仲間酒造</b></a>
@@ -103,7 +105,7 @@
       <td style="font-size:12px;">〒907-0243 沖縄県石垣市宮良956番地</td>
       <td>宮之鶴</td>
       <td style="font-size:12px;">昭和23年（1948年）</td>
-      <td class="n">4</td>
+      <td class="n">1</td>
       <td><span class="src src--official" title="酒造所の公式サイトで確認">公式</span></td>
     </tr>    <tr>
       <td class="name"><a href="../distillery/seifuku"><b>請福酒造</b></a>
@@ -111,7 +113,7 @@
       <td style="font-size:12px;">〒907-0243 沖縄県石垣市宮良959</td>
       <td>請福</td>
       <td style="font-size:12px;">創業 昭和24年5月（1949年、『漢那酒屋』として）／設立 昭和41年11月29日／平成4年に現社名へ変更</td>
-      <td class="n">26</td>
+      <td class="n">15</td>
       <td><span class="src src--official" title="酒造所の公式サイトで確認">公式</span></td>
     </tr>    <tr>
       <td class="name"><a href="../distillery/takamine"><b>髙嶺酒造所</b></a>
@@ -119,7 +121,7 @@
       <td style="font-size:12px;">〒907-0453 沖縄県石垣市字川平930-2</td>
       <td>於茂登</td>
       <td style="font-size:12px;">創業年 1949年（昭和24年）。設立年は記載なし</td>
-      <td class="n">21</td>
+      <td class="n">10</td>
       <td><span class="src src--official" title="酒造所の公式サイトで確認">公式</span></td>
     </tr>    <tr>
       <td class="name"><a href="../distillery/yaesen"><b>八重泉酒造</b></a>
@@ -127,7 +129,7 @@
       <td style="font-size:12px;">〒907-0023 沖縄県石垣市字石垣1834番地</td>
       <td>八重泉</td>
       <td style="font-size:12px;">創業 1955年／有限会社設立 1989年</td>
-      <td class="n">35</td>
+      <td class="n">25</td>
       <td><span class="src src--official" title="酒造所の公式サイトで確認">公式</span></td>
     </tr>    <tr>
       <td class="name"><a href="../distillery/tamanaha"><b>玉那覇酒造所</b></a>
@@ -135,7 +137,7 @@
       <td style="font-size:12px;">〒907-0023 沖縄県石垣市字石垣47番地</td>
       <td>玉の露</td>
       <td style="font-size:12px;">明治末期に首里の酒造所から分家して創業（公式は『創業90余年』とのみ。具体的な創業年の記載なし＝未確認）</td>
-      <td class="n">6</td>
+      <td class="n">5</td>
       <td><span class="src src--official" title="酒造所の公式サイトで確認">公式</span></td>
     </tr>    <tr>
       <td class="name"><a href="../distillery/hateruma"><b>波照間酒造所</b></a>
@@ -143,7 +145,7 @@
       <td style="font-size:12px;">沖縄県八重山郡竹富町字波照間156番地</td>
       <td>泡波</td>
       <td style="font-size:12px;">1950年代初頭（諸説あり）※組合公式=1952年／竹富町役場運営サイトの三代目本人談=1950年</td>
-      <td class="n">5</td>
+      <td class="n">1</td>
       <td><span class="src src--union" title="沖縄県酒造組合・自治体サイト（準一次ソース）">組合公式＋自治体</span></td>
     </tr></tbody>
 </table></div>
@@ -164,7 +166,7 @@
         公式に記載がない項目は「未確認」と表示しています。</p>
       </div>
       <div>
-        <h4>探す</h4>
+        <b class="ft__h">探す</b>
         <a href="../find">条件で絞り込む</a>
         <a href="../region/">地域から探す</a>
         <a href="../koshu">古酒の年数から</a>
@@ -175,7 +177,7 @@
         <a href="../furusato">ふるさと納税</a>
       </div>
       <div>
-        <h4>サイトについて</h4>
+        <b class="ft__h">サイトについて</b>
         <a href="../distillery/">酒造所一覧</a>
         <a href="../guide/">読みもの</a>
         <a href="../about">このサイトについて</a>

@@ -9,8 +9,9 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap">
-<link rel="stylesheet" href="assets/awamori.css?v=20260905d">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap"></noscript>
+<link rel="stylesheet" href="assets/awamori.css?v=20260905g">
 <link rel="canonical" href="https://awamori-db.com/find">
 <meta property="og:site_name" content="泡盛DB">
 <meta property="og:type" content="website">
@@ -20,13 +21,14 @@
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://awamori-db.com/assets/img/hero.webp">
 <meta name="twitter:card" content="summary_large_image">
-<script src="assets/awamori.js?v=20260905d" defer></script>
+<script src="assets/awamori.js?v=20260905g" defer></script>
 <script>(function(){try{var s=location.search;if(s.indexOf('ga=off')>-1){localStorage.setItem('adb_noga','1');}if(s.indexOf('ga=on')>-1){localStorage.removeItem('adb_noga');}if(localStorage.getItem('adb_noga')==='1'){window['ga-disable-G-ZYFBNN3H9E']=true;}}catch(e){}})();</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYFBNN3H9E"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZYFBNN3H9E');</script>
 <script type="application/ld+json">{"@context": "https://schema.org/", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "トップ", "item": "https://awamori-db.com/"}, {"@type": "ListItem", "position": 2, "name": "条件で絞り込む"}]}</script>
 </head>
 <body>
+<a class="skip" href="#main">本文へ移動</a>
 <header class="hd">
   <div class="wrap hd__in">
     <a class="hd__logo" href="./"><b>泡盛DB</b><span>琉球泡盛データベース</span></a>
@@ -47,7 +49,7 @@
   </div>
 </header>
 <nav class="crumb wrap" aria-label="パンくず"><ol><li><a href="./">トップ</a></li><li>条件で絞り込む</li></ol></nav>
-<main class="wrap">
+<main class="wrap" id="main">
 <h1 class="h-page">条件で絞り込んで泡盛を探す</h1>
 <p class="lede">
   度数・古酒の年数・全量古酒かどうか・地域・種別を<strong>掛け合わせて</strong>絞り込めます。
@@ -57,7 +59,7 @@
 </p>
 
 <div class="panel panel--note">
-  <h3>「全量古酒」という絞り込みについて</h3>
+  <p class="panel__h">「全量古酒」という絞り込みについて</p>
   <p>公正競争規約は2013年10月10日の改正以降、<strong>全量が古酒でなければ「古酒」と表示できない</strong>と定めています。
   古酒を60%だけ混ぜた商品は、中身に古酒が入っていても「古酒」とは名乗れません。
   この絞り込みは、公式が古酒の割合を明記している商品を対象にしています。
@@ -108,10 +110,10 @@
   </div>
 
   <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:18px 0 6px;">
-    <input id="q" type="search" placeholder="銘柄名・酒造所名で探す"
+    <input id="q" type="search" placeholder="銘柄名・酒造所名で探す" aria-label="銘柄名・酒造所名で探す"
       style="flex:1;min-width:220px;padding:10px 14px;border:1px solid var(--line-strong);
              border-radius:8px;font-size:14px;font-family:var(--sans);background:#fff;">
-    <select id="sort" style="padding:10px 12px;border:1px solid var(--line-strong);border-radius:8px;
+    <select id="sort" aria-label="並び順" style="padding:10px 12px;border:1px solid var(--line-strong);border-radius:8px;
              font-size:13px;font-family:var(--sans);background:#fff;">
       <option value="d">酒造所順</option>
       <option value="abv-">度数が高い順</option>
@@ -123,11 +125,14 @@
     <button class="chip" type="button" id="reset">条件をリセット</button>
   </div>
   <p id="count" role="status" aria-live="polite" class="find-count"></p>
+  <noscript><div class="panel panel--note"><p>この絞り込みはブラウザのJavaScriptで動いています。
+    JavaScriptが無効な場合は、<a href="distillery/">酒造所の一覧</a>・<a href="koshu">古酒の一覧</a>・
+    <a href="abv/">度数の一覧</a>から探せます。</p></div></noscript>
 </section>
 
 <div class="tblwrap">
   <table class="db db--tight">
-    <colgroup><col><col style="width:132px"><col style="width:66px"><col style="width:136px">
+    <colgroup><col style="width:220px"><col style="width:132px"><col style="width:66px"><col style="width:136px">
       <col style="width:116px"><col style="width:128px"><col style="width:106px"></colgroup>
     <thead><tr>
       <th>銘柄</th><th>酒造所</th><th style="text-align:right;">度数</th>
@@ -142,7 +147,7 @@
   font-size:14px;line-height:2;"></div>
 
 <div class="panel">
-  <h3>この一覧について</h3>
+  <p class="panel__h">この一覧について</p>
   <p>公式サイトに記載がない項目は「—」と表示し、推測では埋めていません。
   泡盛は<strong>公式に価格を出していない酒造所が多く</strong>、価格が空欄の銘柄が多数あります。
   容量ごとに価格が分かれている場合は、いちばん安いものを表示しています。</p>
@@ -380,7 +385,7 @@
         公式に記載がない項目は「未確認」と表示しています。</p>
       </div>
       <div>
-        <h4>探す</h4>
+        <b class="ft__h">探す</b>
         <a href="find">条件で絞り込む</a>
         <a href="region/">地域から探す</a>
         <a href="koshu">古酒の年数から</a>
@@ -391,7 +396,7 @@
         <a href="furusato">ふるさと納税</a>
       </div>
       <div>
-        <h4>サイトについて</h4>
+        <b class="ft__h">サイトについて</b>
         <a href="distillery/">酒造所一覧</a>
         <a href="guide/">読みもの</a>
         <a href="about">このサイトについて</a>

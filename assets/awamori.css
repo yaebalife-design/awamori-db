@@ -27,7 +27,7 @@
   --ink:#1c1b19;
   --ink-2:#4a463f;
   --muted:#7a746b;
-  --muted-2:#9b958b;
+  --muted-2:#7f796f;   /* 2026/09/05 監査：#9b958b は白地でコントラスト比2.9（AA未達）。4.5以上に */
 
   /* 線 */
   --line:#e2dccf;
@@ -94,11 +94,15 @@ a{color:var(--indigo);}
 @media(max-width:1000px){
   /* タップ領域はApple/Google推奨の44px前後を確保する（2026/09/02 監査：
      バーガー約31px・ナビ項目約34px・チップ約31pxで軒並み下回っていた） */
-  .hd__burger{display:block;padding:13px 16px;font-size:15px;line-height:1;}
-  .hd__search{order:2;margin-left:auto;flex:1;max-width:200px;}
-  .hd__search input{width:100%;padding:9px 12px;}
+  .hd__burger{display:block;padding:13px 16px;font-size:15px;line-height:1;margin-left:auto;}
+  /* 🔴 スマホのヘッダーは1段（約60px）にする（2026/09/05 監査）。
+     検索窓を2段目に出していたときは126pxあり、見出しへのジャンプが50px隠れ、
+     メニューを開くと検索窓が29px幅に潰れていた。検索窓はメニューを開いたときだけ、その中に出す。 */
+  .hd__search{display:none;order:4;width:100%;margin:0;padding:4px 0 10px;}
+  .hd__in:has(.hd__nav.is-open) .hd__search{display:block;}
+  .hd__search input{width:100%;padding:11px 14px;font-size:14px;}
   .hd__search input:focus{width:100%;}
-  .hd__nav{display:none;width:100%;order:3;padding-bottom:8px;}
+  .hd__nav{display:none;width:100%;order:3;padding-bottom:0;}
   .hd__nav.is-open{display:flex;flex-direction:column;}
   .hd__nav.is-open a{padding:12px 12px;font-size:14px;}
   .hd__in{flex-wrap:wrap;}
@@ -152,7 +156,7 @@ main{padding-bottom:64px;}
 }
 .panel--note{border-left:4px solid var(--amber);}
 .panel--quiet{background:var(--indigo-soft);border-color:#d3dde8;}
-.panel h3{font-size:15px;margin:0 0 8px;}
+.panel h3,.panel .panel__h{font-size:15px;font-weight:700;margin:0 0 8px;font-family:var(--serif);color:var(--ink);}
 .panel p{margin:0 0 10px;font-size:14px;}
 .panel p:last-child{margin-bottom:0;}
 
@@ -177,7 +181,7 @@ main{padding-bottom:64px;}
   display:inline-flex;align-items:center;gap:6px;padding:6px 12px;
   border:1px solid var(--line-strong);border-radius:999px;background:var(--white);
   font-size:12.5px;font-weight:600;color:var(--ink);text-decoration:none;cursor:pointer;
-  font-family:var(--sans);transition:.13s;
+  font-family:var(--sans);transition:.13s;line-height:1.5;
 }
 .chip:hover{border-color:var(--amber);color:var(--amber-deep);}
 .chip small{font-family:var(--mono);font-weight:400;color:var(--muted-2);font-size:11px;}
@@ -227,7 +231,9 @@ table.db td.n--multi{white-space:normal;word-break:normal;overflow-wrap:break-wo
    ⚠️ この指定は table.db.db--tight より**後ろ**に置くこと。
       同じ詳細度なので、前に置くと min-width が上書きされない。 */
 @media(max-width:760px){
-  table.db.db--tight{min-width:700px;}
+  /* 1列目（銘柄）にも幅を持たせた（220px）ので、列幅の合計 904px に合わせる。
+     700px のままだと銘柄列が16pxに潰れて1文字ずつ縦に折れた（2026/09/05 監査） */
+  table.db.db--tight{min-width:904px;}
   table.db td.name,table.db th:first-child{position:sticky;left:0;
     box-shadow:1px 0 0 var(--line);}
   table.db td.name{background:var(--card);z-index:1;}
@@ -295,7 +301,7 @@ table.db td.n--multi{white-space:normal;word-break:normal;overflow-wrap:break-wo
 /* --- 購入導線 ------------------------------------------------------------ */
 .buy{margin:26px 0;padding:19px 21px;background:var(--amber-soft);
   border:1px solid #e6d4b6;border-radius:var(--radius);scroll-margin-top:74px;}
-.buy h3{font-size:15px;margin:0 0 5px;}
+.buy h3,.buy .buy__h{font-size:15px;font-weight:700;margin:0 0 5px;font-family:var(--serif);color:var(--ink);}
 .buy p{font-size:12.5px;color:var(--ink-2);margin:0 0 13px;}
 .btns{display:flex;flex-wrap:wrap;gap:9px;}
 .btn{
@@ -370,10 +376,17 @@ table.db td.n--multi{white-space:normal;word-break:normal;overflow-wrap:break-wo
    表11個が枠なしの素のtable、注意ボックス26個がただの段落として描画されていた
    （2026-08-31 に発覚）。記事側のHTMLは触らず、ここで泡盛DBのデザインに寄せる。
    --sub-2 も記事HTMLが参照している未定義の変数（--muted-2 と同じ色を当てる）。 */
-:root{--sub-2:#9b958b;}
+:root{--sub-2:#7f796f;}
 
+/* 記事の表にも .tblwrap と同じ「横に続いている」影を出す（2026/09/05 監査） */
 .doc .table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 0 20px;
-  border:1px solid var(--line);border-radius:var(--radius);background:var(--card);}
+  border:1px solid var(--line);border-radius:var(--radius);
+  background:
+    linear-gradient(to right,#fffdf8 30%,rgba(255,253,248,0)) left center/34px 100% no-repeat local,
+    linear-gradient(to left,#fffdf8 30%,rgba(255,253,248,0)) right center/34px 100% no-repeat local,
+    radial-gradient(farthest-side at 0 50%,rgba(28,27,25,.22),rgba(28,27,25,0)) left center/20px 100% no-repeat scroll,
+    radial-gradient(farthest-side at 100% 50%,rgba(28,27,25,.22),rgba(28,27,25,0)) right center/20px 100% no-repeat scroll,
+    var(--card);}
 .doc table.spec-table{width:100%;border-collapse:collapse;font-size:13px;min-width:520px;}
 .doc table.spec-table th,.doc table.spec-table td{padding:10px 13px;text-align:left;
   vertical-align:top;border-bottom:1px solid var(--line);line-height:1.85;}
@@ -396,7 +409,17 @@ table.db td.n--multi{white-space:normal;word-break:normal;overflow-wrap:break-wo
 @media(max-width:720px){.ft__grid{grid-template-columns:1fr;}}
 .ft b{font-family:var(--serif);color:#fff;font-size:17px;display:block;margin-bottom:9px;}
 .ft p{margin:0;font-size:12px;line-height:1.95;color:#a8bacd;}
-.ft h4{font-size:12px;color:#fff;margin:0 0 9px;letter-spacing:.05em;font-family:var(--sans);font-weight:700;}
+.ft h4,.ft .ft__h{display:block;font-size:12px;color:#fff;margin:0 0 9px;letter-spacing:.05em;font-family:var(--sans);font-weight:700;}
+/* 🔴 スマホのチップのタップ領域。ヘッダーの media ブロックにあった `.chip{padding:9px 14px}` は
+   後ろで定義される `.chip{}` に同じ詳細度で負けて効いていなかった（実測33px）。ここで上書きする */
+@media(max-width:1000px){.chips .chip,button.chip{padding:10px 14px;font-size:13px;min-height:40px;}}
+/* キーボード操作の見える化と、本文へのスキップリンク（2026/09/05 監査） */
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px;}
+.skip{position:absolute;left:-9999px;top:8px;z-index:100;background:var(--amber);color:#fff;
+  padding:8px 14px;border-radius:6px;font-weight:700;text-decoration:none;}
+.skip:focus{left:8px;}
+/* スマホの固定CTAバーが出ている間は、下端の余白でフッターのリンクを隠さない */
+body.ctabar-on{padding-bottom:calc(72px + env(safe-area-inset-bottom));}
 .ft a{display:block;color:#c3d1e0;text-decoration:none;font-size:12.5px;padding:3px 0;}
 .ft a:hover{color:#fff;text-decoration:underline;}
 .ft__note{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.14);
@@ -456,6 +479,8 @@ table.db td.n--multi{white-space:normal;word-break:normal;overflow-wrap:break-wo
   padding:0 24px;border-left:1px solid rgba(255,255,255,.16);
 }
 .phero__stats>div:first-child{padding-left:0;border-left:none;}
+/* スマホで4+1に折れたとき、2段目の先頭に縦線だけ残っていた（2026/09/05 監査） */
+@media(max-width:600px){.phero__stats>div{border-left:none;padding-left:0;min-width:45%;}}
 .phero__stats b{
   display:block;font-family:var(--serif);
   font-size:clamp(27px,3.2vw,35px);font-weight:700;
@@ -873,7 +898,7 @@ a[href^="http"]{overflow-wrap:anywhere;}
   text-decoration:none;color:#f2f6fa;border:1px solid rgba(255,255,255,.45);
   transition:.15s;}
 .pbtn:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.7);}
-.pbtn--main{background:var(--amber);border-color:var(--amber);color:#fff;}
+.pbtn--main{background:var(--amber-deep);border-color:var(--amber-deep);color:#fff;}  /* 白文字のコントラスト4.5以上に（2026/09/05） */
 .pbtn--main:hover{background:var(--amber-deep);border-color:var(--amber-deep);}
 
 /* find の件数行と補足。狭い画面ではチップ群の下で見失うので固定する */
@@ -906,7 +931,7 @@ a[href^="http"]{overflow-wrap:anywhere;}
 .fbtn--sm:hover{background:var(--amber-soft);}
 .fbtns{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;margin:8px 0 12px;font-size:12.5px;}
 .fmorelink{font-weight:700;font-size:12.5px;margin-left:auto;white-space:nowrap;}
-.prsup{font-size:9px;color:var(--muted-2);margin-left:2px;}
+.prsup{font-size:10.5px;color:var(--muted-2);margin-left:3px;}
 .flist{list-style:none;margin:0;padding:0;}
 .flist li{padding:6px 0;border-bottom:1px dashed var(--line);line-height:1.75;}
 .flist li:last-child{border-bottom:none;}
@@ -947,7 +972,8 @@ a[href^="http"]{overflow-wrap:anywhere;}
 .fchips__l{font-size:12px;color:var(--muted);font-weight:700;margin-right:4px;align-self:center;}
 .fchips .chip{font-family:var(--sans);}
 .fempty{font-size:14px;color:var(--muted);padding:24px 0;}
-@media(max-width:1000px){.fchips{top:0;}}
+/* スマホではヘッダーの裏に隠れるので固定しない（2026/09/05 監査） */
+@media(max-width:1000px){.fchips{position:static;}}
 /* 1品に対するポータルへのリンク（チョイス・au PAY・楽天・ふるなび）。小さなタグ状に並べる */
 .flinks{display:inline-flex;flex-wrap:wrap;gap:4px 6px;margin-top:4px;vertical-align:middle;}
 .fmeta .flinks{margin-left:4px;}

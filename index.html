@@ -9,8 +9,9 @@
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap">
-<link rel="stylesheet" href="assets/awamori.css?v=20260905d">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap"></noscript>
+<link rel="stylesheet" href="assets/awamori.css?v=20260905g">
 <link rel="canonical" href="https://awamori-db.com/">
 <meta property="og:site_name" content="泡盛DB">
 <meta property="og:type" content="website">
@@ -20,7 +21,7 @@
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://awamori-db.com/assets/img/hero.webp">
 <meta name="twitter:card" content="summary_large_image">
-<script src="assets/awamori.js?v=20260905d" defer></script>
+<script src="assets/awamori.js?v=20260905g" defer></script>
 <script>(function(){try{var s=location.search;if(s.indexOf('ga=off')>-1){localStorage.setItem('adb_noga','1');}if(s.indexOf('ga=on')>-1){localStorage.removeItem('adb_noga');}if(localStorage.getItem('adb_noga')==='1'){window['ga-disable-G-ZYFBNN3H9E']=true;}}catch(e){}})();</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYFBNN3H9E"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZYFBNN3H9E');</script>
@@ -28,6 +29,7 @@
 <script type="application/ld+json">{"@context": "https://schema.org/", "@type": "Organization", "name": "泡盛DB", "url": "https://awamori-db.com/"}</script>
 </head>
 <body>
+<a class="skip" href="#main">本文へ移動</a>
 <header class="hd">
   <div class="wrap hd__in">
     <a class="hd__logo" href="./"><b>泡盛DB</b><span>琉球泡盛データベース</span></a>
@@ -51,16 +53,16 @@
   <img class="phero__img" src="assets/img/hero.webp" srcset="assets/img/hero-sm.webp 720w, assets/img/hero.webp 1600w" sizes="100vw" alt="泡盛の甕が並ぶ蔵のイメージ" fetchpriority="high" width="1600" height="678">
   <div class="phero__body"><div class="wrap">
     <p class="phero__kicker">RYUKYU AWAMORI DATABASE</p>
-    <h1>琉球泡盛47酒造所・636銘柄の<br>横断データベース</h1>
+    <h1>琉球泡盛47酒造所・<br>636銘柄の横断データベース</h1>
     <p><strong>その「古酒」は、本当に全量が古酒か。</strong>泡盛の古酒は、2013年の規約改正から全量が古酒でなければ「古酒」と表示できない。古酒を60%混ぜただけの商品は、中身に古酒が入っていても古酒とは名乗れない。このデータベースは、公式が公開している<strong>古酒の割合</strong>まで載せている。</p>
     <div class="phero__stats"><div><b>47</b><span>酒造所</span></div><div><b>636</b><span>銘柄</span></div><div><b>605</b><span>度数を確認</span></div><div><b>253</b><span>古酒</span></div><div><b>14</b><span>花酒（60度）</span></div></div><div class="phero__cta"><a class="pbtn pbtn--main" href="find">636銘柄を条件で絞り込む</a><a class="pbtn" href="koshu">古酒を年数から探す</a></div>
   </div></div>
   <span class="phero__credit">画像はイメージ</span>
 </div>
-<main class="wrap">
+<main class="wrap" id="main">
 <section style="margin:34px 0 26px;">
 <h2 class="h-sec">何から探しますか</h2>
-  <div class="tiles"><a class="itile" href="find"><span class="itile__img"><img src="assets/img/hero-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">636銘柄</span></span><span class="itile__body"><b>条件で絞り込む</b><span>度数・古酒の年数・全量古酒かどうか・地域・種別を掛け合わせて探せます。</span></span></a><a class="itile" href="koshu"><span class="itile__img"><img src="assets/img/koshu-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">253銘柄</span></span><span class="itile__body"><b>古酒から探す</b><span>3年から50年まで。規約が求める「全量古酒」かどうかを併記しています。</span></span></a><a class="itile" href="abv/"><span class="itile__img"><img src="assets/img/abv-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">605銘柄</span></span><span class="itile__body"><b>度数から探す</b><span>10度から60度まで。30度・43度など度数ごとのページがあります。</span></span></a><a class="itile" href="hanazake"><span class="itile__img"><img src="assets/img/hanazake-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">14銘柄</span></span><span class="itile__body"><b>花酒（60度）</b><span>与那国島の3軒だけが造る60度。酒税法上は「原料用アルコール」になります。</span></span></a><a class="itile" href="tour"><span class="itile__img"><img src="assets/img/tour-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">見学可 19軒</span></span><span class="itile__body"><b>蔵見学ができる酒造所</b><span>無料・有料・休止中まで、公式サイトの記載を確認日つきで分類しました。</span></span></a><a class="itile" href="distillery/"><span class="itile__img"><img src="assets/img/region-naha_south-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">47軒</span></span><span class="itile__body"><b>酒造所から探す</b><span>沖縄県酒造組合が公開する全47軒。正式社名・所在地・創業年つき。</span></span></a><a class="itile" href="furusato"><span class="itile__img"><img src="assets/img/furusato-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">47蔵対応</span></span><span class="itile__body"><b>ふるさと納税で探す</b><span>全47蔵ぶんのポータル検索リンク。返礼品は離島の自治体に多くあります。</span></span></a></div>
+  <div class="tiles"><a class="itile" href="find"><span class="itile__img"><img src="assets/img/hero-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">636銘柄</span></span><span class="itile__body"><b>条件で絞り込む</b><span>度数・古酒の年数・全量古酒かどうか・地域・種別を掛け合わせて探せます。</span></span></a><a class="itile" href="koshu"><span class="itile__img"><img src="assets/img/koshu-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">253銘柄</span></span><span class="itile__body"><b>古酒から探す</b><span>3年から50年まで。規約が求める「全量古酒」かどうかを併記しています。</span></span></a><a class="itile" href="abv/"><span class="itile__img"><img src="assets/img/abv-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">605銘柄</span></span><span class="itile__body"><b>度数から探す</b><span>10度から60度まで。30度・43度など度数ごとのページがあります。</span></span></a><a class="itile" href="hanazake"><span class="itile__img"><img src="assets/img/hanazake-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">14銘柄</span></span><span class="itile__body"><b>花酒（60度）</b><span>与那国島の3軒だけが造る60度。酒税法上は「原料用アルコール」になります。</span></span></a><a class="itile" href="tour"><span class="itile__img"><img src="assets/img/tour-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">見学可 19軒</span></span><span class="itile__body"><b>蔵見学ができる酒造所</b><span>無料・有料・休止中まで、公式サイトの記載を確認日つきで分類しました。</span></span></a><a class="itile" href="distillery/"><span class="itile__img"><img src="assets/img/region-naha_south-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">47軒</span></span><span class="itile__body"><b>酒造所から探す</b><span>沖縄県酒造組合が公開する全47軒。正式社名・所在地・創業年つき。</span></span></a><a class="itile" href="furusato"><span class="itile__img"><img src="assets/img/furusato-sm.webp" alt="" loading="lazy" width="720" height="305"><span class="itile__n">631品</span></span><span class="itile__body"><b>ふるさと納税で探す</b><span>4つのポータルで確認できた返礼品を、酒造所ごとに商品名・寄附先・寄附額つきで。</span></span></a></div>
 </section>
 
 <section style="margin:44px 0;">
@@ -252,10 +254,10 @@
 </section>
 
 <div class="panel panel--quiet">
-  <h3>掲載情報について</h3>
+  <p class="panel__h">掲載情報について</p>
   <p>正式社名・所在地・創業年・度数・容量・価格は、各酒造所の公式サイトで確認したものを載せています。
   公式サイトが確認できない5軒は沖縄県酒造組合の情報によっており、その旨を明示しています。
-  最終確認日は2026年8月31日です。<a href="about">このサイトについて</a></p>
+  銘柄・酒造所の情報の最終確認日は2026年8月31日、ふるさと納税の返礼品は2026年9月3日時点です。<a href="about">このサイトについて</a></p>
 </div>
 </main>
 
@@ -269,7 +271,7 @@
         公式に記載がない項目は「未確認」と表示しています。</p>
       </div>
       <div>
-        <h4>探す</h4>
+        <b class="ft__h">探す</b>
         <a href="find">条件で絞り込む</a>
         <a href="region/">地域から探す</a>
         <a href="koshu">古酒の年数から</a>
@@ -280,7 +282,7 @@
         <a href="furusato">ふるさと納税</a>
       </div>
       <div>
-        <h4>サイトについて</h4>
+        <b class="ft__h">サイトについて</b>
         <a href="distillery/">酒造所一覧</a>
         <a href="guide/">読みもの</a>
         <a href="about">このサイトについて</a>

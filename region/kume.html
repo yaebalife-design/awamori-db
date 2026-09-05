@@ -9,8 +9,9 @@
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap">
-<link rel="stylesheet" href="../assets/awamori.css?v=20260905d">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap"></noscript>
+<link rel="stylesheet" href="../assets/awamori.css?v=20260905g">
 <link rel="canonical" href="https://awamori-db.com/region/kume">
 <meta property="og:site_name" content="泡盛DB">
 <meta property="og:type" content="website">
@@ -20,13 +21,14 @@
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://awamori-db.com/assets/img/region-kume.webp">
 <meta name="twitter:card" content="summary_large_image">
-<script src="../assets/awamori.js?v=20260905d" defer></script>
+<script src="../assets/awamori.js?v=20260905g" defer></script>
 <script>(function(){try{var s=location.search;if(s.indexOf('ga=off')>-1){localStorage.setItem('adb_noga','1');}if(s.indexOf('ga=on')>-1){localStorage.removeItem('adb_noga');}if(localStorage.getItem('adb_noga')==='1'){window['ga-disable-G-ZYFBNN3H9E']=true;}}catch(e){}})();</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYFBNN3H9E"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZYFBNN3H9E');</script>
 <script type="application/ld+json">{"@context": "https://schema.org/", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "トップ", "item": "https://awamori-db.com/"}, {"@type": "ListItem", "position": 2, "name": "久米島"}]}</script>
 </head>
 <body>
+<a class="skip" href="#main">本文へ移動</a>
 <header class="hd">
   <div class="wrap hd__in">
     <a class="hd__logo" href="../"><b>泡盛DB</b><span>琉球泡盛データベース</span></a>
@@ -47,7 +49,7 @@
   </div>
 </header>
 <div class="banner">
-  <img src="../assets/img/region-kume.webp" srcset="../assets/img/region-kume-sm.webp 720w, ../assets/img/region-kume.webp 1600w" sizes="100vw" alt="久米島の風景のイメージ" loading="eager" width="1600" height="678">
+  <img src="../assets/img/region-kume.webp" srcset="../assets/img/region-kume-sm.webp 720w, ../assets/img/region-kume.webp 1600w" sizes="100vw" alt="久米島の風景のイメージ" loading="eager" fetchpriority="high" width="1600" height="678">
   <div class="banner__body"><div class="wrap">
     <p class="hero__kicker">地域から探す</p>
     <h1>久米島の泡盛酒造所 2軒</h1>
@@ -56,7 +58,7 @@
   <span class="banner__credit">画像はイメージ</span>
 </div>
 <nav class="crumb wrap" aria-label="パンくず"><ol><li><a href="../">トップ</a></li><li>久米島</li></ol></nav>
-<main class="wrap">
+<main class="wrap" id="main">
 <p class="lede">
   2軒の酒造所から34銘柄を掲載している。度数の中央値は39度。掲載銘柄の26%が古酒。創業年が確認できた2軒は1948年から1949年に分布する。
   地域の区分は沖縄県酒造組合の「酒造所一覧」のエリア分けに合わせている。
@@ -71,7 +73,7 @@
       <td style="font-size:12px;">〒901-3123 沖縄県島尻郡久米島町字大田499番地</td>
       <td>久米島</td>
       <td style="font-size:12px;">創業 1948年（初代 田場良徳が7名で『米島興業合資会社』を設立）／設立 2014年10月16日</td>
-      <td class="n">28</td>
+      <td class="n">18</td>
       <td><span class="src src--official" title="酒造所の公式サイトで確認">公式</span></td>
     </tr>    <tr>
       <td class="name"><a href="../distillery/kumejima-kumesen"><b>久米島の久米仙</b></a>
@@ -79,7 +81,7 @@
       <td style="font-size:12px;">本社・工場 沖縄県島尻郡久米島町字宇江城2157／営業本部 浦添市港川2-3-3</td>
       <td>久米島の久米仙</td>
       <td style="font-size:12px;">創業 昭和24年1月1日（1949年）。『設立』表記は公式に無し（昭和45年 法人化 合資会社仲里酒造／平成5年 現商号へ変更）</td>
-      <td class="n">23</td>
+      <td class="n">16</td>
       <td><span class="src src--official" title="酒造所の公式サイトで確認">公式</span></td>
     </tr></tbody>
 </table></div>
@@ -100,7 +102,7 @@
         公式に記載がない項目は「未確認」と表示しています。</p>
       </div>
       <div>
-        <h4>探す</h4>
+        <b class="ft__h">探す</b>
         <a href="../find">条件で絞り込む</a>
         <a href="../region/">地域から探す</a>
         <a href="../koshu">古酒の年数から</a>
@@ -111,7 +113,7 @@
         <a href="../furusato">ふるさと納税</a>
       </div>
       <div>
-        <h4>サイトについて</h4>
+        <b class="ft__h">サイトについて</b>
         <a href="../distillery/">酒造所一覧</a>
         <a href="../guide/">読みもの</a>
         <a href="../about">このサイトについて</a>

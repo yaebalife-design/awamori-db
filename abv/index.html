@@ -9,8 +9,9 @@
 <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap">
-<link rel="stylesheet" href="../assets/awamori.css?v=20260905d">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap"></noscript>
+<link rel="stylesheet" href="../assets/awamori.css?v=20260905g">
 <link rel="canonical" href="https://awamori-db.com/abv/">
 <meta property="og:site_name" content="泡盛DB">
 <meta property="og:type" content="website">
@@ -20,13 +21,14 @@
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://awamori-db.com/assets/img/abv.webp">
 <meta name="twitter:card" content="summary_large_image">
-<script src="../assets/awamori.js?v=20260905d" defer></script>
+<script src="../assets/awamori.js?v=20260905g" defer></script>
 <script>(function(){try{var s=location.search;if(s.indexOf('ga=off')>-1){localStorage.setItem('adb_noga','1');}if(s.indexOf('ga=on')>-1){localStorage.removeItem('adb_noga');}if(localStorage.getItem('adb_noga')==='1'){window['ga-disable-G-ZYFBNN3H9E']=true;}}catch(e){}})();</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYFBNN3H9E"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZYFBNN3H9E');</script>
 <script type="application/ld+json">{"@context": "https://schema.org/", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "トップ", "item": "https://awamori-db.com/"}, {"@type": "ListItem", "position": 2, "name": "度数から探す"}]}</script>
 </head>
 <body>
+<a class="skip" href="#main">本文へ移動</a>
 <header class="hd">
   <div class="wrap hd__in">
     <a class="hd__logo" href="../"><b>泡盛DB</b><span>琉球泡盛データベース</span></a>
@@ -57,7 +59,7 @@
   <span class="phero__credit">画像はイメージ</span>
 </div>
 <nav class="crumb wrap" aria-label="パンくず"><ol><li><a href="../">トップ</a></li><li>度数から探す</li></ol></nav>
-<main class="wrap">
+<main class="wrap" id="main">
 
 <p class="lede">
   泡盛は10度から60度まで幅があり、同じ銘柄でも度数違いが用意されていることが多い。
@@ -67,7 +69,7 @@
 <div class="panel panel--note">
   <p>度数は各酒造所の公式サイト（公式に記載がない場合は沖縄県酒造組合の泡盛データベース）で確認したものだけを載せている。
   公式に度数の記載がない銘柄が<strong>31銘柄</strong>あり、それらは推測で埋めずに除いた。
-  <span class="sub">確認日 2026年8月30日</span></p>
+  <span class="sub">確認日 2026年8月31日</span></p>
 </div>
 
 <section style="margin:32px 0;">
@@ -271,13 +273,13 @@
 </section>
 
 <div class="panel">
-  <h3>なぜ30度と43度に集まるのか</h3>
+  <p class="panel__h">なぜ30度と43度に集まるのか</p>
   <p>28種類の度数の分布と、酒税法・公正競争規約が引いた45度・25度の線については
   <a href="../guide/abv">読みもの「泡盛の度数はなぜ30度と43度に集まるのか」</a>で
   条文と数字を確認できる。</p>
 </div>
 <div class="panel">
-  <h3>度数が分かるとカロリーも分かる</h3>
+  <p class="panel__h">度数が分かるとカロリーも分かる</p>
   <p>泡盛は糖質が0で、カロリーはすべてアルコール由来になる。つまり
   <strong>度数が同じなら、銘柄が違ってもカロリーは同じ</strong>だ。
   計算式と度数別の早見表は<a href="../calorie">カロリーと糖質のページ</a>にまとめた。</p>
@@ -304,7 +306,7 @@
         公式に記載がない項目は「未確認」と表示しています。</p>
       </div>
       <div>
-        <h4>探す</h4>
+        <b class="ft__h">探す</b>
         <a href="../find">条件で絞り込む</a>
         <a href="../region/">地域から探す</a>
         <a href="../koshu">古酒の年数から</a>
@@ -315,7 +317,7 @@
         <a href="../furusato">ふるさと納税</a>
       </div>
       <div>
-        <h4>サイトについて</h4>
+        <b class="ft__h">サイトについて</b>
         <a href="../distillery/">酒造所一覧</a>
         <a href="../guide/">読みもの</a>
         <a href="../about">このサイトについて</a>

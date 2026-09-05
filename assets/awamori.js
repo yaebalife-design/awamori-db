@@ -110,6 +110,8 @@
       var e = es[0];
       /* #buy が視界の上に消えたときだけ出す（下にあるうちは出さない） */
       bar.hidden = !(e.boundingClientRect.bottom < 0 && !e.isIntersecting);
+      /* バーが出ている間はページ下端に余白を足し、フッターのリンクが隠れないようにする（2026/09/05 監査） */
+      document.body.classList.toggle("ctabar-on", !bar.hidden);
     }).observe(buyEl);
   });
 
