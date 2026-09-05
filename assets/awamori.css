@@ -915,10 +915,20 @@ a[href^="http"]{overflow-wrap:anywhere;}
 .fmeta{display:block;font-size:11.5px;color:var(--muted);font-family:var(--mono);}
 /* find：絞り込みの見出しの下の説明と、種別の言葉の説明（2026/09/05 社長
    「種別とか意味わからない。記事とリンクするか、吹き出しをつくるか」） */
-.fhelp{font-size:12.5px;color:var(--muted);line-height:1.85;margin:-8px 0 10px;max-width:46em;}
+/* 🔴 文章ブロックの横幅は1つの値に揃える（2026/09/05 社長「横幅のサイズ感が統一ない」）。
+   それまで .lede は 42em×17px≒714px、.fhelp は 46em×12.5px≒575px、.panel は全幅で、
+   同じページの中で文章の行の長さが3通りあった。文字サイズが違っても同じ幅になるよう px で持つ。
+   表・チップ・ボタンは操作部品なので全幅のまま。 */
+:root{--measure:720px;}
+.lede{max-width:var(--measure);}
+.panel{max-width:var(--measure);}
+.panel--wide{max-width:none;}
+/* 760px の細い段組（読みもの・固定ページ）では段組そのものが上限なので、箱と文章は段組いっぱいに */
+.wrap--narrow .lede,.wrap--narrow .panel,.wrap--narrow .fhelp,.wrap--narrow .fdef{max-width:none;}
+.fhelp{font-size:12.5px;color:var(--muted);line-height:1.85;margin:-8px 0 10px;max-width:var(--measure);}
 .fhelp a{font-weight:600;color:var(--indigo);}
 .fhelp strong{color:var(--ink-2);}
-.fdef{margin:-6px 0 18px;font-size:13px;}
+.fdef{margin:-6px 0 18px;font-size:13px;max-width:var(--measure);}
 .fdef summary{cursor:pointer;color:var(--indigo);font-weight:600;font-size:12.5px;list-style:none;}
 .fdef summary::-webkit-details-marker{display:none;}
 .fdef summary::before{content:"＋ ";color:var(--amber-deep);}
