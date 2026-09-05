@@ -1,0 +1,6 @@
+# 🔴 .wrangler/ はアカウント名（＝メールアドレス）を含む。絶対にコミットしない
+# （Gin-DB で 2026/08/31 に誤コミットして公開リポジトリに漏らした前例）
+.wrangler/
+node_modules/
+.DS_Store
+Thumbs.db

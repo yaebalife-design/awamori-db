@@ -413,6 +413,44 @@ table.db td.n--multi{white-space:normal;word-break:normal;overflow-wrap:break-wo
 /* 🔴 スマホのチップのタップ領域。ヘッダーの media ブロックにあった `.chip{padding:9px 14px}` は
    後ろで定義される `.chip{}` に同じ詳細度で負けて効いていなかった（実測33px）。ここで上書きする */
 @media(max-width:1000px){.chips .chip,button.chip{padding:10px 14px;font-size:13px;min-height:40px;}}
+/* --- お問い合わせフォーム（contact.html・2026/09/05） ------------------------ */
+.ct-field{margin-bottom:22px;}
+.ct-field label{display:block;font-weight:700;font-size:14px;margin-bottom:6px;}
+.ct-req{font-size:11px;font-weight:700;color:#fff;background:var(--amber-deep);border-radius:4px;padding:2px 7px;margin-left:8px;vertical-align:1px;}
+.ct-opt{font-size:11px;font-weight:400;color:var(--muted);margin-left:8px;}
+.ct-help{font-size:12.5px;color:var(--muted);line-height:1.8;margin:0 0 8px;}
+.ct-field input[type=text],.ct-field input[type=email],.ct-field input[type=url],.ct-field textarea{
+  width:100%;font:inherit;font-size:16px;padding:12px 14px;border:1.5px solid var(--line-strong);
+  border-radius:8px;background:var(--white);color:inherit;box-sizing:border-box;}
+.ct-field textarea{min-height:190px;line-height:1.85;resize:vertical;}
+.ct-field :focus{outline:none;border-color:var(--amber);box-shadow:0 0 0 3px rgba(176,116,42,.16);}
+.ct-field [aria-invalid="true"]{border-color:#b04a3a;}
+.ct-err{display:none;font-size:12.5px;color:#b04a3a;font-weight:700;margin-top:6px;}
+.ct-err.is-shown{display:block;}
+.ct-kinds{display:grid;gap:9px;}
+.ct-field .ct-kind{display:flex;gap:11px;align-items:flex-start;border:1.5px solid var(--line-strong);
+  border-radius:9px;padding:13px 15px;cursor:pointer;background:var(--white);margin-bottom:0;font-weight:400;}
+.ct-kind:hover{border-color:var(--amber);}
+.ct-kind input{margin-top:3px;accent-color:var(--indigo);width:18px;height:18px;flex-shrink:0;}
+.ct-kind:has(input:checked){border-color:var(--indigo);background:var(--indigo-soft);}
+.ct-kind > span{display:block;min-width:0;}
+.ct-kind b{display:block;font-size:14.5px;margin-bottom:2px;color:var(--ink);font-weight:700;}
+.ct-kind b + span{display:block;font-size:12.5px;color:var(--muted);line-height:1.7;}
+.ct-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;}
+.ct-submit{appearance:none;border:0;cursor:pointer;font:inherit;font-weight:700;font-size:16px;
+  padding:16px 40px;border-radius:8px;background:var(--indigo);color:#fff;min-height:52px;}
+.ct-submit:hover:not(:disabled){background:var(--indigo-deep);}
+.ct-submit:disabled{opacity:.55;cursor:progress;}
+.ct-status{margin-top:20px;font-size:14px;line-height:1.9;border-radius:8px;padding:0;border:1px solid transparent;}
+.ct-status.is-shown{padding:16px 18px;}
+.ct-status.is-ok{background:var(--indigo-soft);border-color:var(--indigo);color:var(--indigo-deep);font-weight:700;}
+.ct-status.is-ng{background:#fbeeea;border-color:#b04a3a;color:#8d3a2c;font-weight:700;}
+.ct-done{display:none;}
+.ct-done.is-shown{display:block;}
+.ct-done__sub{font-weight:400;font-size:14px;}
+.is-sent .ct-form{display:none;}
+.ct-foot{font-size:12px;color:var(--muted);line-height:1.85;margin-top:22px;}
+@media(max-width:640px){.ct-submit{width:100%;}}
 /* キーボード操作の見える化と、本文へのスキップリンク（2026/09/05 監査） */
 :focus-visible{outline:3px solid var(--amber);outline-offset:2px;}
 .skip{position:absolute;left:-9999px;top:8px;z-index:100;background:var(--amber);color:#fff;
