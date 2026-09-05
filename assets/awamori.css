@@ -913,6 +913,21 @@ a[href^="http"]{overflow-wrap:anywhere;}
 .flist a{font-weight:600;color:var(--indigo);text-decoration:none;}
 .flist a:hover{text-decoration:underline;}
 .fmeta{display:block;font-size:11.5px;color:var(--muted);font-family:var(--mono);}
+/* find：絞り込みの見出しの下の説明と、種別の言葉の説明（2026/09/05 社長
+   「種別とか意味わからない。記事とリンクするか、吹き出しをつくるか」） */
+.fhelp{font-size:12.5px;color:var(--muted);line-height:1.85;margin:-8px 0 10px;max-width:46em;}
+.fhelp a{font-weight:600;color:var(--indigo);}
+.fhelp strong{color:var(--ink-2);}
+.fdef{margin:-6px 0 18px;font-size:13px;}
+.fdef summary{cursor:pointer;color:var(--indigo);font-weight:600;font-size:12.5px;list-style:none;}
+.fdef summary::-webkit-details-marker{display:none;}
+.fdef summary::before{content:"＋ ";color:var(--amber-deep);}
+.fdef[open] summary::before{content:"－ ";}
+.fdef dl{margin:10px 0 0;padding:12px 14px;background:var(--card);border:1px solid var(--line);
+  border-radius:var(--radius);display:grid;grid-template-columns:auto 1fr;gap:6px 14px;}
+.fdef dt{font-weight:700;white-space:nowrap;color:var(--ink);}
+.fdef dd{margin:0;color:var(--ink-2);line-height:1.8;}
+@media(max-width:560px){.fdef dl{grid-template-columns:1fr;gap:2px 0;}.fdef dd{margin-bottom:8px;}}
 /* ポータルで絞り込むチップ（2026/09/03 社長「サイトごとに絞れたらいいね」）。
    hidden 属性で隠す要素の中に display を持つクラス（.fbtn 等）があるので !important で消す */
 [hidden]{display:none !important;}

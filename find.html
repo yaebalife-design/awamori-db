@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap">
-<link rel="stylesheet" href="assets/awamori.css?v=20260903a">
+<link rel="stylesheet" href="assets/awamori.css?v=20260905a">
 <link rel="canonical" href="https://awamori-db.com/find">
 <meta property="og:site_name" content="泡盛DB">
 <meta property="og:type" content="website">
@@ -20,7 +20,7 @@
 <meta property="og:locale" content="ja_JP">
 <meta property="og:image" content="https://awamori-db.com/assets/img/hero.webp">
 <meta name="twitter:card" content="summary_large_image">
-<script src="assets/awamori.js?v=20260903a" defer></script>
+<script src="assets/awamori.js?v=20260905a" defer></script>
 <script>(function(){try{var s=location.search;if(s.indexOf('ga=off')>-1){localStorage.setItem('adb_noga','1');}if(s.indexOf('ga=on')>-1){localStorage.removeItem('adb_noga');}if(localStorage.getItem('adb_noga')==='1'){window['ga-disable-G-ZYFBNN3H9E']=true;}}catch(e){}})();</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZYFBNN3H9E"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-ZYFBNN3H9E');</script>
@@ -66,26 +66,45 @@
 
 <section style="margin:26px 0;">
   <h2 class="h-sec">度数</h2>
+  <p class="fhelp">アルコール分。泡盛は30度と43度に集まっていて、与那国島の花酒だけが60度前後。
+    45度を超えると酒税法上の品目が変わる。<a href="guide/abv">度数の読みもの →</a></p>
   <div class="chips" id="f-abv"><button class="chip" type="button" data-g="abv" data-v="a1" aria-pressed="false">20度未満 <small>8</small></button><button class="chip" type="button" data-g="abv" data-v="a2" aria-pressed="false">20〜24度 <small>14</small></button><button class="chip" type="button" data-g="abv" data-v="a3" aria-pressed="false">25〜29度 <small>94</small></button><button class="chip" type="button" data-g="abv" data-v="a4" aria-pressed="false">30〜34度 <small>184</small></button><button class="chip" type="button" data-g="abv" data-v="a5" aria-pressed="false">35〜42度 <small>133</small></button><button class="chip" type="button" data-g="abv" data-v="a6" aria-pressed="false">43〜44度 <small>207</small></button><button class="chip" type="button" data-g="abv" data-v="a7" aria-pressed="false">45度以上 <small>23</small></button></div>
 
   <h2 class="h-sec">古酒の年数</h2>
+  <p class="fhelp">公正競争規約では<strong>3年以上貯蔵したもの</strong>が古酒（クース）。年数は「最低その年数」の意味で、
+    年数の違う古酒を混ぜたときは<strong>いちばん短い年数</strong>を表示する決まり。
+    「古酒でない」は公式が古酒と表示していないもの、「年数の記載なし」は古酒だが公式に年数が書かれていないもの。
+    <a href="guide/koshu-kiyaku">古酒の規約の読みもの →</a></p>
   <div class="chips" id="f-koshu"><button class="chip" type="button" data-g="koshu" data-v="k0" aria-pressed="false">古酒でない <small>376</small></button><button class="chip" type="button" data-g="koshu" data-v="k1" aria-pressed="false">3〜4年 <small>70</small></button><button class="chip" type="button" data-g="koshu" data-v="k2" aria-pressed="false">5〜9年 <small>70</small></button><button class="chip" type="button" data-g="koshu" data-v="k3" aria-pressed="false">10〜19年 <small>73</small></button><button class="chip" type="button" data-g="koshu" data-v="k4" aria-pressed="false">20年以上 <small>16</small></button><button class="chip" type="button" data-g="koshu" data-v="kx" aria-pressed="false">年数の記載なし <small>94</small></button></div>
 
   <h2 class="h-sec">地域</h2>
+  <p class="fhelp">沖縄県酒造組合の6つの地域区分。本島北部・中部・那覇と南部、久米島・宮古・八重山の離島。
+    <a href="region/">地域ごとの一覧 →</a></p>
   <div class="chips" id="f-reg"><button class="chip" type="button" data-g="reg" data-v="north" aria-pressed="false">本島北部 <small>193</small></button><button class="chip" type="button" data-g="reg" data-v="central" aria-pressed="false">本島中部 <small>50</small></button><button class="chip" type="button" data-g="reg" data-v="naha_south" aria-pressed="false">那覇・南部 <small>229</small></button><button class="chip" type="button" data-g="reg" data-v="kume" aria-pressed="false">久米島 <small>36</small></button><button class="chip" type="button" data-g="reg" data-v="miyako" aria-pressed="false">宮古 <small>83</small></button><button class="chip" type="button" data-g="reg" data-v="yaeyama" aria-pressed="false">八重山 <small>108</small></button></div>
 
   <h2 class="h-sec">種別</h2>
-  <div class="chips" id="f-cat"><button class="chip" type="button" data-g="cat" data-v="セット" aria-pressed="false">セット <small>6</small></button><button class="chip" type="button" data-g="cat" data-v="一般酒" aria-pressed="false">一般酒 <small>223</small></button><button class="chip" type="button" data-g="cat" data-v="原酒" aria-pressed="false">原酒 <small>12</small></button><button class="chip" type="button" data-g="cat" data-v="古酒" aria-pressed="false">古酒 <small>233</small></button><button class="chip" type="button" data-g="cat" data-v="壺詰" aria-pressed="false">壺詰 <small>31</small></button><button class="chip" type="button" data-g="cat" data-v="未確認" aria-pressed="false">未確認 <small>79</small></button><button class="chip" type="button" data-g="cat" data-v="花酒" aria-pressed="false">花酒 <small>14</small></button><button class="chip" type="button" data-g="cat" data-v="長期熟成古酒" aria-pressed="false">長期熟成古酒 <small>47</small></button><button class="chip" type="button" data-g="cat" data-v="限定品" aria-pressed="false">限定品 <small>54</small></button></div>
+  <p class="fhelp">酒造所の公式サイトの分類をそのまま使っている。公式に書かれていないものは「未確認」。
+    それぞれの言葉の意味は下の「種別の意味」を開くと読める。</p>
+  <div class="chips" id="f-cat"><button class="chip" type="button" data-g="cat" data-v="セット" title="複数本の詰め合わせやギフト" aria-pressed="false">セット <small>6</small></button><button class="chip" type="button" data-g="cat" data-v="一般酒" title="古酒と表示していない泡盛。酒造所が「一般酒」と分類するもの。古酒を混ぜていても全量古酒でなければ規約上「古酒」と名乗れないので、ここに入る" aria-pressed="false">一般酒 <small>223</small></button><button class="chip" type="button" data-g="cat" data-v="原酒" title="酒造所が「原酒」と表記するもの。一般に、蒸留したあと水を加えていない度数の高い泡盛を指す" aria-pressed="false">原酒 <small>12</small></button><button class="chip" type="button" data-g="cat" data-v="古酒" title="公正競争規約で「3年以上貯蔵したもの」（第2条第2項）。ここでは酒造所が「古酒」「クース」と分類するもの" aria-pressed="false">古酒 <small>233</small></button><button class="chip" type="button" data-g="cat" data-v="壺詰" title="壺（甕）に入れて売られている製品。中身は一般酒のことも古酒のこともある" aria-pressed="false">壺詰 <small>31</small></button><button class="chip" type="button" data-g="cat" data-v="未確認" title="公式サイトに種別の記載がなく、こちらで推測もしていないもの" aria-pressed="false">未確認 <small>79</small></button><button class="chip" type="button" data-g="cat" data-v="花酒" title="与那国島の3蔵だけが造る60度前後の酒。酒税法上の品目は泡盛ではなく「原料用アルコール」" aria-pressed="false">花酒 <small>14</small></button><button class="chip" type="button" data-g="cat" data-v="長期熟成古酒" title="酒造所が「長期熟成古酒」と分類するもの（10年古酒など）。規約に定義はなく、蔵ごとの呼び方" aria-pressed="false">長期熟成古酒 <small>47</small></button><button class="chip" type="button" data-g="cat" data-v="限定品" title="酒造所が「限定」「季節限定」「特別品」と表示しているもの" aria-pressed="false">限定品 <small>54</small></button></div>
+  <details class="fdef">
+    <summary>種別の意味（言葉の説明）</summary>
+    <dl><dt>セット</dt><dd>複数本の詰め合わせやギフト</dd><dt>一般酒</dt><dd>古酒と表示していない泡盛。酒造所が「一般酒」と分類するもの。古酒を混ぜていても全量古酒でなければ規約上「古酒」と名乗れないので、ここに入る</dd><dt>原酒</dt><dd>酒造所が「原酒」と表記するもの。一般に、蒸留したあと水を加えていない度数の高い泡盛を指す</dd><dt>古酒</dt><dd>公正競争規約で「3年以上貯蔵したもの」（第2条第2項）。ここでは酒造所が「古酒」「クース」と分類するもの</dd><dt>壺詰</dt><dd>壺（甕）に入れて売られている製品。中身は一般酒のことも古酒のこともある</dd><dt>未確認</dt><dd>公式サイトに種別の記載がなく、こちらで推測もしていないもの</dd><dt>花酒</dt><dd>与那国島の3蔵だけが造る60度前後の酒。酒税法上の品目は泡盛ではなく「原料用アルコール」</dd><dt>長期熟成古酒</dt><dd>酒造所が「長期熟成古酒」と分類するもの（10年古酒など）。規約に定義はなく、蔵ごとの呼び方</dd><dt>限定品</dt><dd>酒造所が「限定」「季節限定」「特別品」と表示しているもの</dd></dl>
+  </details>
 
   <h2 class="h-sec">公式価格</h2>
+  <p class="fhelp">酒造所の公式サイト・公式ショップに書かれている価格で、販売店の価格ではない。
+    公式に価格を出していない酒造所が多いため、「—」の銘柄がある。<a href="guide/price">定価が見つからない理由 →</a></p>
   <div class="chips" id="f-pb"><button class="chip" type="button" data-g="pb" data-v="p1" aria-pressed="false">〜¥1,999 <small>131</small></button><button class="chip" type="button" data-g="pb" data-v="p2" aria-pressed="false">¥2,000〜4,999 <small>184</small></button><button class="chip" type="button" data-g="pb" data-v="p3" aria-pressed="false">¥5,000〜9,999 <small>52</small></button><button class="chip" type="button" data-g="pb" data-v="p4" aria-pressed="false">¥10,000以上 <small>92</small></button></div>
 
   <h2 class="h-sec">その他</h2>
+  <p class="fhelp">「全量古酒」は公式が古酒100%と明記しているもので、規約上「古酒」と名乗れる条件（<a href="guide/koshu-kiyaku">解説</a>）。
+    「花酒」は与那国島だけの60度前後の酒（<a href="guide/hanazake">解説</a>）。
+    「公式サイトで確認」は出典が酒造所の公式サイト・公式ショップのもので、公式サイトが無い蔵は沖縄県酒造組合の情報による（<a href="about">出典の確度</a>）。</p>
   <div class="chips" id="f-flag">
-    <button class="chip" type="button" data-g="flag" data-v="full" aria-pressed="false">全量古酒だけ <small>36</small></button>
-    <button class="chip" type="button" data-g="flag" data-v="hz" aria-pressed="false">花酒だけ <small>14</small></button>
-    <button class="chip" type="button" data-g="flag" data-v="price" aria-pressed="false">公式価格があるものだけ <small>459</small></button>
-    <button class="chip" type="button" data-g="flag" data-v="official" aria-pressed="false">公式サイトで確認できたものだけ <small>628</small></button>
+    <button class="chip" type="button" data-g="flag" data-v="full" title="公式が古酒100%（全量古酒）と明記しているもの。規約上「古酒」と名乗れる条件" aria-pressed="false">全量古酒だけ <small>36</small></button>
+    <button class="chip" type="button" data-g="flag" data-v="hz" title="与那国島の3蔵だけが造る60度前後の酒。酒税法上は「原料用アルコール」" aria-pressed="false">花酒だけ <small>14</small></button>
+    <button class="chip" type="button" data-g="flag" data-v="price" title="酒造所の公式サイト・公式ショップに価格が書かれているもの" aria-pressed="false">公式価格があるものだけ <small>459</small></button>
+    <button class="chip" type="button" data-g="flag" data-v="official" title="出典が酒造所の公式サイト・公式ショップのもの。公式サイトが無い蔵は沖縄県酒造組合の情報" aria-pressed="false">公式サイトで確認できたものだけ <small>628</small></button>
   </div>
 
   <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:18px 0 6px;">
