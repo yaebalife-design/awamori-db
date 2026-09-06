@@ -321,6 +321,8 @@ table.db td.n--multi{white-space:normal;word-break:normal;overflow-wrap:break-wo
 .affiliate-btn:hover{filter:brightness(1.07);transform:translateY(-1px);}
 .affiliate-btn--rakuten{background:#bf0000;}
 .affiliate-btn--amazon{background:#ff9900;color:#111;}
+/* Yahoo!ショッピング（2026/09/06 提携）。外部ブランドカラーは購入ボタンにだけ使う決まり */
+.affiliate-btn--yahoo{background:#ff0033;}
 .affiliate-link{color:var(--indigo);font-weight:600;text-decoration:none;white-space:nowrap;}
 .affiliate-link:hover{text-decoration:underline;}
 .lnk{font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap;}
