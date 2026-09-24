@@ -532,8 +532,10 @@ body.ctabar-on{padding-bottom:calc(72px + env(safe-area-inset-bottom));}
   letter-spacing:.06em;margin-top:7px;
 }
 @media(max-width:600px){
-  .phero__stats{gap:14px 0;padding-top:14px;}
-  .phero__stats>div{padding:0 14px;}
+  /* 2列の表に揃える。以前は全項目に左余白14pxを付けたが、先頭だけ :first-child の余白0が勝ち、
+     「47」だけ左に寄っていた（2026/09/24 社長指摘） */
+  .phero__stats{display:grid;grid-template-columns:1fr 1fr;gap:14px 16px;padding-top:14px;}
+  .phero__stats>div,.phero__stats>div:first-child{padding:0;border-left:none;min-width:0;}
   .phero__stats b{font-size:24px;}
   .phero__stats span{font-size:10.5px;margin-top:5px;}
 }
