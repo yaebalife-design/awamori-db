@@ -82,15 +82,36 @@
 </div>
 
 <section style="margin:38px 0;">
+<h2 class="h-sec">成分表の数値</h2>
+<p style="font-size:12.5px;color:var(--muted);margin:-6px 0 12px;line-height:1.9;">
+  泡盛は酒税法第3条第10号の「単式蒸留焼酎」にあたり、日本食品標準成分表では
+  16015「単式蒸留しょうちゅう」が対応する。可食部100gあたりの数値は次のとおり。
+</p>
+<div class="tblwrap"><table class="db db--tight" style="max-width:420px;">
+  <thead><tr><th>成分</th><th style="text-align:right;">100gあたり</th></tr></thead>
+  <tbody>
+    <tr><td>エネルギー</td><td class="n">144 kcal</td></tr>
+    <tr><td><strong>炭水化物</strong></td><td class="n"><strong>0 g</strong></td></tr>
+    <tr><td>たんぱく質</td><td class="n">0 g</td></tr>
+    <tr><td>脂質</td><td class="n">0 g</td></tr>
+    <tr><td>アルコール</td><td class="n">20.5 g</td></tr>
+  </tbody>
+</table></div>
+<p style="font-size:12px;color:var(--muted);margin-top:10px;">
+  出典：文部科学省 食品成分データベース 16015 単式蒸留しょうちゅう（日本食品標準成分表（八訂）増補2023年）。原文はページ末尾。</p>
+</section>
+
+<section style="margin:38px 0;">
 <h2 class="h-sec">計算のしかた</h2>
 <p style="font-size:14px;line-height:2;">
   ① 純アルコール量(g) ＝ <b>量(ml) × 度数 ÷ 100 × 0.8</b>（厚生労働省の式。0.8はアルコールの比重）<br>
   ② エネルギー(kcal) ＝ <b>純アルコール量(g) × 7</b>（文部科学省のエネルギー換算係数）<br>
   → まとめると <b>100mlあたりのkcal ＝ 度数 × 5.6</b>
 </p>
+<figure class="fig"><div class="fig__h"><span class="fig__n">図1</span><figcaption class="fig__t">度数と量だけでカロリーが出る</figcaption></div><div class="fig__b"><div class="calc-scroll"><div class="calc calcs" style="grid-template-columns:repeat(9,auto)"><u>量 mL</u><s>×</s><u>度数 ÷ 100</u><s>×</s><u>比重 0.8</u><s>×</s><u>7 kcal/g</u><s>＝</s><u class="out">カロリー</u><u>100 mL</u><s>×</s><u>0.30</u><s>×</s><u>0.8</u><s>×</s><u>7</u><s>＝</s><u class="out">168 kcal</u></div></div><p class="calc__note">下は30度を100mL飲んだ場合</p></div><p class="fig__note">糖質もたんぱく質も0gなので、<b>カロリーはアルコールの分しかない</b>。だから度数と量だけで出せる。比重0.8は厚労省、7kcal/gは食品成分表の値。</p></figure>
 <p style="font-size:12.5px;color:var(--muted);line-height:1.9;">
-  ⚠️ よく使われる「アルコール1gは7.1kcal」は古い係数で、
-  日本食品標準成分表2020年版（八訂）の換算係数は<strong>7kcal/g</strong>。ここでは成分表の値を使っている。<br>
+  ⚠️ よく使われる「アルコール1gは7.1kcal」はアトウォーター係数で、
+  日本食品標準成分表2020年版（八訂）の換算係数<strong>7kcal/g</strong>とは別のもの。ここでは成分表の値を使っている。<br>
   ⚠️ 成分表の値は可食部<strong>100g</strong>あたり、この表は<strong>100ml</strong>あたり。単位が違う。<br>
   ⚠️ 水やお湯、炭酸水で割ってもアルコールの量は変わらないので、この数値も変わらない。
   ジュースなどで割った場合は、割り材のぶんが加わる。
@@ -105,9 +126,9 @@
   いちばん右は、その度数で<strong>純アルコール40g</strong>に達する量。
 </p>
 <p style="font-size:12px;color:var(--muted);margin:-6px 0 12px;line-height:1.9;">
-  <strong>45度を超えるものは糖質0gの根拠が別になる。</strong>
+  <strong>45度を超えるもの（掲載のうち22銘柄）は糖質0gの根拠が別になる。</strong>
   酒税法第3条第10号の「単式蒸留焼酎」は<strong>45度以下</strong>と決まっているので、
-  花酒（60度）や高濃度の原酒は品目が「原料用アルコール」になり、成分表の
+  <a href="hanazake">花酒</a>（60度前後）や高濃度の原酒は品目が「原料用アルコール」（第3条第17号）になり、成分表の
   「単式蒸留しょうちゅう」には当たらない。エネルギーは蒸留酒として同じ式で計算できるが、
   糖質はこのサイトでは「—」と表示して、0gとは書いていない。
 </p>
@@ -324,18 +345,14 @@
 </section>
 
 <div class="panel">
-  <p class="panel__h">計算式の根拠をくわしく</p>
-  <p>糖質0gの根拠（食品成分表の実測値）と、7kcal/gという換算係数がアトウォーター係数（7.1）と
-  別ものである理由は<a href="guide/calorie">読みもの「泡盛のカロリーと糖質」</a>で
-  出典つきで説明している。</p>
-</div>
-<div class="panel">
   <p class="panel__h">純アルコール40g・20gという目安について</p>
   <p>厚生労働省 e-ヘルスネットは、健康日本21（第二次）における
   「生活習慣病のリスクを高める量」を
   <strong>「一日当たりの純アルコール摂取量が男性40ｇ以上、女性20ｇ以上の者」</strong>
   と定義している（原文のまま）。上の表のいちばん右の列は、これを泡盛の量に置き換えたものだ。
-  たとえば43度なら約116mlで40gに達する。</p>
+  たとえば30度なら約167mlで40g（男性の目安）、
+  約83mlで20g（女性の目安）に達する。
+  43度ならそれぞれ約116ml・約58mlだ。</p>
   <p><strong>20歳未満の方の飲酒は法律で禁止されている。</strong>
   妊娠中・授乳期の飲酒は控え、飲酒運転は絶対にしないこと。
   体質や体調による差が大きいので、ここに書いたのはあくまで公表された数値の計算であり、
