@@ -239,6 +239,31 @@ table.db td.n--multi{white-space:normal;word-break:normal;overflow-wrap:break-wo
   table.db td.name{background:var(--card);z-index:1;}
   table.db th:first-child{background:var(--indigo-soft);z-index:3;}
 }
+/* 🔴 600px以下は1行を1枚のカードにする（2026-10-28 監査 H7）。
+   1列目固定の横送りでは、1列目が画面の6割を取り、右へ送れる幅が約130pxしか残らなかった
+   （find・蔵ページで度数・容量・価格が最初から画面の外。見学ページは料金・予約の列が切れていた）。
+   値は「30度」「720ml」「¥1,601 税込」のように単位つきなので、見出しを畳んでも読める。
+   見出し行は読み上げ用に残し、画面からだけ外す。 */
+@media(max-width:600px){
+  .tblwrap{background:var(--card);overflow-x:visible;}
+  table.db,table.db.db--tight{display:block;min-width:0;width:100%;table-layout:auto;font-size:13.5px;}
+  table.db colgroup{display:none;}
+  table.db thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;}
+  table.db tbody,table.db tr{display:block;}
+  table.db tr{padding:11px 13px 10px;border-bottom:1px solid var(--line);}
+  table.db tbody tr:last-child{border-bottom:none;}
+  table.db td,table.db.db--tight td{display:inline-block;padding:0;border:none;margin:3px 14px 3px 0;
+    text-align:left;white-space:normal;vertical-align:baseline;}
+  table.db td:first-child,table.db td.name{display:block;position:static;box-shadow:none;min-width:0;
+    margin:0 0 5px;font-size:14.5px;background:none;}
+  /* 見出し行を隠すので、各値の上に見出しの文字を小さく出す（data-label は site_common._label_tables が付ける） */
+  table.db td[data-label]::before{content:attr(data-label);display:block;font-size:10.5px;font-weight:400;
+    color:var(--muted-2);letter-spacing:.02em;line-height:1.5;font-family:var(--sans,inherit);}
+  table.db td.n{text-align:left;white-space:normal;}
+  table.db td .sub{display:inline;margin:0 0 0 5px;}
+  table.db td:first-child .sub,table.db td.name .sub{display:block;margin:2px 0 0;}
+  table.db td:empty{display:none;}
+}
 .sub{display:block;font-size:11px;color:var(--muted-2);line-height:1.7;margin-top:3px;}
 .sub a{font-weight:600;}
 .na{color:var(--muted-2);}
